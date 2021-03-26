@@ -29,27 +29,39 @@
       Заполните анкету, и мы подберем <br>
       программу питания для вашего кота
     </p>
-    <form class="form-section">
-      <label>Имя:*<input type="text" placeholder="Барсик" class="form-section__name" required></label><br>
-      <label>Вес(кг):*<input type="number" placeholder="7" class="form-section__weight" required></label><br>
-      <label>Возраст(лет):<input type="number" placeholder="7" class="form-section__age"></label>
+    <!--    TODO should work on form-->
+    <form class="program-form-section__form">
+      <fieldset class="program-form-section__form-???">
+        <label>Имя:*<input type="text" placeholder="Барсик" class="form-section__name" required></label><br>
+        <label>Вес(кг):*<input type="number" placeholder="7" class="form-section__weight" required></label><br>
+        <label>Возраст(лет):<input type="number" placeholder="7" class="form-section__age"></label>
+      </fieldset>
+      <fieldset class="program-form-section__form-???">
+        <label><input type="radio" name="program" checked>Похудение</label><br>
+        <label><input type="radio" name="program">Набор массы</label><br>
+        <label><input type="radio" name="program">Не знаю(нужен ваш совет)</label><br>
+      </fieldset>
+      <h2 class="program-form-section__form-subheader">Контактные данные (владельца кота)</h2>
+      <fieldset class="program-form-section__form-contacts">
+        <label>E-MAIL:*<input type="email" placeholder="kuklachev@gmail.com" class="contacts-form__email"
+                              required></label><br>
+        <label>Телефон:*<input type="number" placeholder="8 (960) 900-60-90" class="contacts-form__phone"
+                               required></label><br>
+      </fieldset>
+      <h2 class="program-form-section__form-subheader">Комментарий</h2>
+      <textarea class="form-comment-area" rows="5" cols="37" placeholder="Расскажите обо всех повадках кота"></textarea>
+      <h2 class="program-form-section__form-subheader">Дополнительно</h2>
+      <!--     TODO Add classes name for form-extra-products -->
+      <fieldset class="program-form-section__form-extra-products">
+        <label><input type="checkbox">сахарозаменитель</label><br>
+        <label><input type="checkbox">питьевая вода</label><br>
+        <label><input type="checkbox">молоко</label><br>
+        <label><input type="checkbox">витамины</label><br>
+      </fieldset>
+      <!--     TODO Add classes name for submit-->
+      <input type="submit" value="Отправить заявку">
     </form>
-    <fieldset>
-      <label><input type="radio" name="program" checked>Похудение</label>
-      <label><input type="radio" name="program">Набор массы</label>
-      <label><input type="radio" name="program">Не знаю(нужен ваш совет)</label>
-    </fieldset>
   </section>
-  <section class="connection-form-section">
-    <h1>Контактные данные (владельца кота)</h1>
-    <form class="connection-form">
-      <label>E-MAIL:*<input type="email" placeholder="kuklachev@gmail.com" class="connection-form__email" required></label><br>
-      <label>Телефон:*<input type="number" placeholder="8 (960) 900-60-90" class="connection-form__phone" required></label><br>
-    </form>
-  </section>
-
-  <section class="comment-section"></section>
-  <section class="extra-products-section"></section>
   <section class="contacts__container">
     <div class="contact__container">
       <h3 class="contact__header">
