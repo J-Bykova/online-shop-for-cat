@@ -29,37 +29,48 @@
       Заполните анкету, и мы подберем <br>
       программу питания для вашего кота
     </p>
-    <!--    TODO should work on form-->
     <form class="program-form-section__form">
+<!--     TODO Add classes name for program-form-section__form-??? -->
       <fieldset class="program-form-section__form-???">
         <label>Имя:*<input type="text" placeholder="Барсик" class="form-section__name" required></label><br>
         <label>Вес(кг):*<input type="number" placeholder="7" class="form-section__weight" required></label><br>
         <label>Возраст(лет):<input type="number" placeholder="7" class="form-section__age"></label>
       </fieldset>
+<!--     TODO Add classes name for programs -->
       <fieldset class="program-form-section__form-???">
         <label><input type="radio" name="program" checked>Похудение</label><br>
         <label><input type="radio" name="program">Набор массы</label><br>
         <label><input type="radio" name="program">Не знаю(нужен ваш совет)</label><br>
       </fieldset>
       <h2 class="program-form-section__form-subheader">Контактные данные (владельца кота)</h2>
+<!--      TODO  переделать линию на современный лад-->
+      <hr class="program-form-section__title-line" align="center" width="99" size="2" color="#68B738"/>
       <fieldset class="program-form-section__form-contacts">
-        <label>E-MAIL:*<input type="email" placeholder="kuklachev@gmail.com" class="contacts-form__email"
-                              required></label><br>
-        <label>Телефон:*<input type="number" placeholder="8 (960) 900-60-90" class="contacts-form__phone"
-                               required></label><br>
+        <label>E-MAIL:*
+          <input type="email" placeholder="kuklachev@gmail.com" class="contacts-form__email"
+                              required>
+        </label><br>
+        <label>Телефон:*
+          <input type="number" placeholder="8 (960) 900-60-90" class="contacts-form__phone" required>
+        </label><br>
       </fieldset>
       <h2 class="program-form-section__form-subheader">Комментарий</h2>
+<!--      TODO  переделать линию на современный лад-->
+      <hr class="program-form-section__title-line" align="center" width="99" size="2" color="#68B738"/>
       <textarea class="form-comment-area" rows="5" cols="37" placeholder="Расскажите обо всех повадках кота"></textarea>
       <h2 class="program-form-section__form-subheader">Дополнительно</h2>
-      <!--     TODO Add classes name for form-extra-products -->
+<!--      TODO  переделать линию на современный лад-->
+      <hr class="program-form-section__title-line" align="center" width="99" size="2" color="#68B738"/>
+<!--     TODO Add classes name for form-extra-products -->
       <fieldset class="program-form-section__form-extra-products">
         <label><input type="checkbox">сахарозаменитель</label><br>
         <label><input type="checkbox">питьевая вода</label><br>
         <label><input type="checkbox">молоко</label><br>
         <label><input type="checkbox">витамины</label><br>
       </fieldset>
-      <!--     TODO Add classes name for submit-->
-      <input type="submit" value="Отправить заявку">
+      <input class="button" type="submit" value="Отправить заявку">
+<!--     TODO Add classes name for <p>> -->
+      <p>* — Обязательные поля</p>
     </form>
   </section>
   <section class="contacts__container">
