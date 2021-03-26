@@ -29,39 +29,45 @@
       Заполните анкету, и мы подберем <br>
       программу питания для вашего кота
     </p>
+
     <form class="program-form-section__form">
-<!--     TODO Add classes name for program-form-section__form-??? -->
-      <fieldset class="program-form-section__form-???">
-        <label>Имя:*<input type="text" placeholder="Барсик" class="form-section__name" required></label><br>
-        <label>Вес(кг):*<input type="number" placeholder="7" class="form-section__weight" required></label><br>
-        <label>Возраст(лет):<input type="number" placeholder="7" class="form-section__age"></label>
+
+
+      <fieldset class="program-form-section__personal-parameters">
+        <label>Имя:*
+          <input class="common-field program-form-section__personal-parameters__name" type="text" placeholder="Барсик" required>
+        </label><br>
+        <label>Вес(кг):*
+          <input class="common-field program-form-section__personal-parameters__weight" type="number" placeholder="7" required>
+        </label><br>
+        <label>Возраст(лет):
+          <input class="common-field program-form-section__personal-parameters__age" type="number" placeholder="7">
+        </label><br>
       </fieldset>
-<!--     TODO Add classes name for programs -->
-      <fieldset class="program-form-section__form-???">
-        <label><input type="radio" name="program" checked>Похудение</label><br>
-        <label><input type="radio" name="program">Набор массы</label><br>
-        <label><input type="radio" name="program">Не знаю(нужен ваш совет)</label><br>
+
+
+      <fieldset class="program-form-section__programs">
+        <label><input class="form-field program-form-section__program" type="radio" name="program"
+                      checked>Похудение</label><br>
+        <label><input class="form-field program-form-section__program" type="radio" name="program">Набор
+          массы</label><br>
+        <label><input class="form-field program-form-section__program" type="radio" name="program">Не знаю(нужен
+          ваш совет)</label><br>
       </fieldset>
-      <h2 class="program-form-section__form-subheader">Контактные данные (владельца кота)</h2>
-<!--      TODO  переделать линию на современный лад-->
-      <hr class="program-form-section__title-line" align="center" width="99" size="2" color="#68B738"/>
+      <h2 class="section-header program-form-section__form-subheader">Контактные данные (владельца кота)</h2>
       <fieldset class="program-form-section__form-contacts">
         <label>E-MAIL:*
-          <input type="email" placeholder="kuklachev@gmail.com" class="contacts-form__email"
-                              required>
+          <input class="contacts-form__email" type="email" placeholder="kuklachev@gmail.com" required>
         </label><br>
         <label>Телефон:*
-          <input type="number" placeholder="8 (960) 900-60-90" class="contacts-form__phone" required>
+          <input class="contacts-form__phone" type="number" placeholder="8 (960) 900-60-90" required>
         </label><br>
       </fieldset>
-      <h2 class="program-form-section__form-subheader">Комментарий</h2>
-<!--      TODO  переделать линию на современный лад-->
-      <hr class="program-form-section__title-line" align="center" width="99" size="2" color="#68B738"/>
+      <h2 class="section-header program-form-section__form-subheader">Комментарий</h2>
       <textarea class="form-comment-area" rows="5" cols="37" placeholder="Расскажите обо всех повадках кота"></textarea>
-      <h2 class="program-form-section__form-subheader">Дополнительно</h2>
-<!--      TODO  переделать линию на современный лад-->
-      <hr class="program-form-section__title-line" align="center" width="99" size="2" color="#68B738"/>
-<!--     TODO Add classes name for form-extra-products -->
+      <h2 class="section-header program-form-section__form-subheader">Дополнительно</h2>
+
+      <!--     TODO Add classes name for form-extra-products -->
       <fieldset class="program-form-section__form-extra-products">
         <label><input type="checkbox">сахарозаменитель</label><br>
         <label><input type="checkbox">питьевая вода</label><br>
@@ -69,7 +75,7 @@
         <label><input type="checkbox">витамины</label><br>
       </fieldset>
       <input class="button" type="submit" value="Отправить заявку">
-<!--     TODO Add classes name for <p>> -->
+      <!--     TODO Add classes name for <p>> -->
       <p>* — Обязательные поля</p>
     </form>
   </section>
