@@ -23,8 +23,31 @@
       <a class="header__menu-item" href="form.html">ПОДБОР ПРОГРАММЫ</a>
     </nav>
   </header>
-  <section class="program-form-section"></section>
-  <section class="connection-form-section"></section>
+  <section class="program-form-section">
+    <h1 class="program-form-section__header">Подбор программы</h1>
+    <p class="program-form-section__subheader">
+      Заполните анкету, и мы подберем <br>
+      программу питания для вашего кота
+    </p>
+    <form class="form-section">
+      <label>Имя:*<input type="text" placeholder="Барсик" class="form-section__name" required></label><br>
+      <label>Вес(кг):*<input type="number" placeholder="7" class="form-section__weight" required></label><br>
+      <label>Возраст(лет):<input type="number" placeholder="7" class="form-section__age"></label>
+    </form>
+    <fieldset>
+      <label><input type="radio" name="program" checked>Похудение</label>
+      <label><input type="radio" name="program">Набор массы</label>
+      <label><input type="radio" name="program">Не знаю(нужен ваш совет)</label>
+    </fieldset>
+  </section>
+  <section class="connection-form-section">
+    <h1>Контактные данные (владельца кота)</h1>
+    <form class="connection-form">
+      <label>E-MAIL:*<input type="email" placeholder="kuklachev@gmail.com" class="connection-form__email" required></label><br>
+      <label>Телефон:*<input type="number" placeholder="8 (960) 900-60-90" class="connection-form__phone" required></label><br>
+    </form>
+  </section>
+
   <section class="comment-section"></section>
   <section class="extra-products-section"></section>
   <section class="contacts__container">
