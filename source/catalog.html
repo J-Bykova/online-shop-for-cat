@@ -17,73 +17,130 @@
   </a>
 
   <nav class="header__menu">
-    <a class="header__menu-item" href="index.html">ГЛАВНАЯ</a>
-    <a class="header__menu-item" href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a>
-    <a class="header__menu-item" href="form.html">ПОДБОР ПРОГРАММЫ</a>
+    <a class="header__menu-item" href="index.html">Главная</a>
+    <a class="header__menu-item" href="catalog.html">Каталог продукции</a>
+    <a class="header__menu-item" href="form.html">Подбор программы</a>
   </nav>
 </header>
 <main class="page__main">
   <!--  Каталог продукции-->
-  <section>
-    <!--  Каталог-->
-    <div>
-      <!--  Карточка товара-->
-      <div>
-        <h3></h3>
-        <img>
-        <p></p>
-        <p></p>
-        <p></p>
-        <button></button>
+  <section class="catalog-section">
+    <div class="catalog-section__product-list">
+      <div class="catalog-section__product">
+        <h1 class="product__header">Cat Energy PRO<br>500 г</h1>
+        <img class="product__image" src="#" alt="" width="68" height="86">
+        <div class="product__description">
+          <p class="description__weight">масса 500 г.</p>
+          <p class="description__taste">вкус курица</p>
+          <p class="description__price">цена 700 P.</p>
+        </div>
+        <button class="common-button product__button">Заказать</button>
+      </div>
+      <div class="catalog-section__product">
+        <h1 class="product__header">Cat Energy PRO<br>1000 г</h1>
+        <img class="product__image" src="#" alt="" width="84" height="100.8">
+        <div class="product__description">
+          <p class="description__weight">масса 1000 г.</p>
+          <p class="description__taste">вкус курица</p>
+          <p class="description__price">цена 1000 P.</p>
+        </div>
+        <button class="common-button product__button">Заказать</button>
+      </div>
+      <div class="catalog-section__product">
+        <h1 class="product__header">Cat Energy PRO<br>500 г</h1>
+        <img class="product__image" src="#" alt="" width="68" height="86">
+        <div class="product__description">
+          <p class="description__weight">масса 500 г.</p>
+          <p class="description__taste">вкус рыба</p>
+          <p class="description__price">цена 700 P.</p>
+        </div>
+        <button class="common-button product__button">Заказать</button>
+      </div>
+      <div class="catalog-section__product">
+        <h1 class="product__header">Cat Energy PRO<br>1000 г</h1>
+        <img class="product__image" src="#" alt="" width="84" height="100.8">
+        <div class="product__description">
+          <p class="description__weight">масса 1000 г.</p>
+          <p class="description__taste">вкус рыба</p>
+          <p class="description__price">цена 1000 P.</p>
+        </div>
+        <button class="common-button product__button">Заказать</button>
+      </div>
+      <div class="catalog-section__product">
+        <h1 class="product__header">Cat Energy slim<br>500 г</h1>
+        <img class="product__image" src="#" alt="" width="68" height="86">
+        <div class="product__description">
+          <p class="description__weight">масса 500 г.</p>
+          <p class="description__taste">вкус гречка</p>
+          <p class="description__price">цена 400 P.</p>
+        </div>
+        <button class="common-button product__button">Заказать</button>
+      </div>
+      <div class="catalog-section__product">
+        <h1 class="product__header">Cat Energy slim<br>1000 г</h1>
+        <img class="product__image" src="#" alt="" width="84" height="100.8">
+        <div class="product__description">
+          <p class="description__weight">масса 1000 г.</p>
+          <p class="description__taste">вкус гречка</p>
+          <p class="description__price">цена 700 P.</p>
+        </div>
+        <button class="common-button product__button">Заказать</button>
+      </div>
+      <div class="catalog-section__product">
+        <h1 class="product__header">Cat Energy slim<br>500 г</h1>
+        <img class="product__image" src="#" alt="" width="68" height="86">
+        <div class="product__description">
+          <p class="description__weight">масса 500 г.</p>
+          <p class="description__taste">вкус рис</p>
+          <p class="description__price">цена 500 P.</p>
+        </div>
+        <button class="common-button product__button">Заказать</button>
       </div>
     </div>
-    <!--  Показать еще товары-->
-    <div>
+
+    <div class="catalog-section__showmore-section">
       <button></button>
       <h3></h3>
       <p></p>
       <button></button>
-    </div>
+    </div> <!--  Показать еще товары-->
   </section>
-  <!--  Дополнительные товары-->
+
   <section class="additional-products-section">
-    <div class="section-header additional-products-section-header">
-      <h3 class="additional-products__header">Дополнительные товары</h3>
-      <!--    TODO Заголовок должен быть как блок, он повторяется на странице form -->
-      <hr class="title-line additional-products-section__title-line" align="center" width="99" size="2" color="#68B738"/>
-    </div>
-    <div class="additional-products-section__product-item">
+    <h2 class="common-header additional-products-section__header">Дополнительные товары</h2>
+    <div class="additional-products-section__product">
       <h3 class="additional-products-section__product-name">Сахарозаменитель</h3>
       <span class="additional-products-section__product-size">1 упаковка (100 г)</span>
       <span class="additional-products-section__product-price">200 Р.</span>
-      <a class="button additional-products-section__button" href="form.html">Заказать</a>
+      <a class="common-button additional-products-section__button" href="form.html">Заказать</a>
     </div>
-    <div class="additional-products-section__product-item">
+    <div class="additional-products-section__product">
       <h3 class="additional-products-section__product-name">Питьевая вода</h3>
       <span class="additional-products-section__product-size">5 литров</span>
       <span class="additional-products-section__product-price">50 Р.</span>
-      <a class="button additional-products-section__button" href="form.html">Заказать</a>
+      <a class="common-button additional-products-section__button" href="form.html">Заказать</a>
     </div>
-    <div class="additional-products-section__product-item">
+    <div class="additional-products-section__product">
       <h3 class="additional-products-section__product-name">молоко</h3>
       <span class="additional-products-section__product-size">1 литр</span>
       <span class="additional-products-section__product-price">100 Р.</span>
-      <a class="button additional-products-section__button" href="form.html">Заказать</a>
+      <a class="common-button additional-products-section__button" href="form.html">Заказать</a>
     </div>
-    <div class="additional-products-section__product-item">
+    <div class="additional-products-section__product">
       <h3 class="additional-products-section__product-name">Витамины</h3>
       <span class="additional-products-section__product-size">1 упаковка (30 г)</span>
       <span class="additional-products-section__product-price">300 Р.</span>
-      <a class="button additional-products-section__button" href="form.html">Заказать</a>
+      <a class="common-button additional-products-section__button" href="form.html">Заказать</a>
     </div>
   </section>
-  <section></section> <!--  Подарок для кота-->
+  <section> <!--  Подарок для кота-->
+  </section>
   <section class="contacts__container">
     <div class="contact__container">
-      <h3 class="contact__header">
-        ПРИГЛАШАЕМ<br>
-        К СОТРУДНИЧЕСТВУ ДИЛЕРОВ!
-      </h3>
+      <h2 class="contact__header">
+        Приглашаем<br>
+        к сотрудничеству дилеров!
+      </h2>
       <p class="contact__address">
         ул. Большая Конюшенная, д. 19/8<br>
         Санкт-Петербург
@@ -97,13 +154,19 @@
 </main>
 <footer class="page__footer footer">
   <a class="footer__title" href="index.html">
-    <img class="page-footer__logo-title" src="img/logo2.svg" alt="CAT ENERGY">
+    <img class="page-footer__logo-title" src="img/logo2.svg" alt="CAT ENERGY" width="128" height="24">
   </a>
   <div class="page-footer__line"></div>
   <div class="footer__social">
-    <a class="social__link social__link--vk" href="#"><img src="img/icon-vk.svg" alt=""></a>
-    <a class="social__link social__link--in" href="#"><img src="img/icon_facebook.svg" alt=""></a>
-    <a class="social__link social__link--fb" href="#"><img src="img/icon_instagram.svg" alt=""></a>
+    <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+      <img src="img/icon-vk.svg" alt="vk" width="23" height="16">
+    </a>
+    <a class="social__link social__link--in" href="https://www.facebook.com/htmlacademy">
+      <img src="img/icon_facebook.svg" alt="facebook" width="22" height="22">
+    </a>
+    <a class="social__link social__link--fb" href="https://www.instagram.com/htmlacademy">
+      <img src="img/icon_instagram.svg" alt="instagram" width="16" height="16">
+    </a>
   </div>
   <div class="page-footer__line"></div>
   <div class="footer__copyright">
