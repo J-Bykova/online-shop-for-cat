@@ -29,18 +29,16 @@
       Заполните анкету, и мы подберем <br>
       программу питания для вашего кота
     </p>
-    <form class="program-form-section__form" id="form-date" action=' https://echo.htmlacademy.ru' method='GET'>
+    <form class="program-form-section__form" action=' https://echo.htmlacademy.ru' method='GET'>
       <fieldset class="program-form-section__personal-parameters">
-        <label>Имя:*
-          <input class="common-field program-form-section__personal-parameters__name" type="text" placeholder="Барсик"
-                 required>
+        <label class="program-form-section__personal-parameter-name">Имя:*
+          <input class="common-field" type="text" placeholder="Барсик" required>
         </label><br>
-        <label>Вес(кг):*
-          <input class="common-field program-form-section__personal-parameters__weight" type="number" placeholder="7"
-                 required>
+        <label class="program-form-section__personal-parameter-weight">Вес(кг):*
+          <input class="common-field" type="number" placeholder="7" required>
         </label><br>
-        <label>Возраст(лет):
-          <input class="common-field program-form-section__personal-parameters__age" type="number" placeholder="7">
+        <label class="program-form-section__personal-parameter-age">Возраст(лет):
+          <input class="common-field" type="number" placeholder="7">
         </label><br>
       </fieldset>
       <fieldset class="program-form-section__programs">
@@ -73,8 +71,7 @@
         <label><input class="program-form-section__extra-product" type="checkbox">витамины</label><br>
       </fieldset>
       <label>
-        <input class="common-button program-form-section__button" type="submit" form="form-date"
-               value="Отправить заявку">
+        <input class="common-button program-form-section__button" type="submit" value="Отправить заявку">
       </label>
       <p class="program-form-section__text">* — Обязательные поля</p>
     </form>
