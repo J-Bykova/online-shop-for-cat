@@ -14,49 +14,51 @@
     </p>
     <form class="program-form-section__form" action=' https://echo.htmlacademy.ru' method='POST'>
       <fieldset class="program-form-section__personal-parameters">
-        <label class="program-form-section__personal-parameter">Имя:
-          <span class="program-form-section__asterisk">*</span>
+        <label class="personal-parameters-item">Имя:
+          <span class="personal-parameters-item__asterisk">*</span>
           <input class="common-field" type="text" placeholder="Барсик" required>
         </label><br>
-        <label class="program-form-section__personal-parameter">Вес(кг):
-          <span class="program-form-section__asterisk">*</span>
+        <label class="personal-parameters-item">Вес(кг):
+          <span class="personal-parameters-item__asterisk">*</span>
           <input class="common-field" type="number" placeholder="7" required>
         </label><br>
-        <label class="program-form-section__personal-parameter">Возраст(лет):
+        <label class="personal-parameters-item">Возраст(лет):
           <input class="common-field" type="number" placeholder="7">
         </label><br>
       </fieldset>
       <fieldset class="program-form-section__programs">
-        <label class="program-form-section__program">
-          <input class="program-form-section__program-radio" type="radio" name="program" checked>Похудение
+        <label class="programs-item">
+          <input class="programs-item__program-radio" type="radio" name="program" checked>Похудение
         </label><br>
-        <label class="program-form-section__program">
-          <input class="program-form-section__program-radio" type="radio" name="program">Набор массы
+        <label class="programs-item">
+          <input class="programs-item__program-radio" type="radio" name="program">Набор массы
         </label><br>
-        <label class="program-form-section__program">
-          <input class="program-form-section__program-radio" type="radio" name="program">Не знаю(нужен ваш совет)
+        <label class="programs-item">
+          <input class="programs-item__program-radio" type="radio" name="program">Не знаю(нужен ваш совет)
         </label><br>
       </fieldset>
-      <h2 class="common-header program-form-section__subheader">Контактные данные (владельца кота)</h2>
-      <hr class="border form__border">
       <fieldset class="program-form-section__contacts">
-        <label class="program-form-section__contact-name">e-mail:
-          <span class="program-form-section__asterisk">*</span>
+        <h2 class="common-header program-form-section__contacts-subheader">Контактные данные (владельца кота)</h2>
+        <hr class="border form__border">
+        <label class="program-form-section__contacts-name">e-mail:
+          <span class="asterisk program-form-section__contacts-asterisk">*</span>
           <input class="common-field program-form-section__contact" type="email" placeholder="kuklachev@gmail.com"
                  required>
         </label><br>
         <label class="program-form-section__contact-name">Телефон:
-          <span class="program-form-section__asterisk">*</span>
+          <span class="asterisk program-form-section__contacts-asterisk">*</span>
           <input class="common-field program-form-section__contact" type="tel" placeholder="8 (960) 900-60-90" required>
         </label><br>
       </fieldset>
-      <h2 class="common-header program-form-section__subheader">Комментарий</h2>
-      <hr class="border form__border">
-      <textarea class="program-form-section__comment-area" rows="5" cols="35"
-                placeholder="Расскажите обо всех повадках кота"></textarea>
-      <h2 class="common-header program-form-section__subheader">Дополнительно</h2>
-      <hr class="border form__border">
+      <fieldset class="program-form-section__comment">
+        <h2 class="common-header program-form-section__comment-subheader">Комментарий</h2>
+        <hr class="border form__border">
+        <textarea class="program-form-section__comment-area" rows="5" cols="35"
+                  placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
       <fieldset class="program-form-section__extra-products">
+        <h2 class="common-header program-form-section__extra-products-subheader">Дополнительно</h2>
+        <hr class="border form__border">
         <label class="program-form-section__extra-product-name">
           <input class="program-form-section__extra-product-checkbox" type="checkbox">сахарозаменитель
         </label><br>
@@ -70,13 +72,15 @@
           <input class="program-form-section__extra-product-checkbox" type="checkbox">витамины
         </label><br>
       </fieldset>
-      <label>
-        <input class="common-button program-form-section__button" type="submit" value="Отправить заявку">
-      </label>
-      <p class="program-form-section__asterisk-text">
-        <span class="program-form-section__asterisk">*</span>
-        — Обязательные поля
-      </p>
+      <fieldset class="program-form-section__submit">
+        <label class="">
+          <input class="common-button program-form-section__submit-button" type="submit" value="Отправить заявку">
+        </label>
+        <p class="program-form-section__asterisk-text">
+          <span class="program-form-section__asterisk">*</span>
+          — Обязательные поля
+        </p>
+      </fieldset>
     </form>
   </section>
 </main>
