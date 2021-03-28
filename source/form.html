@@ -28,12 +28,12 @@
     </p>
     <form class="form__info" action=' https://echo.htmlacademy.ru' method='POST'>
       <fieldset class="form__info-personal">
-        <label class="form__info-personal-data">Имя:
-          <span class="asterisk">*</span>
+        <label class="form__info-personal-data">
+          <span>Имя:<sup>*</sup></span>
           <input class="common-field" type="text" placeholder="Барсик" required>
         </label>
-        <label class="form__info-personal-data">Вес(кг):
-          <span class="asterisk">*</span>
+        <label class="form__info-personal-data">
+          <span>Вес(кг):<sup>*</sup></span>
           <input class="common-field" type="number" placeholder="7" required>
         </label>
         <label class="form__info-personal-data">Возраст(лет):
@@ -53,12 +53,12 @@
       </fieldset>
       <fieldset class="form__info-contacts">
         <legend class="common-header">Контактные данные (владельца кота)</legend>
-        <label class="form__info-contact">e-mail:
-          <span class="asterisk">*</span>
+        <label class="form__info-contact">
+          <span>e-mail:<sup>*</sup></span>
           <input class="common-field form__info-field" type="email" placeholder="kuklachev@gmail.com" required>
         </label>
-        <label class="form__info-contact">Телефон:
-          <span class="asterisk">*</span>
+        <label class="form__info-contact">
+          <span>Телефон:<sup>*</sup></span>
           <input class="common-field form__info-field" type="tel" placeholder="8 (960) 900-60-90" required>
         </label>
       </fieldset>
@@ -86,10 +86,7 @@
         <label class="form__info-submit-button">
           <input class="common-button" type="submit" value="Отправить заявку">
         </label>
-        <p class="asterisk-text">
-          <span class="asterisk">*</span>
-          — Обязательные поля
-        </p>
+        <span class="form__info-submit-text"><sup>*</sup>— Обязательные поля</span>
       </fieldset>
     </form>
   </section>
