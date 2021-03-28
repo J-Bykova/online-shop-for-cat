@@ -20,78 +20,74 @@
   </nav>
 </header>
 <main class="page__main">
-  <section class="program-form-section">
-    <h1 class="program-form-section__header">Подбор программы</h1>
-    <p class="program-form-section__subheader">
+  <section class="form">
+    <h1 class="form__header">Подбор программы</h1>
+    <p class="form__subheader">
       Заполните анкету, и мы подберем <br>
       программу питания для вашего кота
     </p>
-    <form class="program-form-section__form" action=' https://echo.htmlacademy.ru' method='POST'>
-      <fieldset class="program-form-section__personal-parameters">
-        <label class="personal-parameters-item">Имя:
-          <span class="personal-parameters-item__asterisk">*</span>
+    <form class="form__info" action=' https://echo.htmlacademy.ru' method='POST'>
+      <fieldset class="form__info-personal">
+        <label class="form__info-personal-data">Имя:
+          <span class="asterisk">*</span>
           <input class="common-field" type="text" placeholder="Барсик" required>
-        </label><br>
-        <label class="personal-parameters-item">Вес(кг):
-          <span class="personal-parameters-item__asterisk">*</span>
+        </label>
+        <label class="form__info-personal-data">Вес(кг):
+          <span class="asterisk">*</span>
           <input class="common-field" type="number" placeholder="7" required>
-        </label><br>
-        <label class="personal-parameters-item">Возраст(лет):
+        </label>
+        <label class="form__info-personal-data">Возраст(лет):
           <input class="common-field" type="number" placeholder="7">
-        </label><br>
+        </label>
       </fieldset>
-      <fieldset class="program-form-section__programs">
-        <label class="programs-item">
-          <input class="programs-item__program-radio" type="radio" name="program" checked>Похудение
-        </label><br>
-        <label class="programs-item">
-          <input class="programs-item__program-radio" type="radio" name="program">Набор массы
-        </label><br>
-        <label class="programs-item">
-          <input class="programs-item__program-radio" type="radio" name="program">Не знаю(нужен ваш совет)
-        </label><br>
+      <fieldset class="form__info-programs">
+        <label class="form__info-program">
+          <input class="form__info-program-radio" type="radio" name="program" checked>Похудение
+        </label>
+        <label class="form__info-program">
+          <input class="form__info-program-radio" type="radio" name="program">Набор массы
+        </label>
+        <label class="form__info-program">
+          <input class="form__info-program-radio" type="radio" name="program">Не знаю(нужен ваш совет)
+        </label>
       </fieldset>
-      <fieldset class="program-form-section__contacts">
-        <legend class="common-header program-form-section__contacts-subheader">Контактные данные (владельца кота)</legend>
-        <hr class="border form__border">
-        <label class="program-form-section__contacts-name">e-mail:
-          <span class="asterisk program-form-section__contacts-asterisk">*</span>
-          <input class="common-field program-form-section__contact" type="email" placeholder="kuklachev@gmail.com"
-                 required>
-        </label><br>
-        <label class="program-form-section__contact-name">Телефон:
-          <span class="asterisk program-form-section__contacts-asterisk">*</span>
-          <input class="common-field program-form-section__contact" type="tel" placeholder="8 (960) 900-60-90" required>
-        </label><br>
+      <fieldset class="form__info-contacts">
+        <legend class="common-header">Контактные данные (владельца кота)</legend>
+        <label class="form__info-contact">e-mail:
+          <span class="asterisk">*</span>
+          <input class="common-field form__info-field" type="email" placeholder="kuklachev@gmail.com" required>
+        </label>
+        <label class="form__info-contact">Телефон:
+          <span class="asterisk">*</span>
+          <input class="common-field form__info-field" type="tel" placeholder="8 (960) 900-60-90" required>
+        </label>
       </fieldset>
-      <fieldset class="program-form-section__comment">
-        <legend class="common-header program-form-section__comment-subheader">Комментарий</legend>
-        <hr class="border form__border">
-        <textarea class="program-form-section__comment-area" rows="5" cols="35"
+      <fieldset class="form__info-comment">
+        <legend class="common-header">Комментарий</legend>
+        <textarea class="form__info-comment-text" rows="5" cols="35"
                   placeholder="Расскажите обо всех повадках кота"></textarea>
       </fieldset>
-      <fieldset class="program-form-section__extra-products">
-        <legend class="common-header program-form-section__extra-products-subheader">Дополнительно</legend>
-        <hr class="border form__border">
-        <label class="program-form-section__extra-product-name">
-          <input class="program-form-section__extra-product-checkbox" type="checkbox">сахарозаменитель
-        </label><br>
-        <label class="program-form-section__extra-product-name">
-          <input class="program-form-section__extra-product-checkbox" type="checkbox">питьевая вода
-        </label><br>
-        <label class="program-form-section__extra-product-name">
-          <input class="program-form-section__extra-product-checkbox" type="checkbox">молоко
-        </label><br>
-        <label class="program-form-section__extra-product-name">
-          <input class="program-form-section__extra-product-checkbox" type="checkbox">витамины
-        </label><br>
-      </fieldset>
-      <fieldset class="program-form-section__submit">
-        <label class="">
-          <input class="common-button program-form-section__submit-button" type="submit" value="Отправить заявку">
+      <fieldset class="form__info-extra">
+        <legend class="common-header">Дополнительно</legend>
+        <label class="form__info-extra-product">
+          <input class="form__info-extra-product-checkbox" type="checkbox">сахарозаменитель
         </label>
-        <p class="program-form-section__asterisk-text">
-          <span class="program-form-section__asterisk">*</span>
+        <label class="form__info-extra-product">
+          <input class="form__info-extra-product-checkbox" type="checkbox">питьевая вода
+        </label>
+        <label class="form__info-extra-product">
+          <input class="form__info-extra-product-checkbox" type="checkbox">молоко
+        </label>
+        <label class="form__info-extra-product">
+          <input class="form__info-extra-product-checkbox" type="checkbox">витамины
+        </label>
+      </fieldset>
+      <fieldset class="form__info-submit">
+        <label class="form__info-submit-button">
+          <input class="common-button" type="submit" value="Отправить заявку">
+        </label>
+        <p class="asterisk-text">
+          <span class="asterisk">*</span>
           — Обязательные поля
         </p>
       </fieldset>
