@@ -5,7 +5,7 @@
   <title>HTML Academy: Форма</title>
 </head>
 <body class="page">
-<header class="page-header header">
+<header class="page__header header">
   <div class="header__body">
     <a class="header__body-logo" href="index.html">
       <img class="header__body-logo-image" src="img/logo-icons/cat-mobile.svg" alt="Кэт энерджи" width="34" height="38">
@@ -39,13 +39,13 @@
       </fieldset>
       <fieldset class="form__info-programs">
         <label class="form__info-program">
-          <input class="form__info-program-radio" type="radio" name="program" value="slim" checked>Похудение
+          <input class="form__info-program-radio" type="radio" name="program-slim" value="slim" checked>Похудение
         </label>
         <label class="form__info-program">
-          <input class="form__info-program-radio" type="radio" name="program" value="fat">Набор массы
+          <input class="form__info-program-radio" type="radio" name="program-fat" value="fat">Набор массы
         </label>
         <label class="form__info-program">
-          <input class="form__info-program-radio" type="radio" name="program" value="unknown">Не знаю(нужен ваш совет)
+          <input class="form__info-program-radio" type="radio" name="program-unknown" value="unknown">Не знаю(нужен ваш совет)
         </label>
       </fieldset>
       <fieldset class="form__info-contacts">
@@ -65,16 +65,16 @@
       <fieldset class="form__info-extra">
         <legend class="common-header form__info-header">Дополнительно</legend>
         <label class="form__info-extra-product">
-          <input class="form__info-extra-product-checkbox" type="checkbox" name="additional" value="sugar" checked>сахарозаменитель
+          <input class="form__info-extra-product-checkbox" type="checkbox" name="add-sugar" value="sugar" checked>сахарозаменитель
         </label>
         <label class="form__info-extra-product">
-          <input class="form__info-extra-product-checkbox" type="checkbox" name="additional" value="water">питьевая вода
+          <input class="form__info-extra-product-checkbox" type="checkbox" name="add-water" value="water">питьевая вода
         </label>
         <label class="form__info-extra-product">
-          <input class="form__info-extra-product-checkbox" type="checkbox" name="additional" value="milk">молоко
+          <input class="form__info-extra-product-checkbox" type="checkbox" name="add-milk" value="milk">молоко
         </label>
         <label class="form__info-extra-product">
-          <input class="form__info-extra-product-checkbox" type="checkbox" name="additional" value="vitamins">витамины
+          <input class="form__info-extra-product-checkbox" type="checkbox" name="add-vitamins" value="vitamins">витамины
         </label>
       </fieldset>
       <fieldset class="form__info-submit">
@@ -86,7 +86,7 @@
     </form>
   </section>
 </main>
-<footer class="footer page-footer ">
+<footer class="footer page__footer ">
   <div class="footer__contact">
     <h2 class="footer__contact-header">
       Приглашаем<br>
