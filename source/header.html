@@ -1,11 +1,15 @@
 <header class="header">
   <div class="header__body">
-    <a class="header__logo-link">
-      <img class="header__logo" src="img/logo-icons/cat-mobile.svg" alt="Кэт энерджи" width="34" height="38">
+    <a class="header__logo-link" href="#">
+      <picture class="header__logo">
+        <source media="(min-width:768px)" srcset="img/logos/image/desktop.svg">
+        <source media="(min-width:320px)" srcset="img/logos/image/tablet.svg">
+        <img src="img/logos/image/mobile.svg" alt="Кэт энерджи">
+      </picture>
     </a>
 
     <a class="header__company-name-link">
-      <img class="header__company-name" src="img/logo-icons/cat-mobile.svg" alt="Кэт энерджи" width="34" height="38">
+      <img class="header__company-name" src="img/logos/image/mobile.svg" alt="Кэт энерджи">
     </a>
 
     <button class="header__menu-button" type="button"></button>
