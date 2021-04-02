@@ -19,7 +19,7 @@
       <img class="header__company-name" src="img/logos/text/cat-energy.svg" alt="Кэт энерджи">
     </a>
 
-    <button class="header__menu-button" type="button"></button>
+    <button class="header__menu-button" type="button" aria-label="Close"></button>
 
     <nav class="header__navigation">
       <ul class="header__navigation-menu">
@@ -62,15 +62,15 @@
 
         <div class="form__radiobutton-group">
           <label class="form__radiobutton">
-            <input class="form__radiobutton-input" type="radio" checked>
+            <input class="form__radiobutton-input" name="program" type="radio" checked>
             <span class="form__radiobutton-label">Похудение</span>
           </label>
           <label class="form__radiobutton">
-            <input class="form__radiobutton-input" type="radio">
+            <input class="form__radiobutton-input" name="program" type="radio">
             <span class="form__radiobutton-label">Набор массы</span>
           </label>
           <label class="form__radiobutton">
-            <input class="form__radiobutton-input" type="radio">
+            <input class="form__radiobutton-input" name="program" type="radio">
             <span class="form__radiobutton-label">Не знаю(нужен ваш совет)</span>
           </label>
         </div>
@@ -118,14 +118,14 @@
       </fieldset>
 
       <div class="form__section">
-        <button class="form__submit-button button button--type_green" type="submit">Отправить заявку</button>
+        <button class="form__submit-button button button--type-green" type="submit">Отправить заявку</button>
         <span class="form__footnote">*— Обязательные поля</span>
       </div>
 
     </form>
   </section>
   <section class="contacts-section">
-    <div class="contacts-section__body">
+    <div class="contacts-section__container">
       <h2 class="contacts-section__title">
         Приглашаем<br>
         к сотрудничеству диллеров!

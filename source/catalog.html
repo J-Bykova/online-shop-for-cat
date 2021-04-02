@@ -19,7 +19,7 @@
       <img class="header__company-name" src="img/logos/text/cat-energy.svg" alt="Кэт энерджи">
     </a>
 
-    <button class="header__menu-button" type="button"></button>
+    <button class="header__menu-button" type="button" aria-label="Close"></button>
 
     <nav class="header__navigation">
       <ul class="header__navigation-menu">
@@ -42,27 +42,29 @@
     <ul class="catalog-section__catalog">
       <li class="catalog-section__catalog-card">
         <div class="catalog-section__product-card-body">
-          <h2 class="catalog-section__product-name">
-            <a href="#">Cat Energy PRO 500 г</a>
-          </h2>
+          <a class="catalog-section__product-name-link" href="#"><h2 class="catalog-section__product-name">Cat Energy PRO 500 г</h2></a>
           <a class="catalog-section__product-image-link" href="#">
-            <img class="catalog-section__product-image" src="#" alt="Product" width="161" height="172">
+            <picture class="catalog-section__product-image">
+              <source media="(min-width: 1200px)" srcset="#">
+              <source media="(min-width: 768px)" srcset="#">
+              <img src="#" alt="Product">
+            </picture>
           </a>
-          <div class="catalog-section__product-attribute-list">
-            <p class="catalog-section__product-attribute">
+          <ul class="catalog-section__product-attribute-list">
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Масса</span>
               <span class="catalog-section__product-attribute-value">500 г</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Вкус</span>
               <span class="catalog-section__product-attribute-value">Курица</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Цена</span>
               <span class="catalog-section__product-attribute-value">700 Р.</span>
-            </p>
-          </div>
-          <a class="catalog-section__product-button button button--type_green" href="#">Заказать</a>
+            </li>
+          </ul>
+          <a class="catalog-section__product-button button button--type-green" href="#">Заказать</a>
         </div>
       </li>
       <li class="catalog-section__catalog-card">
@@ -71,23 +73,27 @@
             <a href="#">Cat Energy PRO 1000 г</a>
           </h2>
           <a class="catalog-section__product-image-link" href="#">
-            <img class="catalog-section__product-image" src="#" alt="Product" width="161" height="172">
+            <picture class="catalog-section__product-image">
+              <source media="(min-width: 1200px)" srcset="#">
+              <source media="(min-width: 768px)" srcset="#">
+              <img src="#" alt="Product">
+            </picture>
           </a>
-          <div class="catalog-section__product-attribute-list">
-            <p class="catalog-section__product-attribute">
+          <ul class="catalog-section__product-attribute-list">
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Масса</span>
               <span class="catalog-section__product-attribute-value">1000 г</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Вкус</span>
               <span class="catalog-section__product-attribute-value">Курица</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Цена</span>
               <span class="catalog-section__product-attribute-value">1000 Р.</span>
-            </p>
-          </div>
-          <a class="catalog-section__product-button button button--type_green" href="#">Заказать</a>
+            </li>
+          </ul>
+          <a class="catalog-section__product-button button button--type-green" href="#">Заказать</a>
         </div>
       </li>
       <li class="catalog-section__catalog-card">
@@ -96,23 +102,27 @@
             <a href="#">Cat Energy PRO 500 г</a>
           </h2>
           <a class="catalog-section__product-image-link" href="#">
-            <img class="catalog-section__product-image" src="#" alt="Product" width="161" height="172">
+            <picture class="catalog-section__product-image">
+              <source media="(min-width: 1200px)" srcset="#">
+              <source media="(min-width: 768px)" srcset="#">
+              <img src="#" alt="Product">
+            </picture>
           </a>
-          <div class="catalog-section__product-attribute-list">
-            <p class="catalog-section__product-attribute">
+          <ul class="catalog-section__product-attribute-list">
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Масса</span>
               <span class="catalog-section__product-attribute-value">500 г</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Вкус</span>
               <span class="catalog-section__product-attribute-value">Рыба</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Цена</span>
               <span class="catalog-section__product-attribute-value">700 Р.</span>
-            </p>
-          </div>
-          <a class="catalog-section__product-button button button--type_green" href="#">Заказать</a>
+            </li>
+          </ul>
+          <a class="catalog-section__product-button button button--type-green" href="#">Заказать</a>
         </div>
       </li>
       <li class="catalog-section__catalog-card">
@@ -121,23 +131,27 @@
             <a href="#">Cat Energy PRO 1000 г</a>
           </h2>
           <a class="catalog-section__product-image-link" href="#">
-            <img class="catalog-section__product-image" src="#" alt="Product" width="161" height="172">
+            <picture class="catalog-section__product-image">
+              <source media="(min-width: 1200px)" srcset="#">
+              <source media="(min-width: 768px)" srcset="#">
+              <img src="#" alt="Product">
+            </picture>
           </a>
-          <div class="catalog-section__product-attribute-list">
-            <p class="catalog-section__product-attribute">
+          <ul class="catalog-section__product-attribute-list">
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Масса</span>
               <span class="catalog-section__product-attribute-value">1000 г</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Вкус</span>
               <span class="catalog-section__product-attribute-value">Гречка</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Цена</span>
               <span class="catalog-section__product-attribute-value">700 Р.</span>
-            </p>
-          </div>
-          <a class="catalog-section__product-button button button--type_green" href="#">Заказать</a>
+            </li>
+          </ul>
+          <a class="catalog-section__product-button button button--type-green" href="#">Заказать</a>
         </div>
       </li>
       <li class="catalog-section__catalog-card">
@@ -146,23 +160,27 @@
             <a href="#">Cat Energy PRO 500 г</a>
           </h2>
           <a class="catalog-section__product-image-link" href="#">
-            <img class="catalog-section__product-image" src="#" alt="Product" width="161" height="172">
+            <picture class="catalog-section__product-image">
+              <source media="(min-width: 1200px)" srcset="#">
+              <source media="(min-width: 768px)" srcset="#">
+              <img src="#" alt="Product">
+            </picture>
           </a>
-          <div class="catalog-section__product-attribute-list">
-            <p class="catalog-section__product-attribute">
+          <ul class="catalog-section__product-attribute-list">
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Масса</span>
               <span class="catalog-section__product-attribute-value">500 г</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Вкус</span>
               <span class="catalog-section__product-attribute-value">Гречка</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Цена</span>
               <span class="catalog-section__product-attribute-value">400 Р.</span>
-            </p>
-          </div>
-          <a class="catalog-section__product-button button button--type_green" href="#">Заказать</a>
+            </li>
+          </ul>
+          <a class="catalog-section__product-button button button--type-green" href="#">Заказать</a>
         </div>
       </li>
       <li class="catalog-section__catalog-card">
@@ -171,23 +189,27 @@
             <a href="#">Cat Energy PRO 1000 г</a>
           </h2>
           <a class="catalog-section__product-image-link" href="#">
-            <img class="catalog-section__product-image" src="#" alt="Product" width="161" height="172">
+            <picture class="catalog-section__product-image">
+              <source media="(min-width: 1200px)" srcset="#">
+              <source media="(min-width: 768px)" srcset="#">
+              <img src="#" alt="Product">
+            </picture>
           </a>
-          <div class="catalog-section__product-attribute-list">
-            <p class="catalog-section__product-attribute">
+          <ul class="catalog-section__product-attribute-list">
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Масса</span>
               <span class="catalog-section__product-attribute-value">1000 г</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Вкус</span>
               <span class="catalog-section__product-attribute-value">Курица</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Цена</span>
               <span class="catalog-section__product-attribute-value">1000 Р.</span>
-            </p>
-          </div>
-          <a class="catalog-section__product-button button button--type_green" href="#">Заказать</a>
+            </li>
+          </ul>
+          <a class="catalog-section__product-button button button--type-green" href="#">Заказать</a>
         </div>
       </li>
       <li class="catalog-section__catalog-card">
@@ -196,23 +218,27 @@
             <a href="#">Cat Energy PRO 500 г</a>
           </h2>
           <a class="catalog-section__product-image-link" href="#">
-            <img class="catalog-section__product-image" src="#" alt="Product" width="161" height="172">
+            <picture class="catalog-section__product-image">
+              <source media="(min-width: 1200px)" srcset="#">
+              <source media="(min-width: 768px)" srcset="#">
+              <img src="#" alt="Product">
+            </picture>
           </a>
-          <div class="catalog-section__product-attribute-list">
-            <p class="catalog-section__product-attribute">
+          <ul class="catalog-section__product-attribute-list">
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Масса</span>
               <span class="catalog-section__product-attribute-value">500 г</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Вкус</span>
               <span class="catalog-section__product-attribute-value">Рис</span>
-            </p>
-            <p class="catalog-section__product-attribute">
+            </li>
+            <li class="catalog-section__product-attribute">
               <span class="catalog-section__product-attribute-name">Цена</span>
               <span class="catalog-section__product-attribute-value">500 Р.</span>
-            </p>
-          </div>
-          <a class="catalog-section__product-button button button--type_green" href="#">Заказать</a>
+            </li>
+          </ul>
+          <a class="catalog-section__product-button button button--type-green" href="#">Заказать</a>
         </div>
       </li>
       <li class="catalog-section__catalog-card">
@@ -232,7 +258,7 @@
             <span class="catalog-section__related-product-amount">1 упаковка (100 г)</span>
             <span class="catalog-section__related-product-price">200 Р.</span>
           </div>
-          <a class="catalog-section__related-product-button button button--type_green" href="#">Заказать</a>
+          <a class="catalog-section__related-product-button button button--type-green" href="#">Заказать</a>
         </li>
         <li class="catalog-section__related-product">
           <h3 class="catalog-section__related-product-name">Питьевая вода</h3>
@@ -240,7 +266,7 @@
             <span class="catalog-section__related-product-amount">5 литров</span>
             <span class="catalog-section__related-product-price">50 Р.</span>
           </div>
-          <a class="catalog-section__related-product-button button button--type_green" href="#">Заказать</a>
+          <a class="catalog-section__related-product-button button button--type-green" href="#">Заказать</a>
         </li>
         <li class="catalog-section__related-product">
           <h3 class="catalog-section__related-product-name">Молоко</h3>
@@ -248,7 +274,7 @@
             <span class="catalog-section__related-product-amount">1 литр</span>
             <span class="catalog-section__related-product-price">100 Р.</span>
           </div>
-          <a class="catalog-section__related-product-button button button--type_green" href="#">Заказать</a>
+          <a class="catalog-section__related-product-button button button--type-green" href="#">Заказать</a>
         </li>
         <li class="catalog-section__related-product">
           <h3 class="catalog-section__related-product-name">Витамины</h3>
@@ -256,7 +282,7 @@
             <span class="catalog-section__related-product-amount">1 упаковка (30 г)</span>
             <span class="catalog-section__related-product-price">300 Р.</span>
           </div>
-          <a class="catalog-section__related-product-button button button--type_green" href="#">Заказать</a>
+          <a class="catalog-section__related-product-button button button--type-green" href="#">Заказать</a>
         </li>
       </ul>
       <div class="catalog-section__special">
@@ -266,7 +292,7 @@
     </div>
   </section>
   <section class="contacts-section">
-    <div class="contacts-section__body">
+    <div class="contacts-section__container">
       <h2 class="contacts-section__title">
         Приглашаем<br>
         к сотрудничеству диллеров!
