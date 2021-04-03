@@ -1,4 +1,55 @@
+@import "source/less/variables.less";
+
 .header {
   margin: 0 auto;
   background-color: white;
 }
+
+.header__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 66px;
+  padding: 0 20px;
+}
+
+.header__company-name-link {
+  display: block;
+}
+
+.header__company-name {
+  display: block;
+}
+
+.header__menu-button {
+  width: 24px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  background-image: url("/img/mobile-button.svg");
+}
+
+.header__navigation-menu {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header__navigation-menu-item {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.header__navigation-menu-item:not(:first-of-type) {
+  border-top: 1px solid #e6e6e6;
+}
+
+.header__navigation-link {
+  font-family: @oswaldFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: black;
+}
+

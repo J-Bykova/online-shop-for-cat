@@ -1,39 +1,45 @@
 @import "source/less/variables.less";
 
 .offer-section {
-  height: 480px;
-  color: white;
+  position: relative;
+  padding: 28px 20px;
 }
 
-.offer-section__container {
+.offer-section__background {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 302px;
+  width: 100%;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("/img/cat-background.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -1;
 }
 
 .offer-section__title {
-  margin: 0;
-  padding-top: 27px;
   text-align: center;
+  color: #ffffff;
 }
 
 .offer-section__subtitle {
-  margin: 0;
-  padding-top: 25px;
+  margin: 25px 0 0 0;
   text-align: center;
   font-family: @oswaldFont;
   text-transform: uppercase;
   font-size: 14px;
+  line-height: 14px;
   font-weight: normal;
+  color: #ffffff;
 }
 
 .offer-section__image {
-  padding-left: 20px;
-  padding-right: 20px;
+  display: block;
+  margin: 24px auto 0 auto;
 }
 
 .offer-section__button {
-  padding: 7px 44px;
+  display: block;
+  margin: 22px auto 0 auto;
 }
