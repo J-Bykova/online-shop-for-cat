@@ -1,23 +1,62 @@
 .header {
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 1);
+
+  @media (min-width: @tablet-width) {
+    padding: 42px 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 42px 110px;
+  }
 }
 
 .header__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 66px;
+  //height: 66px;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.header__logo:hover {
+  opacity: 80%;
+}
+
+.header__logo:active {
+  opacity: 60%;
 }
 
 .header__company-name-link {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .header__company-name {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
+
+.header__company-name:hover {
+  opacity: 80%;
+}
+
+.header__company-name:active {
+  opacity: 60%;
+}
+
 
 .header__menu-button {
   width: 24px;
@@ -25,24 +64,41 @@
   border: none;
   background-color: transparent;
   background-image: url("../img/mobile-button.svg");
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .header__navigation-menu {
+  margin: 0;
+  padding: 0;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 
-  margin: 0;
-  padding: 0;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+  }
 }
 
 .header__navigation-menu-item {
   padding: 24px 0;
   text-align: center;
   list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 25px;
+  }
 }
 
 .header__navigation-menu-item:not(:first-of-type) {
   border-top: 1px solid #e6e6e6;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .header__navigation-link {
@@ -51,12 +107,25 @@
   line-height: 20px;
   text-transform: uppercase;
   color: rgba(0, 0, 0, 1);
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
+    color: red;   /* TODO поменять color на белый  */
+  }
 }
 
 .header__navigation-link:hover {
   color: rgb(102, 102, 102);
+
+  @media (min-width: @desktop-width) {
+    color: rgba(255, 255, 255, 0.5);   /* TODO Add opacity   */
+  }
 }
 
 .header__navigation-link:active {
   color: rgb(179, 179, 179);
+
+  @media (min-width: @desktop-width) {
+    color: rgba(255, 255, 255, 1);   /* TODO Add opacity  */
+  }
 }
