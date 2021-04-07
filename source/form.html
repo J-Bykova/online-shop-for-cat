@@ -45,7 +45,7 @@
     </p>
 
     <form class="form" action='https://echo.htmlacademy.ru' method='POST'>
-      <div class="form__section">
+      <div class="form__section form__section--personal">
         <div class="form__field-group">
           <label class="form__field">
             <span class="form__field-label">Имя:*</span>
@@ -60,7 +60,6 @@
             <input class="form__field-input" type="text" placeholder="7">
           </label>
         </div>
-
         <div class="form__radiobutton-group">
           <label class="form__radiobutton">
             <input class="form__radiobutton-input" name="program" type="radio" checked>
@@ -76,8 +75,7 @@
           </label>
         </div>
       </div>
-
-      <fieldset class="form__section">
+      <fieldset class="form__section form__section--contacts">
         <legend class="form__section-title">Контактные данные<br> (владельца кота)</legend>
         <label class="form__field">
           <span class="form__field-label">e-mail:*</span>
@@ -88,13 +86,11 @@
           <input class="form__field-input form__field-input--type_tel" type="tel" placeholder="8 (960) 900-60-90" required>
         </label>
       </fieldset>
-
-      <fieldset class="form__section">
+      <fieldset class="form__section form__section--comment">
         <legend class="form__section-title">Комментарий</legend>
-        <textarea class="form__textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+        <textarea class="form__textarea" placeholder="Расскажите обо всех повАдках кота"></textarea>
       </fieldset>
-
-      <fieldset class="form__section">
+      <fieldset class="form__section form__section--related">
         <legend class="form__section-title">Дополнительно</legend>
 
         <label class="form__checkbox">
@@ -117,12 +113,10 @@
           <span class="form__checkbox-label">Витамины</span>
         </label>
       </fieldset>
-
-      <div class="form__section">
+      <div class="form__section form__section--submit">
         <button class="form__submit-button button button--green" type="submit">Отправить заявку</button>
         <span class="form__footnote">*— Обязательные поля</span>
       </div>
-
     </form>
   </section>
   <section class="contacts-section">
