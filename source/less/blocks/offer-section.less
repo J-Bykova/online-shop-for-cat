@@ -1,40 +1,38 @@
 .offer-section {
   position: relative;
   padding: 27px 20px 0 20px;
-}
 
-.offer-section__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 302px;
-  width: 100%;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/cat-background.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-}
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 302px;
+    width: 100%;
+    background-image: linear-gradient(@background_basic_green, @background_basic_green), url("../img/cat-background.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
 
-.offer-section__title {
-  text-align: center;
-  color: rgba(255, 255, 255, 1);
-}
+  &__title {
+    text-align: center;
+    color: @basic-white;
+  }
 
-.offer-section__subtitle {
-  margin: 25px 0 0 0;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 14px;
-  color: rgba(255, 255, 255, 1);
-}
+  &__subtitle {
+    margin: 25px 0 0 0;
+    text-align: center;
+    color: @basic-white;
+  }
 
-.offer-section__image {
-  display: block;
-  margin: 29px auto 0 auto;
-}
+  &__image {
+    display: block;
+    margin: 29px auto 0 auto;
+  }
 
-.offer-section__button {
-  display: block;
-  margin: 3px auto 0 auto;
+  &__button {
+    display: block;
+    margin: 3px auto 0 auto;
+  }
 }
