@@ -3,28 +3,30 @@
 }
 
 .howitworks-section__title {
+  margin: 0 auto;
   font-size: 36px;
   line-height: 40px;
-  margin: 0 auto;
+  font-weight: 400;
 }
 
 .howitworks-section__point-list {
   margin-left: 0;
   padding-left: 0;
-  font-family: @arialFont;
-  color: rgba(68, 68, 68, 1);
   margin-top: 36px;
+  font-family: @arialFont;
+  line-height: 18px;
+  color: #444444;
 }
 
 .howitworks-section__point {
+  margin: 20px 0 0 0;
   height: 60px;
   list-style-type: none;
   display: flex;
-  margin: 20px 0 0 0;
-}
 
-.howitworks-section__point:first-of-type {
-  margin-top: 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .howitworks-section__point-description {
@@ -32,20 +34,22 @@
   padding-left: 80px;
   background-position: left center;
   background-repeat: no-repeat;
+
+  &--icon-leaf {
+    background-image: url("../img/howitworks/icon_leaf.svg");
+  }
+
+  &--icon-tub {
+    background-image: url("../img/howitworks/icon_tub.svg");
+  }
+
+  &--icon-eat {
+    background-image: url("../img/howitworks/icon_eat.svg");
+  }
+
+  &--icon-alarm {
+    background-image: url("../img/howitworks/icon_alarm.svg");
+  }
 }
 
-.howitworks-section__point-description--icon-leaf {
-  background-image: url("../img/howitworks/icon_leaf.svg");
-}
 
-.howitworks-section__point-description--icon-tub {
-  background-image: url("../img/howitworks/icon_tub.svg");
-}
-
-.howitworks-section__point-description--icon-eat {
-  background-image: url("../img/howitworks/icon_eat.svg");
-}
-
-.howitworks-section__point-description--icon-alarm {
-  background-image: url("../img/howitworks/icon_alarm.svg");
-}
