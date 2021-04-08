@@ -1,6 +1,5 @@
 .header {
   margin: 0 auto;
-  background-color: #ffffff;
 
   &__body {
     padding: 12px 16px;
@@ -53,15 +52,15 @@
 .header__navigation-menu {
   margin: 0;
   padding: 0;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid @border_grey-menu;
+  border-bottom: 1px solid @border_grey-menu;
 
   &-item {
     padding: 24px 0;
     text-align: center;
 
     &:not(:first-of-type) {
-      border-top: 1px solid #e6e6e6;
+      border-top: 1px solid @border_grey-menu;
     }
   }
 
@@ -69,7 +68,7 @@
     font-family: @oswaldFont;
     font-size: 20px;
     line-height: 20px;
-    color: #000000;
+    color: @title_black;
     font-weight: 500;
     font-style: normal;
     list-style-type: none;
