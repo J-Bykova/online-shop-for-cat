@@ -3,14 +3,39 @@
   flex-direction: column;
   border: 0;
   border-top: 2px solid #68b738;
-}
 
-.form__section:first-child {
-  border-top: 0;
-}
+  &:first-child {
+    border-top: 0;
+  }
 
-.form__section:last-child {
-  border-top: 0;
+  &:last-child {
+    border-top: 0;
+  }
+
+  &-title {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  &--contacts {
+    padding: 0 20px;
+    margin-top: 26px;
+  }
+
+  &--comment {
+    padding: 0 20px;
+    margin-top: 23px;
+  }
+
+  &--related {
+    padding: 0 20px;
+    margin-top: 22px;
+  }
+
+  &--submit {
+    padding: 0 20px;
+    margin-top: 34px;
+  }
 }
 
 .form__field-group {
@@ -24,32 +49,33 @@
   margin-top: 10px;
   display: flex;
   align-items: center;
-}
 
-.form__field:first-of-type {
-  margin-top: 0;
-}
+  &:first-of-type {
+    margin-top: 0;
+  }
 
-.form__field-label {
-  font-size: 16px;
-  color: rgba(68, 68, 68, 1);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
+  &-label {
+    font-size: 16px;
+    line-height: 18px;
+    color: @text_dark-grey;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
 
-.form__field-input {
-  padding-top: 13px;
-  padding-bottom: 13px;
-  padding-left: 15px;
-  margin-left: 8px;
-  width: 100%;
-  outline: none;
-  border: 1px solid rgba(205, 205, 205, 1);
+  &-input {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    margin-left: 8px;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(205, 205, 205, 1);
 
-  font-family: @oswaldFont;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: rgba(68, 68, 68, 1);
+    font-family: @oswaldFont;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: rgba(68, 68, 68, 1);
+  }
 }
 
 .form__radiobutton-group {
@@ -59,44 +85,19 @@
   border-bottom: 1px solid rgba(205, 205, 205, 1);
 }
 
-.form__section--contacts {
-  padding: 0 20px;
-  margin-top: 26px;
-}
-
-.form__section--comment {
-  padding: 0 20px;
-  margin-top: 23px;
-}
-
-.form__section--related {
-  padding: 0 20px;
-  margin-top: 22px;
-}
-
-.form__section--submit {
-  padding: 0 20px;
-  margin-top: 34px;
-}
-
 .form__radiobutton {
   margin-top: 13px;
-}
 
-.form__radiobutton:first-of-type {
-  margin-top: 0;
-}
+  &:first-of-type {
+    margin-top: 0;
+  }
 
-.form__radiobutton-label {
-  margin-left: 13px;
-  font-size: 16px;
-  text-transform: uppercase;
-  color: rgba(34, 34, 34, 1);
-}
-
-.form__section-title {
-  font-size: 24px;
-  line-height: 26px;
+  &-label {
+    margin-left: 13px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: rgba(34, 34, 34, 1);
+  }
 }
 
 .form__textarea {
@@ -116,16 +117,28 @@
 .form__checkbox {
   display: flex;
   margin-top: 13px;
+
+  &-label {
+    margin-left: 16px;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
 }
 
-.form__checkbox-label {
-  margin-left: 16px;
+.form__submit-button {
+  font-family: @oswaldFont;
   font-size: 16px;
-  text-transform: uppercase;
+  line-height: 20px;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 .form__footnote {
   margin-top: 21px;
   padding-bottom: 20px;
   text-align: center;
+  font-family: @arialFont;
+  line-height: 16px;
 }

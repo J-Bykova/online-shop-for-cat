@@ -1,23 +1,28 @@
 .button {
-  text-align: center;
-  text-transform: uppercase;
   padding: 7px 44px;
   border: none;
+  text-align: center;
+  line-height: 18px;
+  text-transform: uppercase;
+  white-space: nowrap;
 
   &--green {
-    background-color: rgba(104, 183, 56, 1);
-    color: rgba(255, 255, 255, 1);
+    background-color: @button_basic_green;
+    color: @basic-white;
   }
 
   &--after-before {
-    border: none;
-    font-size: 16px;
-    line-height: 20px;
-    background-color: rgba(234, 234, 234, 1);
-    text-transform: uppercase;
+    margin: 5px;
     display: flex;
     align-items: center;
     text-align: center;
-    margin: 5px;
+    border: none;
+    font-family: @oswaldFont;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #111111;
+    background-color: transparent;
+    text-transform: uppercase;
   }
 }
