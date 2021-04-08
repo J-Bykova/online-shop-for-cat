@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru" xmlns:https="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 <body class="page">
@@ -14,39 +18,39 @@
         <img src="img/logos/image/mobile.svg" alt="Кэт энерджи">
       </picture>
     </a>
-
     <a class="header__company-name-link" href="#">
       <img class="header__company-name" src="img/logos/text/cat-energy.svg" alt="Кэт энерджи">
     </a>
-
     <button class="header__menu-button" type="button" aria-label="Close"></button>
-
-    <nav class="header__navigation">
-      <ul class="header__navigation-menu">
-        <li class="header__navigation-menu-item">
-          <a class="header__navigation-link" href="#">Главная</a>
-        </li>
-        <li class="header__navigation-menu-item">
-          <a class="header__navigation-link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="header__navigation-menu-item">
-          <a class="header__navigation-link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
   </div>
+  <nav class="header__navigation">
+    <ul class="header__navigation-menu">
+      <li class="header__navigation-menu-item">
+        <a class="header__navigation-menu-link" href="#">Главная</a>
+      </li>
+      <li class="header__navigation-menu-item">
+        <a class="header__navigation-menu-link" href="catalog.html">Каталог продукции</a>
+      </li>
+      <li class="header__navigation-menu-item">
+        <a class="header__navigation-menu-link" href="form.html">Подбор программы</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 <main class="page__main">
   <section class="offer-section">
-    <h1 class="offer-section__title page__title">Функциональное питание для котов</h1>
-    <p class="offer-section__subtitle">Занялся собой? Займись котом!</p>
-    <img class="offer-section__image" src="#" alt="can" width="280" height="270">
-    <a class="offer-section__button button button--type-green" href="form.html">Подобрать программу</a>
+    <div class="offer-section__background"></div>
+    <h1 class="offer-section__title page__title">Функциональное<br> питание для котов</h1>
+    <p class="offer-section__subtitle page__subtitle">Занялся собой? Займись котом!</p>
+    <img class="offer-section__image" src="img/offer-can-mobile.png" alt="can">
+    <a class="offer-section__button button button--green" href="form.html">Подобрать программу</a>
   </section>
   <div class="programs-section">
     <ul class="programs-section__program-list">
-      <li class="programs-section__program">
-        <h3 class="programs-section__program-title">Похудение</h3>
+      <li class="programs-section__program ">
+        <div class="programs-section__head">
+          <h3 class="programs-section__program-title programs-section__program-title--slim">Похудение</h3>
+        </div>
         <p class="programs-section__program-description">
           Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
           Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
@@ -54,7 +58,9 @@
         <a class="programs-section__program-link" href="catalog-slim.html">Каталог slim</a>
       </li>
       <li class="programs-section__program">
-        <h3 class="programs-section__program-title">Набор массы</h3>
+        <div class="programs-section__head">
+          <h3 class="programs-section__program-title programs-section__program-title--pro ">Набор массы</h3>
+        </div>
         <p class="programs-section__program-description">
           Заработать авторитет среди дворовых котов и даже собак?
           Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
@@ -67,22 +73,22 @@
     <h2 class="howitworks-section__title">Как это работает</h2>
     <ol class="howitworks-section__point-list">
       <li class="howitworks-section__point">
-        <p class="howitworks-section__point-description">
+        <p class="howitworks-section__point-description howitworks-section__point-description--icon-leaf">
           Функциональное питание содержит только полезные питательные вещества.
         </p>
       </li>
       <li class="howitworks-section__point">
-        <p class="howitworks-section__point-description">
+        <p class="howitworks-section__point-description howitworks-section__point-description--icon-tub">
           Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
         </p>
       </li>
       <li class="howitworks-section__point">
-        <p class="howitworks-section__point-description">
+        <p class="howitworks-section__point-description howitworks-section__point-description--icon-eat">
           Замените один-два приема обычной еды на наше функциональное питание.
         </p>
       </li>
       <li class="howitworks-section__point">
-        <p class="howitworks-section__point-description">
+        <p class="howitworks-section__point-description howitworks-section__point-description--icon-alarm">
           Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
         </p>
       </li>
@@ -112,13 +118,17 @@
       </p>
     </div>
     <div class="example-section__demo">
-      <div class="example-section__before-image"></div>
-      <div class="example-section__after-image"></div>
-      <div class="example-section__buttons">
-        <button class="example-section__before-button" type="button">было</button>
-        <button class="example-section__after-button" type="button">стало</button>
+      <div class="example-section__before-container">
+        <img class="example-section__before-image" src="img/example-section/cat-fat.png" alt="fat cat">
       </div>
-      <input class="example-section__slider" type="range" min="1" max="100" value="50">
+      <div class="example-section__after-container">
+        <img class="example-section__after-image" src="img/example-section/cat-skinny.png" alt="skinny cat">
+      </div>
+      <div class="example-section__buttons">
+        <button class="example-section__before-button button--after-before" type="button">было</button>
+        <input class="example-section__slider" type="range" min="1" max="100" value="50">
+        <button class="example-section__after-button button--after-before" type="button">стало</button>
+      </div>
     </div>
   </section>
   <section class="contacts-section">
@@ -135,10 +145,7 @@
     <div class="contacts-section__map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499.6509364352636!2d30.322500229255127!3d59.93871717066152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631f6df7d3481%3A0xc0016be317f9a6fd!2sCat%20Energy!5e0!3m2!1sen!2sus!4v1617310405206!5m2!1sen!2sus"
-        width="600"
-        height="450"
-        style="border: 0;"
-        allowfullscreen=""
+        allowfullscreen="";
         loading="lazy">
       </iframe>
     </div>

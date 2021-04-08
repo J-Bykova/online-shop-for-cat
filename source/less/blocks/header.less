@@ -1,0 +1,85 @@
+.header {
+  margin: 0 auto;
+
+  &__body {
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  display: block;
+
+  &-link {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.header__company-name {
+  display: block;
+
+  &-link {
+    display: block;
+  }
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.header__menu-button {
+  width: 24px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../img/mobile-button.svg");
+}
+
+.header__navigation-menu {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid @border_grey-menu;
+  border-bottom: 1px solid @border_grey-menu;
+
+  &-item {
+    padding: 24px 0;
+    text-align: center;
+
+    &:not(:first-of-type) {
+      border-top: 1px solid @border_grey-menu;
+    }
+  }
+
+  &-link {
+    font-family: @oswaldFont;
+    font-size: 20px;
+    line-height: 20px;
+    color: @title_black;
+    font-weight: 500;
+    font-style: normal;
+    list-style-type: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: rgb(102, 102, 102);
+    }
+
+    &:active {
+      color: rgb(179, 179, 179);
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.footer {
+  padding: 0;
+  background-color: @background_basic-grey;
+
+  &__body {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.footer__company-name {
+  margin-top: 24px;
+  text-align: center;
+  border-bottom: 1px solid @border_grey-block;
+
+  &-link {
+    padding: 10px 0;
+    display: block;
+  }
+
+  &-image {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.footer__social-networks {
+  margin-left: 0;
+  padding: 0 20px 0 20px;
+  margin-top: 24px;
+  text-align: center;
+  border-bottom: 1px solid @border_grey-block;
+}
+
+.footer__social-network {
+  list-style-type: none;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &-name {
+    margin: 0;
+    font-family: @arialFont;
+    font-size: 16px;
+    line-height: 18px;
+    color: @text_dark-grey;
+  }
+
+  &-logo {
+    display: block;
+  }
+}
