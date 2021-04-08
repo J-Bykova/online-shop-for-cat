@@ -1,22 +1,20 @@
 .programs-section {
   padding: 20px 20px 0 20px;
-}
 
-.programs-section__program-list {
-  margin: 0;
-  padding: 0;
-}
+  &__program-list {
+    margin: 0;
+    padding: 0;
+  }
 
-.programs-section__program {
-  list-style-type: none;
-  padding: 20px;
-  background-color: rgba(242, 242, 242, 1);
-  background-repeat: no-repeat;
-  background-position: left top;
-}
+  &__program {
+    list-style-type: none;
+    padding: 20px;
+    background-color: @background_basic-grey;
+  }
 
-.programs-section__program:not(:first-of-type) {
-  margin-top: 20px;
+  &__program:not(:first-of-type) {
+    margin-top: 20px;
+  }
 }
 
 .programs-section__head {
@@ -27,36 +25,38 @@
 .programs-section__program-title {
   margin: 0;
   padding-left: 84px;
+  height: 67px;
+  color: @title_black;
   font-size: 24px;
-  line-height: 67px;
+  line-height: 37px;
+  font-weight: 400;
   text-transform: uppercase;
   background-position: left center;
   background-repeat: no-repeat;
-}
 
-.programs-section__program-title--slim {
-  background-image: url("../img/program-icons/cat-slim.svg");
-}
+  &--slim {
+    background-image: url("../img/program-icons/cat-slim.svg");
+  }
 
-.programs-section__program-title--pro {
-  background-image: url("../img/program-icons/cat-pro.svg");
+  &--pro {
+    background-image: url("../img/program-icons/cat-pro.svg");
+  }
 }
 
 .programs-section__program-description {
   margin: 29px 0 0 0;
   padding-bottom: 20px;
   font-family: @arialFont;
-  color: rgba(68, 68, 68, 1);
-  border-bottom: 1px solid #d9d9d9;
+  line-height: 18px;
+  color: @text_dark-grey;
+  border-bottom: 1px solid @border_grey-block;
 }
 
 .programs-section__program-link {
   margin: 18px 0 0 0;
   display: block;
-  flex-direction: row;
-  align-items: center;
-  text-transform: uppercase;
   font-size: 16px;
   line-height: 16px;
-  color: rgba(0, 0, 0, 1);
+  color: @title_black;
+  text-transform: uppercase;
 }
