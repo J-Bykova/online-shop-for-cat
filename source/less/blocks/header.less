@@ -1,20 +1,33 @@
 .header {
   margin: 0 auto;
+}
 
-  &__body {
-    padding: 12px 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.header__body {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
   display: block;
 
-  &-link {
-    display: block;
+  &:hover {
+    opacity: 80%;
   }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.header__logo-link {
+  display: block;
+}
+
+
+.header__company-name {
+  display: block;
 
   &:hover {
     opacity: 80%;
@@ -25,20 +38,8 @@
   }
 }
 
-.header__company-name {
+&.header__company-name {
   display: block;
-
-  &-link {
-    display: block;
-  }
-
-  &:hover {
-    opacity: 80%;
-  }
-
-  &:active {
-    opacity: 60%;
-  }
 }
 
 .header__menu-button {
@@ -55,31 +56,31 @@
   border-top: 1px solid @border_grey-menu;
   border-bottom: 1px solid @border_grey-menu;
 
-  &-item {
-    padding: 24px 0;
-    text-align: center;
-
-    &:not(:first-of-type) {
-      border-top: 1px solid @border_grey-menu;
-    }
+  &:hover {
+    color: rgb(102, 102, 102);
   }
 
-  &-link {
-    font-family: @oswaldFont;
-    font-size: 20px;
-    line-height: 20px;
-    color: @title_black;
-    font-weight: 500;
-    font-style: normal;
-    list-style-type: none;
-    text-transform: uppercase;
-
-    &:hover {
-      color: rgb(102, 102, 102);
-    }
-
-    &:active {
-      color: rgb(179, 179, 179);
-    }
+  &:active {
+    color: rgb(179, 179, 179);
   }
+}
+
+.header__navigation-menu-item {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.header__navigation-menu:not(:first-of-type) {
+  border-top: 1px solid @border_grey-menu;
+}
+
+.header__navigation-menu-link {
+  font-family: @oswaldFont;
+  font-size: 20px;
+  line-height: 20px;
+  color: @title_black;
+  font-weight: 500;
+  font-style: normal;
+  list-style-type: none;
+  text-transform: uppercase;
 }
