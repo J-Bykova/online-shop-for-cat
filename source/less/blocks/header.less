@@ -83,3 +83,55 @@
     }
   }
 }
+
+@media (min-width: @tablet-width) {
+  .header {
+    padding: 19px 29px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__body {
+    margin-top: 5px;
+    padding: 0;
+  }
+
+  .header__company-name {
+    display: none;
+  }
+
+  .header__menu-button {
+    display: none;
+  }
+
+  .header__navigation {
+    margin-top: 12px;
+  }
+
+  .header__navigation-menu {
+    list-style-type: none;
+    border: none;
+    display: flex;
+  }
+
+  .header__navigation-menu-item {
+    display: block;
+    padding: 0;
+  }
+
+  .header__navigation-menu-item:first-of-type {
+    margin-right: -2px;
+  }
+
+  .header__navigation-menu-item:not(:first-of-type) {
+    border-top: none;
+    margin-left: 37px;
+  }
+
+  .header__navigation-menu-link {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
