@@ -1,38 +1,86 @@
 .offer-section {
   position: relative;
   padding: 27px 20px 0 20px;
+}
 
-  &__background {
+.offer-section__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 302px;
+  width: 100%;
+  background-image: linear-gradient(@background_basic_green, @background_basic_green), url("../img/cat-background.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.offer-section__title {
+  text-align: center;
+  color: @basic-white;
+}
+
+.offer-section__subtitle {
+  margin: 25px 0 0 0;
+  text-align: center;
+  color: @basic-white;
+}
+
+.offer-section__image {
+  display: block;
+  margin: 29px auto 0 auto;
+}
+
+.offer-section__button {
+  display: block;
+  margin: 3px auto 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .offer-section {
+    padding: 0 30px;
+  }
+
+  .offer-section__background {
+    display: none;
+  }
+
+  .offer-section__title {
+    margin-top: 63px;
+    margin-left: 87px;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    color: @title_black;
+    text-align: left;
+  }
+
+  .offer-section__subtitle {
+    margin-top: 41px;
+    margin-left: 88px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @title_black;
+    text-align: left;
+  }
+
+  .offer-section__image {
+    display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 302px;
-    width: 100%;
-    background-image: linear-gradient(@background_basic_green, @background_basic_green), url("../img/cat-background.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 100px auto 0 auto;
+    height: 609px;
+    width: 709px;
     z-index: -1;
   }
 
-  &__title {
-    text-align: center;
-    color: @basic-white;
-  }
-
-  &__subtitle {
-    margin: 25px 0 0 0;
-    text-align: center;
-    color: @basic-white;
-  }
-
-  &__image {
+  .offer-section__button {
     display: block;
-    margin: 29px auto 0 auto;
-  }
-
-  &__button {
-    display: block;
-    margin: 3px auto 0 auto;
+    margin-top: 50px;
+    margin-left: 82px;
+    padding: 16px 0;
+    width: 244px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
