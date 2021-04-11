@@ -2,6 +2,7 @@
   border: none;
   text-align: center;
   .oswald-regular(16px; 20px);
+  color: @text_black;
   text-transform: uppercase;
   white-space: nowrap;
 
@@ -20,21 +21,13 @@
   }
 
   &--grey {
-    background-color: rgba(242, 242, 242, 1);
-    color: rgba(68, 68, 68, 1);
+    background-color: @background_basic-grey;
+    color: @text_dark-grey;
   }
 
   &--after-before {
     border: none;
-    margin: 5px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-family: @oswaldFont;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #111111;
+    .oswald-regular(16px; 20px);
     background-color: transparent;
     text-transform: uppercase;
   }
