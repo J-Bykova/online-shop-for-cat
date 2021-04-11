@@ -1,14 +1,22 @@
 .button {
-  padding: 7px 44px;
   border: none;
   text-align: center;
-  line-height: 18px;
+  .oswald-regular(16px; 20px);
   text-transform: uppercase;
   white-space: nowrap;
 
   &--green {
-    background-color: @button_basic_green;
+    background-color: @button-background_green;
     color: @basic-white;
+
+    &:hover {
+      background-color: @button-background_green-hover;
+    }
+
+    &:active {
+      background-color: @button-background_green-hover;
+      opacity: 30%;
+    }
   }
 
   &--grey {
@@ -17,11 +25,11 @@
   }
 
   &--after-before {
+    border: none;
     margin: 5px;
     display: flex;
     align-items: center;
     text-align: center;
-    border: none;
     font-family: @oswaldFont;
     font-size: 16px;
     line-height: 20px;
@@ -30,13 +38,4 @@
     background-color: transparent;
     text-transform: uppercase;
   }
-}
-
-.button--green:hover {
-  background-color: rgba(94, 170, 47, 1);
-  color: rgba(255, 255, 255, 1);
-}
-
-.button--green:active {
-  color: rgba(255, 255, 255, 0.3);
 }

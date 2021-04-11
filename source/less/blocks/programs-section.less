@@ -3,12 +3,10 @@
 }
 
 .programs-section__program-list {
-  margin: 0;
-  padding: 0;
+  .reset-list-styles();
 }
 
 .programs-section__program {
-  list-style-type: none;
   padding: 20px;
   background-color: @background_basic-grey;
 }
@@ -26,10 +24,8 @@
   margin: 0;
   padding-left: 84px;
   height: 67px;
+  .oswald-regular(24px; 37px);
   color: @title_black;
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
   text-transform: uppercase;
   background-position: left center;
   background-repeat: no-repeat;
@@ -46,8 +42,7 @@
 .programs-section__program-description {
   margin: 29px 0 0 0;
   padding-bottom: 20px;
-  font-family: @arialFont;
-  line-height: 18px;
+  .arial-regular(14px; 18px);
   color: @text_dark-grey;
   border-bottom: 1px solid @border_grey-block;
 }
@@ -55,8 +50,7 @@
 .programs-section__program-link {
   margin: 18px 0 0 0;
   display: block;
-  font-size: 16px;
-  line-height: 16px;
+  .oswald-regular(16px; 16px);
   color: @title_black;
   text-transform: uppercase;
 }

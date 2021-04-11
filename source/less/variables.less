@@ -12,10 +12,41 @@
 
 @title_black: #000000;
 @text_dark-grey: #444444;
-@button_basic_green: #68b738;
+@button-background_green: #68b738;
+@button-background_green-hover: #5eaa2f;
 
 @border_grey-block: #d9d9d9;
 @border_grey-menu: #e6e6e6;
 
 @tablet-width: 768px;
-@desktop-width: 1440px;
+@desktop-width: 1000px;
+
+.oswald-regular(@font-size; @line-height) {
+  font-family: @oswaldFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.oswald-medium(@font-size; @line-height) {
+  font-family: @oswaldFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.arial-regular(@font-size; @line-height) {
+  font-family: @arialFont;
+  font-style: normal;
+  font-weight: 400;
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.reset-list-styles() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

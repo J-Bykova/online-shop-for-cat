@@ -4,24 +4,19 @@
 
 .howitworks-section__title {
   margin: 0 auto;
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
+  .oswald-regular(36px; 40px);
 }
 
 .howitworks-section__point-list {
-  margin-left: 0;
-  padding-left: 0;
+  .reset-list-styles();
   margin-top: 36px;
-  font-family: @arialFont;
-  line-height: 18px;
-  color: @text_dark-grey;
 }
 
 .howitworks-section__point {
   margin: 20px 0 0 0;
   height: 60px;
-  list-style-type: none;
+  .arial-regular(14px; 18px);
+  color: @text_dark-grey;
   display: flex;
 }
 

@@ -1,86 +1,102 @@
 .offer-section {
+  padding: 20px 20px 20px 20px;
   position: relative;
-  padding: 27px 20px 0 20px;
-}
+  display: flex;
+  flex-direction: column;
 
-.offer-section__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 302px;
-  width: 100%;
-  background-image: linear-gradient(@background_basic_green, @background_basic_green), url("../img/cat-background.jpg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::before {
+    width: 100%;
+    height: 270px;
+    top: 0;
+    background-image: linear-gradient(@background_basic_green, @background_basic_green),
+      url("../img/cat-background.jpg");
+  }
+
+  &::after {
+    width: 280px;
+    height: 270px;
+    top: 170px;
+    background-image: url("../img/offer-can-mobile.png");
+  }
 }
 
 .offer-section__title {
-  text-align: center;
+  .oswald-regular(36px; 36px);
   color: @basic-white;
+  text-align: center;
 }
 
 .offer-section__subtitle {
   margin: 25px 0 0 0;
-  text-align: center;
+  .oswald-regular(14px; 14px);
   color: @basic-white;
-}
-
-.offer-section__image {
-  display: block;
-  margin: 29px auto 0 auto;
+  text-align: center;
 }
 
 .offer-section__button {
   display: block;
-  margin: 3px auto 0 auto;
+  margin-top: 300px;
+  padding: 7px 44px;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 @media (min-width: @tablet-width) {
   .offer-section {
-    padding: 0 30px;
-  }
+    padding: 20px 90px 580px 90px;
 
-  .offer-section__background {
-    display: none;
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      width: 609px;
+      height: 709px;
+      top: 200px;
+    }
   }
 
   .offer-section__title {
-    margin-top: 63px;
-    margin-left: 87px;
-    font-size: 60px;
-    line-height: 60px;
-    font-weight: 400;
+    .oswald-regular(60px; 60px);
     color: @title_black;
     text-align: left;
   }
 
   .offer-section__subtitle {
-    margin-top: 41px;
-    margin-left: 88px;
-    font-size: 20px;
-    line-height: 20px;
+    .oswald-regular(20px; 20px);
     color: @title_black;
     text-align: left;
   }
 
-  .offer-section__image {
-    display: block;
-    position: absolute;
-    margin: 100px auto 0 auto;
-    height: 609px;
-    width: 709px;
-    z-index: -1;
-  }
-
   .offer-section__button {
     display: block;
-    margin-top: 50px;
-    margin-left: 82px;
+    margin-top: 30px;
     padding: 16px 0;
     width: 244px;
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .offer-section {
+    padding: 103px 90px 580px 111px;
+  }
+
+  .offer-section__button {
+    padding: 14px 26px;
   }
 }
