@@ -5,9 +5,6 @@
 .page__body {
   margin: 0;
   padding: 0;
-  color: @basic_black;
-  background-color: @basic-white;
-
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -15,11 +12,13 @@
 
 .page__title {
   margin: 0;
-  .oswald-regular(36px; 36px);
+  .oswald-regular();
+  // (36px; 36px);
 }
 
 .page__subtitle {
   margin: 0;
-  .oswald-regular(14px; 14px);
+  .oswald-regular();
+  // (14px; 14px);
   text-transform: uppercase;
 }

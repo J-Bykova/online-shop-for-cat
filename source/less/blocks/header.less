@@ -1,5 +1,4 @@
 .header__body {
-  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,35 +18,11 @@
   }
 }
 
-.header__company-name-link {
-  margin-left: -11px;
-  margin-top: 2px;
-}
-
-.header__menu-button {
-  width: 24px;
-  height: 18px;
-  background-color: transparent;
-  background-image: url("../img/mobile-button.svg");
-}
-
 .header__navigation-menu {
   .reset-list-styles();
-  border-top: 1px solid @border_grey-menu;
-  border-bottom: 1px solid @border_grey-menu;
-}
-
-.header__navigation-menu-item {
-  padding: 24px 0;
-  text-align: center;
-}
-
-.header__navigation-menu-item:not(:first-of-type) {
-  border-top: 1px solid @border_grey-menu;
 }
 
 .header__navigation-menu-link {
-  .oswald-medium (20px; 20px);
   color: @basic_black;
   text-transform: uppercase;
 
@@ -57,6 +32,43 @@
 
   &:active {
     opacity: 60%;
+  }
+}
+
+@media (min-width: @mobile-width) {
+  .header__body {
+    padding: 12px 20px;
+  }
+
+  .header__company-name-link {
+    margin-left: -11px;
+    margin-top: 2px;
+  }
+
+  .header__navigation-menu {
+    border-top: 1px solid @border_grey-menu;
+    border-bottom: 1px solid @border_grey-menu;
+  }
+
+  .header__navigation-menu-item {
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  .header__navigation-menu-item:not(:first-of-type) {
+    border-top: 1px solid @border_grey-menu;
+  }
+
+  .header__navigation-menu-link {
+    .oswald-medium();
+    .font-size-height(20px; 20px);
+  }
+
+  .header__menu-button {
+    width: 24px;
+    height: 18px;
+    background-color: transparent;
+    background-image: url("../img/mobile-button.svg");
   }
 }
 
@@ -97,11 +109,22 @@
   }
 
   .header__navigation-menu-item:not(:first-of-type) {
-    border-top: none;
     margin-left: 37px;
+    border: none;
   }
 
   .header__navigation-menu-link {
-    .oswald-regular(18px; 24px);
+    .oswald-regular();
+    .font-size-height(18px; 24px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    padding: 54px 109px;
+  }
+
+  .header__navigation-menu-link {
+    .font-size-height(20px; 30px);
   }
 }
