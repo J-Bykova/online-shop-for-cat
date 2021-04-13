@@ -13,12 +13,54 @@
 .page__title {
   margin: 0;
   .oswald-regular();
-  // (36px; 36px);
+  color: @basic_black;
 }
 
 .page__subtitle {
   margin: 0;
   .oswald-regular();
-  // (14px; 14px);
+  color: @basic_black;
   text-transform: uppercase;
+}
+
+@media (min-width: @mobile-width) {
+  .page__title {
+    .font-size-height(36px, 36px);
+  }
+
+  .page__subtitle {
+    .font-size-height(14px, 14px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page__title {
+    .font-size-height(60px, 60px);
+  }
+
+  .page__subtitle {
+    .font-size-height(20px, 20px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      top: 0;
+      right: 0;
+
+      background-image: linear-gradient(@background_basic_green, @background_basic_green),
+        url("../img/index-background-desktop.png");
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      z-index: -1;
+    }
+  }
 }
