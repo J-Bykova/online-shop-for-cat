@@ -3,28 +3,38 @@
 }
 
 .howitworks-section__point {
+  min-height: 60px;
   color: @text_grey;
   background-position: left center;
   background-repeat: no-repeat;
 
   &--icon-leaf {
     background-image: url("../img/howitworks/icon_leaf.svg");
+    background-size: 60px 60px;
   }
 
   &--icon-tub {
     background-image: url("../img/howitworks/icon_tub.svg");
+    background-size: 60px 60px;
   }
 
   &--icon-eat {
     background-image: url("../img/howitworks/icon_eat.svg");
+    background-size: 60px 60px;
   }
 
   &--icon-alarm {
     background-image: url("../img/howitworks/icon_alarm.svg");
+    background-size: 60px 60px;
   }
 }
 
-@media (min-width: @mobile-width) {
+.howitworks-section__point-description {
+  margin: 0;
+  .arial-regular();
+}
+
+@media (max-width: @mobile-width) {
   .howitworks-section {
     padding: 27px 20px 20px 20px;
   }
@@ -38,7 +48,7 @@
   }
 
   .howitworks-section__point {
-    display: flex;
+    //display: flex;
     margin: 20px 0 0 0;
   }
 
@@ -49,6 +59,7 @@
   .howitworks-section__point-description {
     margin: 0;
     padding-left: 80px;
+    .font-size-height(14px, 18px);
   }
 }
 
@@ -68,11 +79,28 @@
   .howitworks-section__point {
     background-position: left top;
     margin-top: 0;
+
+    &--icon-leaf {
+      background-size: 80px 80px;
+    }
+
+    &--icon-tub {
+      background-size: 80px 80px;
+    }
+
+    &--icon-eat {
+      background-size: 80px 80px;
+    }
+
+    &--icon-alarm {
+      background-size: 80px 80px;
+    }
   }
 
   .howitworks-section__point-description {
     padding-left: 0;
     padding-top: 90px;
+    .font-size-height(16px, 24px);
   }
 }
 

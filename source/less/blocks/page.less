@@ -5,10 +5,10 @@
 .page__body {
   margin: 0;
   padding: 0;
-  color: @text_black;
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+  color: @basic_black;
 }
 
 .page__title {
@@ -30,12 +30,13 @@
 }
 
 .page__text {
+  margin: 0;
   .arial-regular();
 }
 
-@media (min-width: @mobile-width) {
+@media (max-width: @mobile-width) {
   .page__body {
-    min-width: 320px;
+    max-width: 767px;
   }
 
   .page__title {
