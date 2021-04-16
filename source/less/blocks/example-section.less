@@ -31,7 +31,6 @@
 }
 
 .example-section__buttons {
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,7 +54,6 @@
   }
 
   .example-section__description {
-    margin: 33px;
     .font-size-height(14px, 18px);
   }
 
@@ -102,7 +100,7 @@
   }
 
   .example-section__buttons {
-    margin: 25px 0 0 0;
+    margin-top: 25px;
   }
 
   .example-section__slider {
@@ -113,7 +111,20 @@
 
 @media (min-width: @tablet-width) {
   .example-section {
+    position: relative;
     padding: 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 462px;
+      background-color: @background_special-grey;
+      background-size: cover;
+      z-index: -1;
+    }
   }
 
   .example-section__title {
@@ -121,7 +132,7 @@
   }
 
   .example-section__description {
-    margin-top: 60px;
+    margin: 60px 0 0 0;
     .font-size-height(16px, 24px);
   }
 
@@ -157,6 +168,12 @@
   .example-section__expenses {
     .font-size-height(20px, 20px);
   }
+
+  .example-section__slider {
+    width: 428px;
+    height: 6px;
+    background-color: #dcdcdc;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -171,5 +188,13 @@
 
   .example-section__expenses {
     text-align: left;
+  }
+
+  .example-section__content {
+    display: flex;
+  }
+
+  .example-section__description {
+    margin: 146px 0 0 0;
   }
 }

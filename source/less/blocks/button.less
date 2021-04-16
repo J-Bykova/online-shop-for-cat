@@ -27,8 +27,19 @@
   &--after-before {
     border: none;
     .oswald-regular();
-    // (16px; 20px);
     background-color: transparent;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .button--after-before {
+    .font-size-height(16px, 20px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button--after-before {
+    .font-size-height(20px, 30px);
   }
 }
