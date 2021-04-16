@@ -4,13 +4,6 @@
 
 .programs-section__program {
   background-color: @background_basic-grey;
-}
-
-.programs-section__program-title {
-  .oswald-regular();
-  color: @basic_black;
-  text-transform: uppercase;
-  background-position: left center;
   background-repeat: no-repeat;
 
   &--slim {
@@ -20,6 +13,12 @@
   &--pro {
     background-image: url("../img/program-icons/cat-pro.svg");
   }
+}
+
+.programs-section__program-title {
+  .oswald-regular();
+  color: @basic_black;
+  text-transform: uppercase;
 }
 
 .programs-section__program-link {
@@ -40,6 +39,7 @@
 
   .programs-section__program {
     padding: 20px;
+    background-position: left top;
   }
 
   .programs-section__program:not(:first-of-type) {
@@ -79,6 +79,7 @@
   }
 
   .programs-section__program {
+    background-position: right center;
     text-align: left;
     padding: 50px;
   }
@@ -113,6 +114,7 @@
   }
 
   .programs-section__program {
+    background-position: left top;
     flex: 1;
   }
 }
