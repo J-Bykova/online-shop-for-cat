@@ -12,65 +12,15 @@
   color: @text_grey;
 }
 
-
-.page__subtitle {
-  margin: 0;
-  .oswald-regular();
-  color: @basic_black;
-  text-transform: uppercase;
-}
-
-.page__section-header {
-  .oswald-regular();
-  color: @basic_black;
-}
-
-.page__text {
-  margin: 0;
-  .arial-regular();
-}
-
 @media (max-width: @mobile-width) {
   .page__body {
     max-width: 767px;
-  }
-
-  .page__title {
-    .font-size-height(36px, 36px);
-  }
-
-  .page__subtitle {
-    .font-size-height(14px, 14px);
-  }
-
-  .page__section-header {
-    .font-size-height(36px, 40px);
-  }
-
-  .page__text {
-    .font-size-height(14px, 18px);
   }
 }
 
 @media (min-width: @tablet-width) {
   .page__body {
     min-width: 768px;
-  }
-
-  .page__title {
-    .font-size-height(60px, 60px);
-  }
-
-  .page__subtitle {
-    .font-size-height(20px, 20px);
-  }
-
-  .page__section-header {
-    .font-size-height(60px, 60px);
-  }
-
-  .page__text {
-    .font-size-height(16px, 24px);
   }
 }
 
