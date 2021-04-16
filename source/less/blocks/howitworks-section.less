@@ -1,46 +1,46 @@
+.howitworks-section__title {
+  margin: 0;
+  .oswald-regular();
+  color: @basic_black;
+}
+
 .howitworks-section__point-list {
   .reset-list-styles();
 }
 
 .howitworks-section__point {
-  min-height: 60px;
   color: @text_grey;
   background-position: left center;
   background-repeat: no-repeat;
 
   &--icon-leaf {
     background-image: url("../img/howitworks/icon_leaf.svg");
-    background-size: 60px 60px;
   }
 
   &--icon-tub {
     background-image: url("../img/howitworks/icon_tub.svg");
-    background-size: 60px 60px;
   }
 
   &--icon-eat {
     background-image: url("../img/howitworks/icon_eat.svg");
-    background-size: 60px 60px;
   }
 
   &--icon-alarm {
     background-image: url("../img/howitworks/icon_alarm.svg");
-    background-size: 60px 60px;
   }
 }
 
 .howitworks-section__point-description {
   margin: 0;
-  .arial-regular();
 }
 
 @media (max-width: @mobile-width) {
   .howitworks-section {
-    padding: 27px 20px 20px 20px;
+    padding: 20px;
   }
 
   .howitworks-section__title {
-    margin: 0 auto;
+    .font-size-height(36px, 40px);
   }
 
   .howitworks-section__point-list {
@@ -48,8 +48,9 @@
   }
 
   .howitworks-section__point {
-    //display: flex;
     margin: 20px 0 0 0;
+    min-height: 60px;
+    background-size: 60px 60px;
   }
 
   .howitworks-section__point:first-of-type {
@@ -57,7 +58,6 @@
   }
 
   .howitworks-section__point-description {
-    margin: 0;
     padding-left: 80px;
     .font-size-height(14px, 18px);
   }
@@ -77,24 +77,14 @@
   }
 
   .howitworks-section__point {
-    background-position: left top;
     margin-top: 0;
+    background-position: left top;
+    min-height: 80px;
+    background-size: 80px 80px;
+  }
 
-    &--icon-leaf {
-      background-size: 80px 80px;
-    }
-
-    &--icon-tub {
-      background-size: 80px 80px;
-    }
-
-    &--icon-eat {
-      background-size: 80px 80px;
-    }
-
-    &--icon-alarm {
-      background-size: 80px 80px;
-    }
+  .howitworks-section__title {
+    .font-size-height(60px, 60px);
   }
 
   .howitworks-section__point-description {
