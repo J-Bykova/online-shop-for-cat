@@ -5,6 +5,7 @@
 @basic_black: #000000;
 @text_dark-grey: #111111;
 @text_grey: #444444;
+@text_grey-form: #222222;
 
 @background_basic-grey: #f2f2f2;
 @background_special-grey: #eaeaea;
@@ -20,16 +21,10 @@
 @tablet-width: 768px;
 @desktop-width: 1440px;
 
-.oswald-regular() {
+.oswald-regular(@font-weight: 400) {
   font-family: @oswaldFont;
   font-style: normal;
-  font-weight: 400;
-}
-
-.oswald-medium() {
-  font-family: @oswaldFont;
-  font-style: normal;
-  font-weight: 500;
+  font-weight: @font-weight;
 }
 
 .arial-regular() {

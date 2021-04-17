@@ -1,8 +1,40 @@
 .form__section {
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
   border: 0;
-  border-top: 2px solid #68b738;
+
+  @media (max-width: @mobile-width) {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid #68b738;
+
+    &--contacts,
+    &--comment,
+    &--related,
+    &--submit {
+      padding: 20px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    border-top: 2px solid #68b738;
+
+    &--contacts,
+    &--comment,
+    &--related,
+    &--submit {
+      padding: 30px 70px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--contacts,
+    &--comment,
+    &--related,
+    &--submit {
+      padding: 40px 110px;
+    }
+  }
 }
 
 .form__section:first-child {
@@ -13,70 +45,89 @@
   border-top: 0;
 }
 
-.form__section--contacts {
-  padding: 0 20px;
-  margin-top: 26px;
-}
+.form__section-title {
+  .oswald-regular();
+  color: @basic_black;
 
-.form__section--comment {
-  padding: 0 20px;
-  margin-top: 23px;
-}
+  @media (max-width: @mobile-width) {
+    padding: 0 14px;
+    .font-size-height(24px; 26px);
+  }
 
-.form__section--related {
-  padding: 0 20px;
-  margin-top: 22px;
-}
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+    .font-size-height(36px; 36px);
+  }
 
-.form__section--submit {
-  padding: 0 20px;
-  margin-top: 34px;
-}
-
-.form__field-group {
-  padding: 20px 20px;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid rgba(205, 205, 205, 1);
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+  }
 }
 
 .form__field {
-  margin-top: 10px;
   display: flex;
   align-items: center;
+
+  @media (max-width: @mobile-width) {
+    margin-top: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 20px;
+  }
 }
 
 .form__field:first-of-type {
   margin-top: 0;
 }
 
+.form__field-group {
+  @media (max-width: @mobile-width) {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 110px;
+  }
+}
+
 .form__field-label {
   .oswald-regular();
-  //(16px; 18px);
-  color: @text_grey;
   text-transform: uppercase;
   white-space: nowrap;
+
+  @media (max-width: @mobile-width) {
+    .font-size-height(16px, 18px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-size-height(20px, 30px);
+  }
 }
 
 .form__field-input {
-  padding-top: 13px;
-  padding-bottom: 13px;
-  padding-left: 15px;
+  padding: 13px 0 13px 15px;
   margin-left: 8px;
   width: 100%;
   outline: none;
   border: 1px solid rgba(205, 205, 205, 1);
   .oswald-regular();
-  //(16px; 18px);
-  color: rgba(68, 68, 68, 1);
   text-transform: uppercase;
-}
 
-.form__radiobutton-group {
-  padding: 20px 20px;
-  display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid rgba(205, 205, 205, 1);
+  @media (max-width: @mobile-width) {
+    .font-size-height(16px, 18px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-size-height(20px, 30px);
+  }
 }
 
 .form__radiobutton {
@@ -87,30 +138,38 @@
   margin-top: 0;
 }
 
+.form__radiobutton-group {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: @mobile-width) {
+    padding: 20px;
+    border-bottom: 1px solid rgba(205, 205, 205, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 30px 70px;
+    border: none; // TODO  добавить границы у блока
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 40px 110px;
+  }
+}
+
 .form__radiobutton-label {
   margin-left: 13px;
   .oswald-regular();
-  //(16px; 18px);
-  color: rgba(34, 34, 34, 1);
+  color: @text_grey-form;
   text-transform: uppercase;
-}
 
-.form__section-title {
-  .oswald-regular();
-  //(24px; 26px);
-}
+  @media (max-width: @mobile-width) {
+    .font-size-height(16px, 18px);
+  }
 
-.form__textarea {
-  padding: 10px;
-  margin-top: 20px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100px;
-  .oswald-regular();
-  //(16px; 18px);
-  color: rgba(68, 68, 68, 1);
-  text-transform: uppercase;
+  @media (min-width: @tablet-width) {
+    .font-size-height(20px, 30px);
+  }
 }
 
 .form__checkbox {
@@ -121,20 +180,108 @@
 .form__checkbox-label {
   margin-left: 16px;
   .oswald-regular();
-  // (16px; 18px);
+  color: @basic_black;
   text-transform: uppercase;
+
+  @media (max-width: @mobile-width) {
+    .font-size-height(16px, 18px);
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-size-height(20px, 30px);
+  }
+}
+
+.form__textarea {
+  padding: 10px;
+  margin-top: 20px;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  .oswald-regular();
+  text-transform: uppercase;
+
+  @media (max-width: @mobile-width) {
+    .font-size-height(16px, 18px);
+    height: 150px;
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-size-height(20px, 30px);
+    height: 174px;
+  }
+}
+
+.form__section--personal {
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .form__submit-button {
-  padding: 7px 44px;
-  .oswald-regular();
-  // (16px; 20px);
+  @media (max-width: @mobile-width) {
+    padding: 7px 44px;
+    .font-size-height(16px, 18px);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 13px 45px;
+    .font-size-height(20px, 30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 13px 188px;
+  }
 }
 
 .form__footnote {
-  margin-top: 21px;
-  padding-bottom: 20px;
-  .arial-regular();
-  //(14px; 16px);
   text-align: center;
+
+  @media (max-width: @mobile-width) {
+    margin-top: 21px;
+    padding-bottom: 20px;
+    .font-size-height(14px, 16px);
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 70px;
+    .font-size-height(16px, 16px);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 81px;
+  }
+}
+
+.form__section--contacts-desktop {
+  // TODO тут опеределенно говно код
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 30px;
+
+    .form__field {
+      margin-top: 0;
+    }
+
+    .form__field:not(:first-of-type) {
+      margin-left: 70px;
+    }
+  }
+}
+
+.form__section--related-tablet-desktop {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
