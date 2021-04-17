@@ -66,9 +66,11 @@
 @media (min-width: @tablet-width) {
   .howitworks-section {
     padding: 30px;
+    border-bottom: 1px solid #e6e6e6;;
   }
 
   .howitworks-section__point-list {
+    margin-top: 72px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -90,13 +92,16 @@
   .howitworks-section__point-description {
     padding-left: 0;
     padding-top: 90px;
+    padding-right: 100px;
     .font-size-height(16px, 24px);
   }
 }
 
 @media (min-width: @desktop-width) {
   .howitworks-section {
-    padding: 110px;
+    margin-top: 71px;
+    padding: 0 110px;
+    border-bottom: none;
   }
 
   .howitworks-section__point-list {

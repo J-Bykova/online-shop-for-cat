@@ -28,22 +28,25 @@
   .page__body {
     min-width: 1440px;
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 50%;
-      height: 694px;
-      top: 0;
-      right: 0;
+    &--desktop {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 694px;
+        top: 0;
+        right: 0;
 
-      background-image: linear-gradient(@background_basic_green, @background_basic_green),
-        url("../img/index-background-desktop.png");
-      background-position: right top;
-      background-repeat: no-repeat;
-      background-size: cover;
+        background-image: linear-gradient(@background_basic_green, @background_basic_green),
+        url("../img/offer-section/index-background-desktop.png");
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: cover;
 
-      z-index: -1;
+        z-index: -1;
+      }
     }
   }
 }
+

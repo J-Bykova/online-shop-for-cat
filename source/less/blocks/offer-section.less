@@ -8,11 +8,11 @@
 
   &::before {
     background-image: linear-gradient(@background_basic_green, @background_basic_green),
-      url("../img/cat-background.jpg");
+    url("../img/offer-section/cat-background.jpg");
   }
 
   &::after {
-    background-image: url("../img/offer-can-mobile.png");
+    background-image: url("../img/offer-section/offer-can-mobile.png");
   }
 }
 
@@ -93,16 +93,17 @@
       content: "";
       display: block;
       position: absolute;
+      top: 332px;
       left: 50%;
       transform: translateX(-50%);
       z-index: -1;
       width: 280px;
       height: 270px;
-      top: 200px;
     }
   }
 
   .offer-section__title {
+    margin-top: 30px;
     .font-size-height(60px, 60px);
     color: @basic_black;
     text-align: left;
@@ -116,7 +117,7 @@
   }
 
   .offer-section__button {
-    margin-top: 30px;
+    margin-top: 49px;
     padding: 16px 0;
     width: 244px;
     .font-size-height(20px, 20px);
@@ -130,8 +131,13 @@
     &::after {
       width: 280px;
       height: 270px;
-      top: 170px;
+      top: 350px;
+      left: 800px;
     }
+  }
+
+  .offer-section__title {
+    margin-top: 0;
   }
 
   .offer-section__button {
