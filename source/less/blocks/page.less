@@ -1,21 +1,51 @@
 .page {
+  min-height: 100vh;
+}
+
+.page__body {
   margin: 0;
   padding: 0;
-  font-family: @oswaldFont;
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 400;
-  font-style: normal;
-  color: @title_black;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  font-family: @arialFont;
+  color: @text_grey;
 }
 
-.page__title {
-  margin: 0;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 36px;
+@media (max-width: @mobile-width) {
+  .page__body {
+    max-width: 767px;
+  }
 }
 
-.page__subtitle {
-  text-transform: uppercase;
+@media (min-width: @tablet-width) {
+  .page__body {
+    min-width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body {
+    min-width: 1440px;
+
+    &--desktop {
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 694px;
+        top: 0;
+        right: 0;
+
+        background-image: linear-gradient(@background_basic_green, @background_basic_green),
+          url("../img/offer-section/index-background-desktop.png");
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        z-index: -1;
+      }
+    }
+  }
 }

@@ -1,33 +1,45 @@
 .button {
-  padding: 7px 44px;
   border: none;
   text-align: center;
-  line-height: 18px;
+  .oswald-regular();
   text-transform: uppercase;
   white-space: nowrap;
 
   &--green {
-    background-color: @button_basic_green;
+    background-color: @button-background_green;
     color: @basic-white;
+
+    &:hover {
+      background-color: @button-background_green-hover;
+    }
+
+    &:active {
+      background-color: @button-background_green-hover;
+      opacity: 30%;
+    }
   }
 
   &--grey {
-    background-color: rgba(242, 242, 242, 1);
-    color: rgba(68, 68, 68, 1);
+    background-color: @background_basic-grey;
+    color: @text_dark-grey;
   }
 
   &--after-before {
-    margin: 5px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     border: none;
-    font-family: @oswaldFont;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 400;
-    color: #111111;
+    .oswald-regular();
     background-color: transparent;
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: @mobile-width) {
+  .button--after-before {
+    .font-size-height(16px, 20px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button--after-before {
+    .font-size-height(20px, 30px);
   }
 }

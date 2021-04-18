@@ -1,37 +1,9 @@
-.programs-section {
-  padding: 20px 20px 0 20px;
-}
-
 .programs-section__program-list {
-  margin: 0;
-  padding: 0;
+  .reset-list-styles();
 }
 
 .programs-section__program {
-  list-style-type: none;
-  padding: 20px;
   background-color: @background_basic-grey;
-}
-
-.programs-section__program:not(:first-of-type) {
-  margin-top: 20px;
-}
-
-.programs-section__head {
-  display: flex;
-  align-items: center;
-}
-
-.programs-section__program-title {
-  margin: 0;
-  padding-left: 84px;
-  height: 67px;
-  color: @title_black;
-  font-size: 24px;
-  line-height: 37px;
-  font-weight: 400;
-  text-transform: uppercase;
-  background-position: left center;
   background-repeat: no-repeat;
 
   &--slim {
@@ -43,20 +15,119 @@
   }
 }
 
+.programs-section__program-title {
+  margin: 0;
+  .oswald-regular();
+  color: @basic_black;
+  text-transform: uppercase;
+}
+
 .programs-section__program-description {
-  margin: 29px 0 0 0;
-  padding-bottom: 20px;
-  font-family: @arialFont;
-  line-height: 18px;
-  color: @text_dark-grey;
-  border-bottom: 1px solid @border_grey-block;
+  margin: 0;
 }
 
 .programs-section__program-link {
-  margin: 18px 0 0 0;
   display: block;
-  font-size: 16px;
-  line-height: 16px;
-  color: @title_black;
+  .oswald-regular();
+  color: @basic_black;
   text-transform: uppercase;
+}
+
+@media (max-width: @mobile-width) {
+  .programs-section {
+    padding: 20px;
+  }
+
+  .programs-section__program {
+    padding: 20px;
+    background-position: left top;
+  }
+
+  .programs-section__program:not(:first-of-type) {
+    margin-top: 20px;
+  }
+
+  .programs-section__head {
+    display: flex;
+    align-items: center;
+  }
+
+  .programs-section__program-title {
+    padding-left: 84px;
+    .font-size-height(24px, 37px);
+  }
+
+  .programs-section__program-description {
+    margin: 29px 0 0 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid @border_grey-block;
+    .font-size-height(14px, 18px);
+  }
+
+  .programs-section__program-link {
+    margin-top: 10px;
+    .font-size-height(16px; 16px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .programs-section {
+    padding: 0 30px;
+  }
+
+  .programs-section__program:not(:first-of-type) {
+    margin-top: 30px;
+  }
+
+  .programs-section__program {
+    padding: 50px;
+    background-position: right center;
+    text-align: left;
+  }
+
+  .programs-section__program-title {
+    .font-size-height(36px, 36px);
+  }
+
+  .programs-section__program-description {
+    border: none;
+    margin-top: 24px;
+    padding-right: 255px;
+    .font-size-height(16px, 24px);
+  }
+
+  .programs-section__program-link {
+    margin-top: 48px;
+    .font-size-height(20px, 30px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs-section {
+    padding: 0 110px;
+  }
+
+  .programs-section__program:not(:first-of-type) {
+    margin-top: 0;
+    margin-left: 80px;
+  }
+
+  .programs-section__program-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs-section__program {
+    background-position: left top;
+    flex: 1;
+  }
+
+  .programs-section__program-description {
+    margin-top: 73px;
+    padding-right: 7px;
+  }
+
+  .programs-section__program-link {
+    margin-top: 23px;
+  }
 }

@@ -1,37 +1,15 @@
-.howitworks-section {
-  padding: 27px 20px 20px 20px;
-}
-
 .howitworks-section__title {
-  margin: 0 auto;
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 400;
+  margin: 0;
+  .oswald-regular();
+  color: @basic_black;
 }
 
 .howitworks-section__point-list {
-  margin-left: 0;
-  padding-left: 0;
-  margin-top: 36px;
-  font-family: @arialFont;
-  line-height: 18px;
-  color: @text_dark-grey;
+  .reset-list-styles();
 }
 
 .howitworks-section__point {
-  margin: 20px 0 0 0;
-  height: 60px;
-  list-style-type: none;
-  display: flex;
-}
-
-.howitworks-section__point:first-of-type {
-  margin-top: 0;
-}
-
-.howitworks-section__point-description {
-  margin: 0;
-  padding-left: 80px;
+  color: @text_grey;
   background-position: left center;
   background-repeat: no-repeat;
 
@@ -49,5 +27,86 @@
 
   &--icon-alarm {
     background-image: url("../img/howitworks/icon_alarm.svg");
+  }
+}
+
+.howitworks-section__point-description {
+  margin: 0;
+}
+
+@media (max-width: @mobile-width) {
+  .howitworks-section {
+    padding: 20px;
+  }
+
+  .howitworks-section__title {
+    .font-size-height(36px, 40px);
+  }
+
+  .howitworks-section__point-list {
+    margin-top: 36px;
+  }
+
+  .howitworks-section__point {
+    margin: 20px 0 0 0;
+    min-height: 60px;
+    background-size: 60px 60px;
+  }
+
+  .howitworks-section__point:first-of-type {
+    margin-top: 0;
+  }
+
+  .howitworks-section__point-description {
+    padding-left: 80px;
+    .font-size-height(14px, 18px);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .howitworks-section {
+    padding: 30px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .howitworks-section__point-list {
+    margin-top: 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .howitworks-section__point {
+    margin-top: 0;
+    background-position: left top;
+    min-height: 80px;
+    background-size: 80px 80px;
+  }
+
+  .howitworks-section__title {
+    .font-size-height(60px, 60px);
+  }
+
+  .howitworks-section__point-description {
+    padding-left: 0;
+    padding-top: 90px;
+    padding-right: 100px;
+    .font-size-height(16px, 24px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .howitworks-section {
+    margin-top: 71px;
+    padding: 0 110px;
+    border-bottom: none;
+  }
+
+  .howitworks-section__point-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: none;
   }
 }
