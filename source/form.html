@@ -39,8 +39,8 @@
 </header>
 <main class="page__main">
   <section class="form-section">
-    <h1 class="form-section__title page__title">Подбор программы</h1>
-    <p class="form-section__subtitle page__subtitle">
+    <h1 class="form-section__title">Подбор программы</h1>
+    <p class="form-section__subtitle">
       Заполните анкету, и мы подберем программу питания для вашего кота
     </p>
 
@@ -76,42 +76,46 @@
         </div>
       </div>
       <fieldset class="form__section form__section--contacts">
-        <legend class="form__section-title page__section-header">Контактные данные<br> (владельца кота)</legend>
-        <label class="form__field">
-          <span class="form__field-label">e-mail:*</span>
-          <input class="form__field-input form__field-input--type_email" type="email" placeholder="kuklachev@gmail.com" required>
-        </label>
-        <label class="form__field">
-          <span class="form__field-label">Телефон:*</span>
-          <input class="form__field-input form__field-input--type_tel" type="tel" placeholder="8 (960) 900-60-90" required>
-        </label>
+        <legend class="form__section-title">Контактные данные<br> (владельца кота)</legend>
+        <div class="form__section--contacts-desktop">
+          <label class="form__field">
+            <span class="form__field-label">e-mail:*</span>
+            <input class="form__field-input form__field-input--type_email" type="email"
+                    placeholder="kuklachev@gmail.com" required>
+          </label>
+          <label class="form__field">
+            <span class="form__field-label">Телефон:*</span>
+            <input class="form__field-input form__field-input--type_tel" type="tel" placeholder="8 (960) 900-60-90" required>
+          </label>
+        </div>
       </fieldset>
       <fieldset class="form__section form__section--comment">
-        <legend class="form__section-title page__section-header">Комментарий</legend>
+        <legend class="form__section-title">Комментарий</legend>
         <textarea class="form__textarea" placeholder="Расскажите обо всех повАдках кота"></textarea>
       </fieldset>
       <fieldset class="form__section form__section--related">
-        <legend class="form__section-title page__section-header">Дополнительно</legend>
+        <legend class="form__section-title">Дополнительно</legend>
+        <div class="form__section--related-tablet-desktop">
+          <label class="form__checkbox">
+            <input class="form__checkbox-input" type="checkbox" checked>
+            <span class="form__checkbox-label">Сахарозаменитель</span>
+          </label>
 
-        <label class="form__checkbox">
-          <input class="form__checkbox-input" type="checkbox" checked>
-          <span class="form__checkbox-label">Сахарозаменитель</span>
-        </label>
+          <label class="form__checkbox">
+            <input class="form__checkbox-input" type="checkbox">
+            <span class="form__checkbox-label">Питьевая вода</span>
+          </label>
 
-        <label class="form__checkbox">
-          <input class="form__checkbox-input" type="checkbox">
-          <span class="form__checkbox-label">Питьевая вода</span>
-        </label>
+          <label class="form__checkbox">
+            <input class="form__checkbox-input" type="checkbox">
+            <span class="form__checkbox-label">Молоко</span>
+          </label>
 
-        <label class="form__checkbox">
-          <input class="form__checkbox-input" type="checkbox">
-          <span class="form__checkbox-label">Молоко</span>
-        </label>
-
-        <label class="form__checkbox">
-          <input class="form__checkbox-input" type="checkbox">
-          <span class="form__checkbox-label">Витамины</span>
-        </label>
+          <label class="form__checkbox">
+            <input class="form__checkbox-input" type="checkbox">
+            <span class="form__checkbox-label">Витамины</span>
+          </label>
+        </div>
       </fieldset>
       <div class="form__section form__section--submit">
         <button class="form__submit-button button button--green" type="submit">Отправить заявку</button>
@@ -120,7 +124,7 @@
     </form>
   </section>
   <section class="contacts-section">
-    <div class="contacts-section__container">
+    <div class="contacts-section__container contacts-section__container--grey">
       <h2 class="contacts-section__title page__section-header">
         Приглашаем<br>
         к сотрудничеству диллеров!

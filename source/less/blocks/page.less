@@ -9,7 +9,9 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   font-family: @arialFont;
-  color: @text_grey;
+  font-style: normal;
+  font-weight: 400;
+  color: @light-grey;
 }
 
 @media (max-width: @mobile-width) {
@@ -38,7 +40,7 @@
         top: 0;
         right: 0;
 
-        background-image: linear-gradient(@background_basic_green, @background_basic_green),
+        background-image: linear-gradient(@background-green, @background-green),
           url("../img/offer-section/index-background-desktop.png");
         background-position: right top;
         background-repeat: no-repeat;

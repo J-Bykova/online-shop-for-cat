@@ -1,12 +1,32 @@
+.header {
+  @media (min-width: @tablet-width) {
+    padding: 19px 29px 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 54px 109px;
+  }
+}
+
 .header__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: @mobile-width) {
+    padding: 12px 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 5px;
+    padding: 0;
+  }
 }
 
-.header__logo,
-.header__logo-link,
-.header__company-name {
+.header__logo {
   display: block;
 
   &:hover {
@@ -18,13 +38,8 @@
   }
 }
 
-.header__navigation-menu {
-  .reset-list-styles();
-}
-
-.header__navigation-menu-link {
-  color: @basic_black;
-  text-transform: uppercase;
+.header__logo-link {
+  display: block;
 
   &:hover {
     opacity: 80%;
@@ -35,97 +50,113 @@
   }
 }
 
-@media (max-width: @mobile-width) {
-  .header__body {
-    padding: 12px 20px;
+.header__company-name {
+  display: block;
+
+  &:hover {
+    opacity: 80%;
   }
 
-  .header__company-name-link {
+  &:active {
+    opacity: 60%;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.header__company-name-link {
+  display: block;
+
+  @media (max-width: @mobile-width) {
     margin-left: -11px;
     margin-top: 2px;
   }
+}
 
-  .header__navigation-menu {
-    border-top: 1px solid @border_grey-menu;
-    border-bottom: 1px solid @border_grey-menu;
+.header__navigation {
+  @media (min-width: @tablet-width) {
+    margin-top: 12px;
+  }
+}
+
+.header__navigation-menu {
+  .reset-list-styles();
+
+  @media (max-width: @mobile-width) {
+    border-top: @border-mobile-menu;
+    border-bottom: @border-mobile-menu;
   }
 
-  .header__navigation-menu-item {
+  @media (min-width: @tablet-width) {
+    border: none;
+    display: flex;
+  }
+}
+
+.header__navigation-menu-link {
+  color: @basic-black;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
+  @media (max-width: @mobile-width) {
+    .oswald-regular(500);
+    .font-size-height(20; 20);
+  }
+
+  @media (min-width: @tablet-width) {
+    .oswald-regular();
+    .font-size-height(18; 24);
+  }
+
+  @media (min-width: @desktop-width) {
+    .font-size-height(20; 30);
+    color: @basic-white;
+  }
+}
+
+.header__navigation-menu-item {
+  @media (max-width: @mobile-width) {
     padding: 22px 0;
     text-align: center;
+
+    &:not(:first-of-type) {
+      border-top: @border-mobile-menu;
+    }
   }
 
-  .header__navigation-menu-item:not(:first-of-type) {
-    border-top: 1px solid @border_grey-menu;
-  }
+  @media (min-width: @tablet-width) {
+    display: block;
+    padding: 0;
 
-  .header__navigation-menu-link {
-    .oswald-medium();
-    .font-size-height(20px; 20px);
-  }
+    &:first-of-type {
+      margin-right: -2px;
+    }
 
-  .header__menu-button {
+    &:not(:first-of-type) {
+      margin-left: 37px;
+      border: none;
+    }
+  }
+}
+
+.header__menu-button {
+  @media (max-width: @mobile-width) {
     width: 24px;
     height: 18px;
     background-color: transparent;
     background-image: url("../img/mobile-button.svg");
   }
-}
 
-@media (min-width: @tablet-width) {
-  .header {
-    padding: 19px 29px 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .header__body {
-    margin-top: 5px;
-    padding: 0;
-  }
-
-  .header__company-name,
-  .header__menu-button {
+  @media (min-width: @tablet-width) {
     display: none;
-  }
-
-  .header__navigation {
-    margin-top: 12px;
-  }
-
-  .header__navigation-menu {
-    border: none;
-    display: flex;
-  }
-
-  .header__navigation-menu-item {
-    display: block;
-    padding: 0;
-  }
-
-  .header__navigation-menu-item:first-of-type {
-    margin-right: -2px;
-  }
-
-  .header__navigation-menu-item:not(:first-of-type) {
-    margin-left: 37px;
-    border: none;
-  }
-
-  .header__navigation-menu-link {
-    .oswald-regular();
-    .font-size-height(18px; 24px);
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .header {
-    padding: 54px 109px;
-  }
-
-  .header__navigation-menu-link {
-    .font-size-height(20px; 30px);
-    color: @basic-white;
   }
 }
