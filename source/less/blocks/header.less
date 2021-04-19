@@ -85,8 +85,8 @@
   .reset-list-styles();
 
   @media (max-width: @mobile-width) {
-    border-top: 1px solid @border_grey-menu;
-    border-bottom: 1px solid @border_grey-menu;
+    border-top: @border-mobile-menu;
+    border-bottom: @border-mobile-menu;
   }
 
   @media (min-width: @tablet-width) {
@@ -129,7 +129,7 @@
     text-align: center;
 
     &:not(:first-of-type) {
-      border-top: 1px solid @border_grey-menu;
+      border-top: @border-mobile-menu;
     }
   }
 
