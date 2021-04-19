@@ -47,7 +47,7 @@
 
 .form__section-title {
   .oswald-regular();
-  color: @basic_black;
+  color: @basic-black;
 
   @media (max-width: @mobile-width) {
     padding: 0 14px;
@@ -86,7 +86,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid rgba(205, 205, 205, 1);
+    border-bottom: @border-content;
   }
 
   @media (min-width: @tablet-width) {
@@ -117,7 +117,7 @@
   margin-left: 8px;
   width: 100%;
   outline: none;
-  border: 1px solid rgba(205, 205, 205, 1);
+  border: @border-content;
   .oswald-regular();
   text-transform: uppercase;
 
@@ -144,7 +144,7 @@
 
   @media (max-width: @mobile-width) {
     padding: 20px;
-    border-bottom: 1px solid rgba(205, 205, 205, 1);
+    border-bottom: @border-content;
   }
 
   @media (min-width: @tablet-width) {
@@ -160,7 +160,7 @@
 .form__radiobutton-label {
   margin-left: 13px;
   .oswald-regular();
-  color: @text_grey-form;
+  color: @basic-grey;
   text-transform: uppercase;
 
   @media (max-width: @mobile-width) {
@@ -180,7 +180,7 @@
 .form__checkbox-label {
   margin-left: 16px;
   .oswald-regular();
-  color: @basic_black;
+  color: @basic-black;
   text-transform: uppercase;
 
   @media (max-width: @mobile-width) {
@@ -257,7 +257,6 @@
 }
 
 .form__section--contacts-desktop {
-  // TODO тут опеределенно говно код
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;

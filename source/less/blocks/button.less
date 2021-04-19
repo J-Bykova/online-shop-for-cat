@@ -20,8 +20,8 @@
   }
 
   &--grey {
-    background-color: @background_basic-grey;
-    color: @text_dark-grey;
+    background-color: @background-light-grey;
+    color: @dark-grey;
   }
 
   &--after-before {
@@ -29,17 +29,13 @@
     .oswald-regular();
     background-color: transparent;
     text-transform: uppercase;
-  }
-}
 
-@media (max-width: @mobile-width) {
-  .button--after-before {
-    .font-size-height(16, 20);
-  }
-}
+    @media (max-width: @mobile-width) {
+      .font-size-height(16, 20);
+    }
 
-@media (min-width: @tablet-width) {
-  .button--after-before {
-    .font-size-height(20, 30);
+    @media (min-width: @tablet-width) {
+      .font-size-height(20, 30);
+    }
   }
 }
