@@ -1,5 +1,24 @@
+.programs-section {
+  @media (max-width: @mobile-width) {
+    padding: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+}
+
 .programs-section__program-list {
   .reset-list-styles();
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs-section__program {
@@ -13,6 +32,42 @@
   &--pro {
     background-image: url("../img/program-icons/cat-pro.svg");
   }
+
+  @media (max-width: @mobile-width) {
+    padding: 20px;
+    background-position: left top;
+
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 50px;
+    background-position: right center;
+    text-align: left;
+
+    &:not(:first-of-type) {
+      margin-top: 30px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-position: left top;
+    flex: 1;
+
+    &:not(:first-of-type) {
+      margin-top: 0;
+      margin-left: 80px;
+    }
+  }
+}
+
+.programs-section__head {
+  @media (max-width: @mobile-width) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .programs-section__program-title {
@@ -20,10 +75,38 @@
   .oswald-regular();
   color: @basic_black;
   text-transform: uppercase;
+
+  @media (max-width: @mobile-width) {
+    padding-left: 84px;
+    .font-size-height(24, 37);
+  }
+
+  @media (min-width: @tablet-width) {
+    .font-size-height(36, 36);
+  }
 }
 
 .programs-section__program-description {
   margin: 0;
+
+  @media (max-width: @mobile-width) {
+    margin: 29px 0 0 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid @border_grey-block;
+    .font-size-height(14, 18);
+  }
+
+  @media (min-width: @tablet-width) {
+    border: none;
+    margin-top: 24px;
+    padding-right: 255px;
+    .font-size-height(16, 24);
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 73px;
+    padding-right: 7px;
+  }
 }
 
 .programs-section__program-link {
@@ -31,103 +114,18 @@
   .oswald-regular();
   color: @basic_black;
   text-transform: uppercase;
-}
 
-@media (max-width: @mobile-width) {
-  .programs-section {
-    padding: 20px;
-  }
-
-  .programs-section__program {
-    padding: 20px;
-    background-position: left top;
-  }
-
-  .programs-section__program:not(:first-of-type) {
-    margin-top: 20px;
-  }
-
-  .programs-section__head {
-    display: flex;
-    align-items: center;
-  }
-
-  .programs-section__program-title {
-    padding-left: 84px;
-    .font-size-height(24, 37);
-  }
-
-  .programs-section__program-description {
-    margin: 29px 0 0 0;
-    padding-bottom: 20px;
-    border-bottom: 1px solid @border_grey-block;
-    .font-size-height(14, 18);
-  }
-
-  .programs-section__program-link {
+  @media (max-width: @mobile-width) {
     margin-top: 10px;
     .font-size-height(16; 16);
   }
-}
 
-@media (min-width: @tablet-width) {
-  .programs-section {
-    padding: 0 30px;
-  }
-
-  .programs-section__program:not(:first-of-type) {
-    margin-top: 30px;
-  }
-
-  .programs-section__program {
-    padding: 50px;
-    background-position: right center;
-    text-align: left;
-  }
-
-  .programs-section__program-title {
-    .font-size-height(36, 36);
-  }
-
-  .programs-section__program-description {
-    border: none;
-    margin-top: 24px;
-    padding-right: 255px;
-    .font-size-height(16, 24);
-  }
-
-  .programs-section__program-link {
+  @media (min-width: @tablet-width) {
     margin-top: 48px;
     .font-size-height(20, 30);
   }
-}
 
-@media (min-width: @desktop-width) {
-  .programs-section {
-    padding: 0 110px;
-  }
-
-  .programs-section__program:not(:first-of-type) {
-    margin-top: 0;
-    margin-left: 80px;
-  }
-
-  .programs-section__program-list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .programs-section__program {
-    background-position: left top;
-    flex: 1;
-  }
-
-  .programs-section__program-description {
-    margin-top: 73px;
-    padding-right: 7px;
-  }
-
-  .programs-section__program-link {
+  @media (min-width: @desktop-width) {
     margin-top: 23px;
   }
 }
