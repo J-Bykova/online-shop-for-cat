@@ -11,6 +11,7 @@
   }
 }
 
+// TODO шапка
 .header__body {
   display: flex;
   justify-content: space-between;
@@ -65,6 +66,27 @@
   }
 }
 
+.header__burger {
+  display: inline-block;
+  cursor: pointer;
+
+  &--line1,
+  &--line2,
+  &--line3 {
+    width: 25px;
+    height: 2px;
+    background-color: @basic-black;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+
+// TODO меню
 .header__navigation {
   @media (min-width: @tablet-width) {
     margin-top: 12px;
@@ -132,16 +154,5 @@
       margin-left: 37px;
       border: none;
     }
-  }
-}
-
-.header__menu-button {
-  width: 24px;
-  height: 18px;
-  background-color: transparent;
-  background-image: url("../img/mobile-button.svg");
-
-  @media (min-width: @tablet-width) {
-    display: none;
   }
 }
