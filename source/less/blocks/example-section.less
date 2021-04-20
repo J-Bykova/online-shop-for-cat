@@ -193,8 +193,8 @@
 .example-section__slider {
   appearance: none;
   border-radius: 10px;
-  border: 1px solid rgba(205, 205, 205, 1);
-  background-color: rgba(255, 255, 255, 1);
+  border: @border-slider;
+  background-color: @basic-white;
 
   @media (max-width: @mobile-width) {
     width: 86px;
@@ -204,6 +204,6 @@
   @media (min-width: @tablet-width) {
     width: 428px;
     height: 6px;
-    background-color: #dcdcdc;
+    background-color: @slider-grey;
   }
 }
