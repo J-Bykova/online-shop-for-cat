@@ -15,10 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: @mobile-width) {
-    padding: 12px 20px;
-  }
+  padding: 12px 20px;
 
   @media (min-width: @tablet-width) {
     margin-top: 5px;
@@ -28,14 +25,6 @@
 
 .header__logo {
   display: block;
-
-  &:hover {
-    opacity: 80%;
-  }
-
-  &:active {
-    opacity: 60%;
-  }
 }
 
 .header__logo-link {
@@ -53,6 +42,16 @@
 .header__company-name {
   display: block;
 
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.header__company-name-link {
+  display: block;
+  margin-left: -11px;
+  margin-top: 2px;
+
   &:hover {
     opacity: 80%;
   }
@@ -66,15 +65,6 @@
   }
 }
 
-.header__company-name-link {
-  display: block;
-
-  @media (max-width: @mobile-width) {
-    margin-left: -11px;
-    margin-top: 2px;
-  }
-}
-
 .header__navigation {
   @media (min-width: @tablet-width) {
     margin-top: 12px;
@@ -83,11 +73,8 @@
 
 .header__navigation-menu {
   .reset-list-styles();
-
-  @media (max-width: @mobile-width) {
-    border-top: @border-mobile-menu;
-    border-bottom: @border-mobile-menu;
-  }
+  border-top: @border-mobile-menu;
+  border-bottom: @border-mobile-menu;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -98,6 +85,8 @@
 .header__navigation-menu-link {
   color: @basic-black;
   text-transform: uppercase;
+  .oswald-regular(500);
+  .font-size-height(20; 20);
 
   &:hover {
     opacity: 80%;
@@ -105,11 +94,6 @@
 
   &:active {
     opacity: 60%;
-  }
-
-  @media (max-width: @mobile-width) {
-    .oswald-regular(500);
-    .font-size-height(20; 20);
   }
 
   @media (min-width: @tablet-width) {
@@ -129,13 +113,11 @@
 }
 
 .header__navigation-menu-item {
-  @media (max-width: @mobile-width) {
-    padding: 22px 0;
-    text-align: center;
+  padding: 22px 0;
+  text-align: center;
 
-    &:not(:first-of-type) {
-      border-top: @border-mobile-menu;
-    }
+  &:not(:first-of-type) {
+    border-top: @border-mobile-menu;
   }
 
   @media (min-width: @tablet-width) {
@@ -154,12 +136,10 @@
 }
 
 .header__menu-button {
-  @media (max-width: @mobile-width) {
-    width: 24px;
-    height: 18px;
-    background-color: transparent;
-    background-image: url("../img/mobile-button.svg");
-  }
+  width: 24px;
+  height: 18px;
+  background-color: transparent;
+  background-image: url("../img/mobile-button.svg");
 
   @media (min-width: @tablet-width) {
     display: none;
