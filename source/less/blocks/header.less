@@ -67,18 +67,11 @@
 }
 
 .header__burger {
-  display: inline-block;
-  cursor: pointer;
+  .reset-button-styles();
+  width: 24px;
+  height: 18px;
+  background-image: url("../img/mobile-button.svg");
 
-  &--line1,
-  &--line2,
-  &--line3 {
-    width: 25px;
-    height: 2px;
-    background-color: @basic-black;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
 
   @media (min-width: @tablet-width) {
     display: none;
