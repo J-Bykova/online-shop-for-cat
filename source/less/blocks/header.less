@@ -1,9 +1,9 @@
 .header {
   @media (min-width: @tablet-width) {
-    padding: 19px 29px 0 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
+    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -15,21 +15,36 @@
 .header__body {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 12px 20px;
+  align-items: stretch;
+  height: 65px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 5px;
     padding: 0;
+    height: 107px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 60px;
   }
 }
 
 .header__logo {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .header__logo-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 74px;
 
   &:hover {
     opacity: 80%;
@@ -38,10 +53,19 @@
   &:active {
     opacity: 60%;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 174px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 202px;
+  }
 }
 
 .header__company-name {
   display: block;
+  transform: translateX(-1px);
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -49,9 +73,10 @@
 }
 
 .header__company-name-link {
-  display: block;
-  margin-left: -11px;
-  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 
   &:hover {
     opacity: 80%;
@@ -68,9 +93,11 @@
 
 .header__burger {
   .reset-button-styles();
-  width: 24px;
-  height: 18px;
-  background-image: url("../img/mobile-button.svg");
+  width: 74px;
+  background-image: url("../img/cross-button.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 32px calc(50% - 2px);
 
 
   @media (min-width: @tablet-width) {
@@ -82,7 +109,8 @@
 // TODO меню
 .header__navigation {
   @media (min-width: @tablet-width) {
-    margin-top: 12px;
+    display: flex;
+    align-items: stretch;
   }
 }
 
@@ -94,14 +122,18 @@
   @media (min-width: @tablet-width) {
     border: none;
     display: flex;
+    align-items: stretch;
   }
 }
 
 .header__navigation-menu-link {
+  display: block;
   color: @basic-black;
   text-transform: uppercase;
   .oswald-regular(500);
   .font-size-height(20; 20);
+  letter-spacing: 0.63px;
+  padding: 22px 0 23px 0;
 
   &:hover {
     opacity: 80%;
@@ -112,40 +144,81 @@
   }
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    position: relative;
     .oswald-regular();
     .font-size-height(18; 24);
+    padding: 0;
+    letter-spacing: 0;
   }
 
   @media (min-width: @desktop-width) {
     .font-size-height(20; 30);
   }
-}
 
-.header__navigation-menu-link--index {
-  @media (min-width: @desktop-width) {
-    color: @basic-white;
+  &--current {
+    @media (min-width: @tablet-width) {
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        top: calc(50% + 20px);
+        left: 0;
+        background: #68b738;
+      }
+    }
+  }
+
+  &--desktop-light {
+    @media (min-width: @desktop-width) {
+      color: @basic-white;
+    }
+  }
+
+  &--current&--desktop-light {
+    @media (min-width: @desktop-width) {
+      &::after {
+        background: @basic-white;
+      }
+    }
   }
 }
 
 .header__navigation-menu-item {
-  padding: 22px 0;
   text-align: center;
 
-  &:not(:first-of-type) {
-    border-top: @border-mobile-menu;
+  &:not(:last-of-type) {
+    border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: @tablet-width) {
-    display: block;
+    display: flex;
+    align-items: stretch;
     padding: 0;
 
+    &:not(:last-of-type) {
+      border: none;
+    }
+
     &:first-of-type {
-      margin-right: -2px;
+      margin-right: -3px;
     }
 
     &:not(:first-of-type) {
       margin-left: 37px;
-      border: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-of-type {
+      margin-right: 4px;
+    }
+
+    &:not(:first-of-type) {
+      margin: 0 2px 0 31px;
     }
   }
 }
