@@ -64,11 +64,19 @@
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: 32px calc(50% - 2px);
+
+  &--closed-on-mobile {
+    background-image: url("../img/burger-button.svg");
+  }
 }
 
 .header__navigation {
   .display(block, flex, flex);
   align-items: stretch; //TODO точно ли это надо?
+
+  &--closed-on-mobile {
+    .display(none, flex, flex);
+  }
 }
 
 .header__navigation-menu {
