@@ -1,17 +1,17 @@
 .applyOnMobile(@property; @value) {
-  @media (max-width: @only-mobile-width) {
+  @media (max-width: 767px) {
     @{property}: @value;
   }
 }
 
 .applyOnTablet(@property; @value) {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: 768px) and (max-width: 1439px) {
     @{property}: @value;
   }
 }
 
 .applyOnDesktop(@property; @value) {
-  @media (min-width: @desktop-width) {
+  @media (min-width: 1440px) {
     @{property}: @value;
   }
 }
