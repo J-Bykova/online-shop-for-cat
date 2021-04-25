@@ -4,7 +4,6 @@
     0, 30, 0, 30,
     54, 109, 54, 109
   );
-
   .display(block, flex, flex);
   .justifyContent(flex-start, space-between, space-between);
   .alignItems(stretch, stretch, stretch);
@@ -20,13 +19,12 @@
 }
 
 .header__logo {
-  display: block;
-
   .margin(
     0, 0, 0, 0,
     -4, 0, 0, 0,
     0, 0, 0, 0
   );
+  display: block;
 }
 
 .header__logo-link {
@@ -34,14 +32,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  &:hover {
-    opacity: 80%;
-  }
-
-  &:active {
-    opacity: 60%;
-  }
 }
 
 .header__company-name {
@@ -54,7 +44,10 @@
   justify-content: center;
   align-items: center;
   flex: 1;
+}
 
+.header__logo-link,
+.header__company-name-link {
   &:hover {
     opacity: 80%;
   }
@@ -73,7 +66,6 @@
   background-repeat: no-repeat;
   background-position: 32px calc(50% - 2px);
 }
-
 
 // TODO меню
 .header__navigation {
@@ -107,11 +99,11 @@
   align-items: center;
 
   &:hover {
-    opacity: 80%;
+    opacity: 60%;
   }
 
   &:active {
-    opacity: 60%;
+    opacity: 30%;
   }
 
   &--current {
