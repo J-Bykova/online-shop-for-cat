@@ -140,3 +140,21 @@
   .applyOnTablet(letter-spacing, ~"@{tablet}px");
   .applyOnDesktop(letter-spacing, ~"@{desktop}px");
 }
+
+.top(@mobile; @tablet; @desktop) {
+  .applyOnMobile(top, ~"@{mobile}px");
+  .applyOnTablet(top, ~"@{tablet}px");
+  .applyOnDesktop(top, ~"@{desktop}px");
+}
+
+.left(@mobile; @tablet; @desktop) {
+  .applyOnMobile(left, ~"@{mobile}px");
+  .applyOnTablet(left, ~"@{tablet}px");
+  .applyOnDesktop(left, ~"@{desktop}px");
+}
+
+.flex(@mobile; @tablet; @desktop) {
+  .applyOnMobile(flex, @mobile);
+  .applyOnTablet(flex, @tablet);
+  .applyOnDesktop(flex, @desktop);
+}

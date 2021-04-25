@@ -1,115 +1,111 @@
 .programs-section {
-  padding: 0 20px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 110px;
-  }
+  .padding (
+    0, 20, 0, 20,
+    0, 30, 0, 30,
+    67, 110, 0, 110
+  );
 }
 
 .programs-section__program-list {
   .reset-list-styles();
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: space-between;
-  }
+  .display(block, block, flex);
+  .justifyContent(flex-start, flex-start, space-between);
+  position: relative;
 }
 
 .programs-section__program {
+  .padding (
+    30, 19, 22, 20,
+    77, 276, 57, 52,
+    77, 52, 59, 52
+  );
+  .flex(initial, initial, 1);
+  margin: 0;
+  position: relative;
   background-color: @background-light-grey;
-  background-repeat: no-repeat;
-  padding: 20px;
-  background-position: 20px 20px;
 
   &:not(:first-of-type) {
-    margin-top: 44px;
+    .margin (
+      20, 0, 0, 0,
+      30, 0, 0, 0,
+      0, 0, 0, 80
+    );
   }
 
-  &--slim {
+  &::before {
+    .top(21, 80, 41);
+    .left(13, 410, 34);
+    .width(67, 328, 134);
+    .height(53, 212, 212);
+    content: "";
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--slim::before {
     background-image: url("../img/program-icons/cat-slim.svg");
   }
 
-  &--pro {
+  &--pro::before {
     background-image: url("../img/program-icons/cat-pro.svg");
   }
-
-  @media (min-width: @tablet-width) {
-    padding: 50px;
-    background-position: right center;
-    text-align: left;
-
-    &:not(:first-of-type) {
-      margin-top: 30px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    background-position: left top;
-    flex: 1;
-
-    &:not(:first-of-type) {
-      margin-top: 0;
-      margin-left: 80px;
-    }
-  }
-}
-
-.programs-section__head {
-  padding-top: 10px;
-  display: flex;
-  align-items: center;
 }
 
 .programs-section__program-title {
-  margin: 0;
-  padding-left: 71px;
-  .oswald-regular();
-  .font-size-height(24, 37);
+  .margin (
+    0, 0, 0, 71,
+    0, 0, 0, 1,
+    0, 0, 0, 162
+  );
+  .fontSize(24, 36, 36);
+  .lineHeight(37, 36, 36);
+  font-family: @oswaldFont;
   color: @basic-black;
   text-transform: uppercase;
-
-  @media (min-width: @tablet-width) {
-    .font-size-height(36, 36);
-  }
 }
 
 .programs-section__program-description {
-  margin: 30px 0 0 0;
-  padding-bottom: 22px;
-  border-bottom: @border-content;
-  .font-size-height(14, 18);
-
-  @media (min-width: @tablet-width) {
-    border: none;
-    margin-top: 24px;
-    padding-right: 255px;
-    .font-size-height(16, 24);
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 73px;
-    padding-right: 7px;
-  }
+  .margin (
+    29, 0, 0, 0,
+    25, 0, 0, 0,
+    73, 0, 0, 0
+  );
+  .fontSize(14, 16, 16);
+  .lineHeight(18, 24, 24);
 }
 
 .programs-section__program-link {
-  margin-top: 19px;
+  .margin (
+    19, 0, 0, -1,
+    51, 0, 0, 0,
+    2, 0, 0, 0
+  );
+  .padding (
+    20, 0, 0, 0,
+    48, 0, 0, 0,
+    27, 0, 0, 0
+  );
+  .fontSize(16, 20, 20);
+  .lineHeight(16, 30, 30);
+  .borderTop(@border-content, none, none);
   display: block;
-  .oswald-regular();
-  .font-size-height(16; 16);
+  position: relative;
+  font-family: @oswaldFont;
   color: @basic-black;
   text-transform: uppercase;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 48px;
-    .font-size-height(20, 30);
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 23px;
+  &::before {
+    .top (21, 57, 35);
+    .left(102, 133, 133);
+    content: "";
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 12px;
+    background-image: url("../img/program-icons/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
