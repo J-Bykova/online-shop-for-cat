@@ -1,12 +1,15 @@
 .button {
-  .reset-button-styles();
+  .oswaldFont();
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
   text-align: center;
-  .oswald-regular();
   text-transform: uppercase;
   white-space: nowrap;
 
   &--green {
-    background-color: @button-background_green;
+    background-color: @basic-green;
     color: @basic-white;
 
     &:hover {
@@ -25,13 +28,8 @@
   }
 
   &--after-before {
-    .reset-button-styles();
-    .oswald-regular();
-    text-transform: uppercase;
+    .font-size-height(16, 20);
 
-    @media (max-width: @mobile-width) {
-      .font-size-height(16, 20);
-    }
 
     @media (min-width: @tablet-width) {
       .font-size-height(20, 30);

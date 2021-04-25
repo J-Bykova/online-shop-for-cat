@@ -1,59 +1,62 @@
 .howitworks-section {
-  @media (max-width: @mobile-width) {
-    padding: 20px;
-  }
+  .padding (
+    26, 20, 43, 20,
+    45, 30, 102, 30,
+    0, 110, 0, 110
+  );
 
   @media (min-width: @tablet-width) {
-    padding: 30px;
     border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: @desktop-width) {
     margin-top: 71px;
-    padding: 0 110px;
     border-bottom: none;
   }
 }
 
 .howitworks-section__title {
   margin: 0;
-  .oswald-regular();
+  .oswaldFont();
+  .font-size-height(36, 40);
   color: @basic-black;
 
-  @media (max-width: @mobile-width) {
-    .font-size-height(36, 40);
-  }
-
   @media (min-width: @tablet-width) {
+    margin: 0;
     .font-size-height(60, 60);
   }
 }
 
 .howitworks-section__point-list {
   .reset-list-styles();
-
-  @media (max-width: @mobile-width) {
-    margin-top: 36px;
-  }
+  margin: 37px 0 0 0;
 
   @media (min-width: @tablet-width) {
     margin-top: 72px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 20px;
+    column-gap: 60px;
+    row-gap: 133px;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 60px;
     grid-template-rows: none;
   }
 }
 
 .howitworks-section__point {
   color: @light-grey;
+  margin: 20px 0 0 0;
+  min-height: 60px;
+  background-size: 60px 60px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
   background-position: left center;
   background-repeat: no-repeat;
 
@@ -73,16 +76,6 @@
     background-image: url("../img/howitworks/icon_alarm.svg");
   }
 
-  @media (max-width: @mobile-width) {
-    margin: 20px 0 0 0;
-    min-height: 60px;
-    background-size: 60px 60px;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     margin-top: 0;
     background-position: left top;
@@ -93,15 +86,12 @@
 
 .howitworks-section__point-description {
   margin: 0;
-
-  @media (max-width: @mobile-width) {
-    padding-left: 80px;
-    .font-size-height(14, 18);
-  }
+  padding: 2px 0 0 80px;
+  .font-size-height(14, 18);
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
-    padding-top: 90px;
+    padding-top: 112px;
     padding-right: 100px;
     .font-size-height(16, 24);
   }

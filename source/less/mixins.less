@@ -1,66 +1,25 @@
-.oswaldFont(@font-weight: 400) {
-  font-family: @oswaldFont;
-  font-weight: @font-weight;
+.applyOnMobile(@property; @value) {
+  @media (max-width: @only-mobile-width) {
+    @{property}: @value;
+  }
 }
 
-.font-size-height(@fontSize; @lineHeight) {
-  font-size: ~"@{fontSize}px";
-  line-height: ~"@{lineHeight}px";
+.applyOnTablet(@property; @value) {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    @{property}: @value;
+  }
+}
+
+.applyOnDesktop(@property; @value) {
+  @media (min-width: @desktop-width) {
+    @{property}: @value;
+  }
 }
 
 .reset-list-styles() {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.reset-button-styles() {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-.applyOnMobile(@property; @value) {
-  @media (max-width: 520px) {
-    @{property}: @value;
-  }
-}
-
-.applyOnTablet(@property; @value) {
-  @media (min-width: 521px) and (max-width: 980px) {
-    @{property}: @value;
-  }
-}
-
-.applyOnDesktop(@property; @value) {
-  @media (min-width: 981px) {
-    @{property}: @value;
-  }
-}
-
-.fontSize(@mobile; @tablet; @desktop) {
-  .applyOnMobile(font-size, ~"@{mobile}px");
-  .applyOnTablet(font-size, ~"@{tablet}px");
-  .applyOnDesktop(font-size, ~"@{desktop}px");
-}
-
-.lineHeight (@mobile; @tablet; @desktop) {
-  .applyOnMobile(line-height, ~"@{mobile}px");
-  .applyOnTablet(line-height, ~"@{tablet}px");
-  .applyOnDesktop(line-height, ~"@{desktop}px");
-}
-
-.color(@mobile; @tablet; @desktop) {
-  .applyOnMobile(color, @mobile);
-  .applyOnTablet(color, @tablet);
-  .applyOnDesktop(color, @desktop);
-}
-
-.backgroundColor(@mobile; @tablet; @desktop) {
-  .applyOnMobile(background-color, @mobile);
-  .applyOnTablet(background-color, @tablet);
-  .applyOnDesktop(background-color, @desktop);
 }
 
 .padding(@m1; @m2; @m3; @m4; @t1; @t2; @t3; @t4; @d1; @d2; @d3; @d4) {
@@ -75,10 +34,28 @@
   .applyOnDesktop(margin, ~"@{d1}px" ~"@{d2}px" ~"@{d3}px" ~"@{d4}px");
 }
 
+.height(@mobile; @tablet; @desktop) {
+  .applyOnMobile(height, ~"@{mobile}px");
+  .applyOnTablet(height, ~"@{tablet}px");
+  .applyOnDesktop(height, ~"@{desktop}px");
+}
+
+.width(@mobile; @tablet; @desktop) {
+  .applyOnMobile(width, @mobile);
+  .applyOnTablet(width, @tablet);
+  .applyOnDesktop(width, @desktop);
+}
+
 .display(@mobile; @tablet; @desktop) {
   .applyOnMobile(display, @mobile);
   .applyOnTablet(display, @tablet);
   .applyOnDesktop(display, @desktop);
+}
+
+.flex(@mobile; @tablet; @desktop) {
+  .applyOnMobile(flex, @mobile);
+  .applyOnTablet(flex, @tablet);
+  .applyOnDesktop(flex, @desktop);
 }
 
 .justifyContent(@mobile; @tablet; @desktop) {
@@ -99,6 +76,48 @@
   .applyOnDesktop(align-items, @desktop);
 }
 
+.textAlign(@mobile; @tablet; @desktop) {
+  .applyOnMobile(text-align, @mobile);
+  .applyOnTablet(text-align, @tablet);
+  .applyOnDesktop(text-align, @desktop);
+}
+// TODO Шрифты
+.fontSize(@mobile; @tablet; @desktop) {
+  .applyOnMobile(font-size, ~"@{mobile}px");
+  .applyOnTablet(font-size, ~"@{tablet}px");
+  .applyOnDesktop(font-size, ~"@{desktop}px");
+}
+
+.lineHeight (@mobile; @tablet; @desktop) {
+  .applyOnMobile(line-height, ~"@{mobile}px");
+  .applyOnTablet(line-height, ~"@{tablet}px");
+  .applyOnDesktop(line-height, ~"@{desktop}px");
+}
+
+.fontWeight(@mobile; @tablet; @desktop) {
+  .applyOnMobile(font-weight, @mobile);
+  .applyOnTablet(font-weight, @tablet);
+  .applyOnDesktop(font-weight, @desktop);
+}
+
+.color(@mobile; @tablet; @desktop) {
+  .applyOnMobile(color, @mobile);
+  .applyOnTablet(color, @tablet);
+  .applyOnDesktop(color, @desktop);
+}
+
+.letterSpacing(@mobile; @tablet; @desktop) {
+  .applyOnMobile(letter-spacing, ~"@{mobile}px");
+  .applyOnTablet(letter-spacing, ~"@{tablet}px");
+  .applyOnDesktop(letter-spacing, ~"@{desktop}px");
+}
+
+.backgroundColor(@mobile; @tablet; @desktop) {
+  .applyOnMobile(background-color, @mobile);
+  .applyOnTablet(background-color, @tablet);
+  .applyOnDesktop(background-color, @desktop);
+}
+
 .borderTop(@mobile; @tablet; @desktop) {
   .applyOnMobile(border-top, @mobile);
   .applyOnTablet(border-top, @tablet);
@@ -111,34 +130,10 @@
   .applyOnDesktop(border-bottom, @desktop);
 }
 
-.height(@mobile; @tablet; @desktop) {
-  .applyOnMobile(height, ~"@{mobile}px");
-  .applyOnTablet(height, ~"@{tablet}px");
-  .applyOnDesktop(height, ~"@{desktop}px");
-}
-
-.width(@mobile; @tablet; @desktop) {
-  .applyOnMobile(width, ~"@{mobile}px");
-  .applyOnTablet(width, ~"@{tablet}px");
-  .applyOnDesktop(width, ~"@{desktop}px");
-}
-
-.fontWeight(@mobile; @tablet; @desktop) {
-  .applyOnMobile(font-weight, @mobile);
-  .applyOnTablet(font-weight, @tablet);
-  .applyOnDesktop(font-weight, @desktop);
-}
-
 .position(@mobile; @tablet; @desktop) {
   .applyOnMobile(position, @mobile);
   .applyOnTablet(position, @tablet);
   .applyOnDesktop(position, @desktop);
-}
-
-.letterSpacing(@mobile; @tablet; @desktop) {
-  .applyOnMobile(letter-spacing, ~"@{mobile}px");
-  .applyOnTablet(letter-spacing, ~"@{tablet}px");
-  .applyOnDesktop(letter-spacing, ~"@{desktop}px");
 }
 
 .top(@mobile; @tablet; @desktop) {
@@ -153,8 +148,13 @@
   .applyOnDesktop(left, ~"@{desktop}px");
 }
 
-.flex(@mobile; @tablet; @desktop) {
-  .applyOnMobile(flex, @mobile);
-  .applyOnTablet(flex, @tablet);
-  .applyOnDesktop(flex, @desktop);
+// TODO нужно будет удалить
+.oswaldFont(@font-weight: 400) {
+  font-family: @oswaldFont;
+  font-weight: @font-weight;
+}
+// TODO нужно будет удалить
+.font-size-height(@fontSize; @lineHeight) {
+  font-size: ~"@{fontSize}px";
+  line-height: ~"@{lineHeight}px";
 }

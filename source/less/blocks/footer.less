@@ -1,42 +1,40 @@
 .footer {
-  padding: 0;
   background-color: @background-light-grey;
+  //padding: 20px;
+  .padding(
+    39, 20, 60, 19,
+    55, 30, 61, 30,
+    57, 110, 58, 110
+  );
 }
 
 .footer__body {
-  @media (max-width: @mobile-width) {
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
+  display: flex;
 
-  @media (min-width: @tablet-width) {
-    padding: 55px 30px 61px 30px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 57px 110px 58px 110px;
-  }
+  .flexDirection(column, row, row);
+  .justifyContent(flex-start, space-between, space-between);
+  .alignItems(stretch, stretch, stretch);
+  //.padding(
+  //  12, 20, 21, 20,
+  //  55, 30, 61, 30,
+  //  57, 110, 58, 110
+  //);
 }
 
 .footer__company-name {
   text-align: center;
-  border-bottom: @border-content;
 
-  @media (min-width: @tablet-width) {
-    border-bottom: none;
-  }
+  .borderBottom(@border-content, none, none);
 }
 
 .footer__company-name-link {
   display: block;
 
-  @media (max-width: @mobile-width) {
-    padding: 32px 0;
-  }
+  .padding(
+    0, 0, 0, 0,
+    0, 0, 0, 0,
+    0, 0, 0, 0
+  );
 }
 
 .footer__company-name-image {
@@ -48,15 +46,12 @@
   margin: 0;
   text-align: center;
 
-
-  @media (max-width: @mobile-width) {
-    padding: 21px 0;
-    border-bottom: @border-content;
-  }
-
-  @media (min-width: @tablet-width) {
-    border-bottom: none;
-  }
+  .padding(
+    21, 0, 21, 0,
+    0 ,0, 0, 0,
+    0 ,0, 0, 0
+  );
+  .borderBottom(@border-content, none, none);
 }
 
 .footer__social-network {
@@ -68,9 +63,11 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: @mobile-width) {
-    padding: 21px 0;
-  }
+  .padding(
+    21, 0, 21, 0,
+    0 ,0, 0, 0,
+    0 ,0, 0, 0
+  );
 }
 
 .footer__copyright-name {
@@ -84,7 +81,9 @@
 }
 
 .footer__copyright-logo {
-  @media (min-width: @tablet-width) {
-    margin-left: 22px;
-  }
+  .margin(
+    0, 0, 0, 0,
+    0 ,0, 0, 22,
+    0 ,0, 0, 0
+  );
 }

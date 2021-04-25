@@ -7,7 +7,7 @@
   justify-content: space-between;
   background-color: @basic-white;
 
-  @media (max-width: @mobile-width) {
+  @media (max-width: @only-mobile-width) {
     padding: 28px 19px 26px 19px;
 
     &--grey {
@@ -36,12 +36,12 @@
 
 .contacts-section__title {
   flex: 1;
-  margin: 2px;
-  .oswald-regular();
+  margin: 0;
+  .oswaldFont();
   color: @dark-grey;
   text-transform: uppercase;
 
-  @media (max-width: @mobile-width) {
+  @media (max-width: @only-mobile-width) {
     max-width: 140px;
     .font-size-height(16, 18);
   }
@@ -61,7 +61,7 @@
   font-style: normal;
   color: @light-grey;
 
-  @media (max-width: @mobile-width) {
+  @media (max-width: @only-mobile-width) {
     max-width: 140px;
     .font-size-height(14; 20);
   }
@@ -81,7 +81,7 @@
   width: 100%;
   border: 0;
 
-  @media (max-width: @mobile-width) {
+  @media (max-width: @only-mobile-width) {
     height: 362px;
   }
 

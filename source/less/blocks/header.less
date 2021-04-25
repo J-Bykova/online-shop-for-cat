@@ -6,13 +6,11 @@
   );
   .display(block, flex, flex);
   .justifyContent(flex-start, space-between, space-between);
-  .alignItems(stretch, stretch, stretch);
+  align-items: stretch;
 }
 
-// TODO шапка
 .header__body {
   .height (65, 107, 60);
-  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -22,13 +20,13 @@
   .margin(
     0, 0, 0, 0,
     -4, 0, 0, 0,
-    0, 0, 0, 0
+    1, 0, 0, 1
   );
   display: block;
 }
 
 .header__logo-link {
-  .width(74, 174, 202);
+  .width(74px, 174px, 202px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +41,7 @@
   .display (flex, none, none);
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex: 1; //TODO точно ли это надо?
 }
 
 .header__logo-link,
@@ -58,7 +56,6 @@
 }
 
 .header__burger {
-  .reset-button-styles();
   .display(block, none, none);
   width: 74px;
   background-image: url("../img/cross-button.svg");
@@ -67,18 +64,17 @@
   background-position: 32px calc(50% - 2px);
 }
 
-// TODO меню
 .header__navigation {
   .display(block, flex, flex);
-  .alignItems(stretch, stretch, stretch);
+  align-items: stretch; //TODO точно ли это надо?
 }
 
 .header__navigation-menu {
   .reset-list-styles();
   .display(block, flex, flex);
-  .alignItems(stretch, stretch, stretch);
   .borderTop (@border-mobile-menu, none, none);
   .borderBottom (@border-mobile-menu, none, none);
+  align-items: stretch; //TODO точно ли это надо?
 }
 
 .header__navigation-menu-link {
@@ -92,7 +88,7 @@
   .fontSize(20, 18, 20);
   .lineHeight(20, 24, 30);
   .fontWeight(500, 400, 400);
-  .letterSpacing(0.6, normal, normal);
+  .letterSpacing(0.7, normal, normal);
   font-family: @oswaldFont;
   color: @basic-black;
   text-transform: uppercase;
@@ -116,7 +112,7 @@
         position: absolute;
         top: calc(50% + 20px);
         left: 0;
-        background: #68b738;
+        background: @basic-green;
       }
     }
   }
@@ -138,8 +134,7 @@
 
 .header__navigation-menu-item {
   .display(block, flex, flex);
-  padding: 0;
-  align-items: stretch;
+  align-items: stretch; //TODO точно ли это надо?
   text-align: center;
 
   &:first-of-type {
