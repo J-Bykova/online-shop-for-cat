@@ -1,10 +1,14 @@
 .offer-section {
-  .padding(
-    27, 20, 22, 20,
-    33, 117, 221, 117,
-    55, 90, 200, 190
-  );
+  padding: 27px 20px 22px 20px;
   position: relative;
+
+  @media @tablet {
+    padding: 33px 117px 221px 117px;
+  }
+
+  @media @desktop {
+    padding: 55px 90px 200px 190px;
+  }
 
   &::before,
   &::after {
@@ -25,6 +29,10 @@
     width: 100%;
     height: 302px;
     top: 0;
+
+    @media @tablet {
+      display: none;
+    }
   }
 
   &::after {
@@ -32,66 +40,73 @@
     width: 280px;
     height: 270px;
     top: 167px;
-  }
 
-  @media (min-width: @tablet-width) {
-    &::before {
-      display: none;
+    @media @tablet {
+      top: 235px;
+      left: 424px;
+      width: 629px;
+      height: 509px;
     }
 
-    &::after {
-      top: 167px;
-      width: 280px;
-      height: 270px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    &::after {
-      width: 280px;
-      height: 270px;
-      top: 171px;
-      left: 800px;
+    @media @desktop {
+      top: 0;
+      left: 900px;
+      width: 552px;
+      height: 499px;
     }
   }
 }
 
 .offer-section__title {
-  .fontSize(36, 60, 60);
-  .lineHeight(36, 60, 60);
-  .color (@basic-white, @basic-black, @basic-black);
-  .textAlign(center, left, left);
+  .font(36, 36);
   margin: 0;
   font-family: @oswaldFont;
   font-weight: 400;
+  color: @basic-white;
+  text-align: center;
+
+  @media @tablet {
+    .font(60, 60);
+    color: @basic-black;
+    text-align: left;
+  }
 }
 
 .offer-section__subtitle {
-  .fontSize(14, 20, 20);
-  .lineHeight(14, 20, 20);
-  .color (@basic-white, @basic-black, @basic-black);
-  .textAlign(center, left, left);
-  .margin(
-    25, 0, 0, 0,
-    41, 0, 0, 1,
-    40, 0, 0, 0
-  );
-  text-transform: uppercase;
+  .font(14, 14);
+  margin: 25px 0 0 0;
+  text-align: center;
   font-family: @oswaldFont;
+  color: @basic-white;
+  text-transform: uppercase;
+
+  @media @tablet {
+    .font(20, 20);
+    margin: 41px 0 0 1px;
+    color: @basic-black;
+    text-align: left;
+  }
+
+  @media @desktop {
+    margin: 40px 0 0 0;
+  }
 }
 
 .offer-section__button {
-  .margin(
-    302, 0, 0, 0,
-    49, 0, 0, -5,
-    52, 0, 0, 0
-  );
-  .padding(
-    11, 44, 11, 44,
-    17, 26, 17, 26,
-    17, 26, 17, 26
-  );
-  .display(block, inline-block, inline-block);
-  .fontSize(14, 20, 20);
-  .lineHeight(18, 20, 20);
+  .font(14, 18);
+  display: block;
+  margin: 302px 0 0 0;
+  padding: 11px 44px 11px 44px;
+
+  @media @tablet {
+    .font(20, 20);
+    display: inline-block;
+    margin: 49px 0 0 -5px;
+    padding: 17px 26px 17px 26px;
+  }
+
+  @media @desktop {
+    margin: 52px 0 0 0;
+    padding: 17px 27px 17px 26px;
+  }
 }
