@@ -1,64 +1,103 @@
 .header {
-  .padding(
-    0, 0, 0, 0,
-    0, 30, 0, 30,
-    54, 109, 54, 109
-  );
-  .display(block, flex, flex);
-  .justifyContent(flex-start, space-between, space-between);
+  padding: 0;
+  display: block;
   align-items: stretch;
+
+  @media @tablet {
+    padding: 0 20px 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media @desktop {
+    padding: 54px 109px 54px 109px;
+  }
 }
 
 .header__body {
-  .height (65, 107, 60);
   display: flex;
   justify-content: space-between;
   align-items: stretch;
+  height: 65px;
+
+  @media @tablet {
+    height: 107px;
+  }
+
+  @media @desktop {
+    height: 60px;
+  }
 }
 
 .header__logo {
-  .margin(
-    -4, 0, 0, 0,
-    -7, 0, 0, 0,
-    -3, 0, 0, 1
-  );
-  .width(34px, 174px, 201px);
-  .height(38, 52, 59);
   display: block;
+  margin: -4px 0 0 0;
+  width: 34px;
+  height: 34px;
+
+  @media @tablet {
+    margin: -7px 0 0 0;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media @tablet {
+    margin: -3px 0 0 1px;
+    width: 201px;
+    height: 59px;
+  }
 }
 
 .header__logo-link {
-  .width(74px, 174px, 202px);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 74px;
+
+  @media @tablet {
+    width: 174px;
+  }
+
+  @media @tablet {
+    width: 201px;
+  }
 }
 
 .header__company-name {
-  .display (block, none, none);
+  display: block;
   transform: translateX(-1px);
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .header__company-name-link {
-  .display (flex, none, none);
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1; //TODO точно ли это надо?
+  flex: 1;
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .header__logo-link,
 .header__company-name-link {
-  &:hover {
-    opacity: 80%;
-  }
+  @media @desktop {
+    &:hover {
+      opacity: 80%;
+    }
 
-  &:active {
-    opacity: 60%;
+    &:active {
+      opacity: 60%;
+    }
   }
 }
 
 .header__burger {
-  .display(block, none, none);
+  display: block;
   width: 74px;
   background-image: url("../img/cross-button.svg");
   background-size: 20px 20px;
@@ -68,52 +107,68 @@
   &--closed-on-mobile {
     background-image: url("../img/burger-button.svg");
   }
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .header__navigation {
-  .display(block, flex, flex);
-  align-items: stretch; //TODO точно ли это надо?
+  display: block;
+  align-items: stretch;
 
   &--closed-on-mobile {
-    .display(none, flex, flex);
+    display: none;
+
+    @media @tablet {
+      display: flex;
+    }
+  }
+
+  @media @tablet {
+    display: flex;
   }
 }
 
 .header__navigation-menu {
   .reset-list-styles();
-  .display(block, flex, flex);
-  .borderTop (@border-mobile-menu, none, none);
-  .borderBottom (@border-mobile-menu, none, none);
-  align-items: stretch; //TODO точно ли это надо?
+  display: block;
+  align-items: stretch;
+  border-top: @border-mobile-menu;
+  border-bottom: @border-mobile-menu;
+
+  @media @tablet {
+    display: flex;
+    border-top: none;
+    border-bottom: none;
+  }
 }
 
 .header__navigation-menu-link {
-  .display(block, flex, flex);
-  .position(static, relative, relative);
-  .padding(
-    22, 0, 23, 0,
-    0, 0, 0, 0,
-    0, 0, 0, 0
-  );
-  .fontSize(20, 18, 20);
-  .lineHeight(20, 24, 30);
-  .fontWeight(500, 400, 400);
-  .letterSpacing(0.7, normal, normal);
-  font-family: @oswaldFont;
+  .oswaldFont(500);
+  .font(20, 20);
+  display: block;
+  align-items: center;
+  padding: 22px 0 23px 0;
+  letter-spacing: 0.7px;
   color: @basic-black;
   text-transform: uppercase;
-  align-items: center;
 
-  &:hover {
-    opacity: 60%;
+  @media @tablet {
+    .font(18, 24);
+    display: flex;
+    position: relative;
+    padding: 0;
+    letter-spacing: normal;
+    font-weight: 400;
   }
 
-  &:active {
-    opacity: 30%;
+  @media @desktop {
+    .font(20, 30);
   }
 
   &--current {
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       &::after {
         content: "";
         display: block;
@@ -128,13 +183,13 @@
   }
 
   &--desktop-light {
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       color: @basic-white;
     }
   }
 
   &--current&--desktop-light {
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       &::after {
         background: @basic-white;
       }
@@ -143,27 +198,43 @@
 }
 
 .header__navigation-menu-item {
-  .display(block, flex, flex);
-  align-items: stretch; //TODO точно ли это надо?
+  display: block;
+  align-items: stretch;
   text-align: center;
 
   &:first-of-type {
-    .margin(
-      0, 0, 0, 0,
-      0, -3, 0, 0,
-      0, 4, 0, 0
-    );
+    margin: 0;
+
+    @media @tablet {
+      margin: 0 -3px 0 0;
+    }
+
+    @media @desktop {
+      margin: 0 4px 0 0;
+    }
   }
 
   &:not(:first-of-type) {
-    .margin(
-      0, 0, 0, 0,
-      0, 0, 0, 37,
-      0, 2, 0, 31
-    );
+    margin: 0;
+
+    @media @tablet {
+      margin: 0 0 0 37px;
+    }
+
+    @media @desktop {
+      margin: 0 2px 0 31px;
+    }
   }
 
   &:not(:last-of-type) {
-    .borderBottom(@border-mobile-menu, none, none);
+    border-bottom: @border-mobile-menu;
+
+    @media @tablet {
+      border-bottom: none;
+    }
+  }
+
+  @media @tablet {
+    display: flex;
   }
 }
