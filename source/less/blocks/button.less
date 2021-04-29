@@ -15,12 +15,13 @@
     color: @basic-white;
 
     &:hover {
-      background-color: @button-background_green-hover;
+      @media @desktop {
+        background-color: @dark-green;
+      }
     }
 
     &:active {
-      background-color: @button-background_green-hover;
-      opacity: 30%;
+      //background-color: @button-background_green-hover;
     }
   }
 
@@ -33,7 +34,7 @@
     .font-size-height(16, 20);
 
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       .font-size-height(20, 30);
     }
   }

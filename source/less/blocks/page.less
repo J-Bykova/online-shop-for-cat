@@ -14,7 +14,7 @@
   font-weight: 400;
   color: @light-grey;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     &--index-desktop {
       &::before {
         content: "";
@@ -26,7 +26,7 @@
         top: 0;
         left: 50%;
 
-        background-image: linear-gradient(@background-green, @background-green),
+        background-image: linear-gradient(@transparent-green, @transparent-green),
           url("../img/offer-section/index-background-desktop.png");
         background-position: right top;
         background-repeat: no-repeat;

@@ -85,14 +85,12 @@
 
 .header__logo-link,
 .header__company-name-link {
-  @media @desktop {
-    &:hover {
-      opacity: 80%;
-    }
+  &:hover {
+    opacity: 80%;
+  }
 
-    &:active {
-      opacity: 60%;
-    }
+  &:active {
+    opacity: 60%;
   }
 }
 
@@ -154,19 +152,6 @@
   color: @basic-black;
   text-transform: uppercase;
 
-  @media @tablet {
-    .font(18, 24);
-    display: flex;
-    position: relative;
-    padding: 0;
-    letter-spacing: normal;
-    font-weight: 400;
-  }
-
-  @media @desktop {
-    .font(20, 30);
-  }
-
   &--current {
     @media @tablet {
       &::after {
@@ -194,6 +179,19 @@
         background: @basic-white;
       }
     }
+  }
+
+  @media @tablet {
+    .font(18, 24);
+    display: flex;
+    position: relative;
+    padding: 0;
+    letter-spacing: normal;
+    font-weight: 400;
+  }
+
+  @media @desktop {
+    .font(20, 30);
   }
 }
 
@@ -232,6 +230,14 @@
     @media @tablet {
       border-bottom: none;
     }
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 
   @media @tablet {

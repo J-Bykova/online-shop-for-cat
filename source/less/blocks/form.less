@@ -16,7 +16,7 @@
     }
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     border-top: 2px solid #68b738;
 
     &--contacts,
@@ -27,7 +27,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     &--contacts,
     &--comment,
     &--related,
@@ -51,12 +51,12 @@
 
   @media (max-width: @only-mobile-width) {
     padding: 0 14px;
-    .font-size-height(24; 26);
+    .font(24; 26);
   }
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
-    .font-size-height(36; 36);
+    .font(36; 36);
   }
 
   @media (min-width: @desktop-width) {

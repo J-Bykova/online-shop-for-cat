@@ -1,47 +1,68 @@
 .programs-section {
-  .padding (
-    0, 20, 0, 20,
-    0, 30, 0, 30,
-    67, 110, 0, 110
-  );;;;
+  padding: 0 20px;
+
+  @media @tablet {
+    padding: 0 30px;
+  }
+
+  @media @desktop {
+    padding: 67px 110px 0 110px;
+  }
 }
 
 .programs-section__program-list {
   .reset-list-styles();
-  .display(block, block, flex);
-  .justifyContent(flex-start, flex-start, space-between);
+  display: block;
   position: relative;
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs-section__program {
-  .padding (
-    30, 19, 22, 20,
-    77, 276, 57, 52,
-    77, 52, 59, 52
-  );
-  .flex(initial, initial, 1);
+  padding: 30px 19px 22px 20px;
   margin: 0;
   position: relative;
   background-color: @background-light-grey;
 
   &:not(:first-of-type) {
-    .margin (
-      20, 0, 0, 0,
-      30, 0, 0, 0,
-      0, 0, 0, 80
-    );;;;
+    margin: 20px 0 0 0;
+
+    @media @tablet {
+      margin: 33px 0 0 0;
+    }
+
+    @media @desktop {
+      margin: 0 0 0 80px;
+    }
   }
 
   &::before {
-    .top(21, 80, 41);
-    .left(13, 410, 34);
-    .width(67px, 328px, 134px);
-    .height(53, 212, 212);
+    top: 21px;
+    left: 13px;
+    width: 67px;
+    height: 53px;
     content: "";
     display: block;
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
+
+    @media @tablet {
+      top: 80px;
+      left: 410px;
+      width: 328px;
+      height: 212px;
+    }
+
+    @media @desktop {
+      top: 41px;
+      left: 34px;
+      width: 134px;
+      height: 212px;
+    }
   }
 
   &--slim::before {
@@ -51,55 +72,62 @@
   &--pro::before {
     background-image: url("../img/program-icons/cat-pro.svg");
   }
+
+  @media @tablet {
+    padding: 77px 276px 57px 52px;
+  }
+
+  @media @desktop {
+    padding: 77px 52px 59px 52px;
+    flex: 1;
+  }
 }
 
 .programs-section__program-title {
-  .margin (
-    0, 0, 0, 71,
-    0, 0, 0, 1,
-    0, 0, 0, 162
-  );
-  .fontSize(24, 36, 36);
-  .lineHeight(37, 36, 36);
-  font-family: @oswaldFont;
-  font-weight: 400;
+  margin: 0 0 0 71px;
+  .oswaldFont();
+  .font(24, 37);
   color: @basic-black;
   text-transform: uppercase;
+
+  @media @tablet {
+    margin: 0 0 0 1px;
+    .font(36, 36);
+  }
+
+  @media @desktop {
+    margin: 0 0 0 162px;
+  }
 }
 
 .programs-section__program-description {
-  .margin (
-    29, 0, 0, 0,
-    25, 0, 0, 0,
-    73, 0, 0, 0
-  );
-  .fontSize(14, 16, 16);
-  .lineHeight(18, 24, 24);
+  .font(14, 18);
+  margin: 29px 0 0 0;
+
+  @media @tablet {
+    .font(16, 24);
+    margin: 25px 0 0 0;
+  }
+
+  @media @desktop {
+    margin: 72px 0 0 0;
+  }
 }
 
 .programs-section__program-link {
-  .margin (
-    19, 0, 0, -1,
-    51, 0, 0, 0,
-    2, 0, 0, 0
-  );
-  .padding(
-    20, 0, 0, 0,
-    48, 0, 0, 0,
-    27, 0, 0, 0
-  );
-  .fontSize(16, 20, 20);
-  .lineHeight(16, 30, 30);
-  .borderTop(@border-content, none, none);
+  .font(16, 16);
+  margin: 19px 0 0 -1px;
+  padding: 20px 0 0 0;
   display: block;
   position: relative;
   font-family: @oswaldFont;
   color: @basic-black;
   text-transform: uppercase;
+  border-top: @border-content;
 
   &::before {
-    .top (21, 57, 35);
-    .left(102, 133, 133);
+    top: 21px;
+    left: 102px;
     content: "";
     display: block;
     position: absolute;
@@ -108,5 +136,27 @@
     background-image: url("../img/program-icons/icon-arrow.svg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media @tablet {
+      top: 57px;
+      left: 133px;
+    }
+
+    @media @desktop {
+      top: 35px;
+      left: 133px;
+    }
+  }
+
+  @media @tablet {
+    .font(20, 30);
+    margin: 51px 0 0 0;
+    padding: 48px 0 0 0;
+    border-top: none;
+  }
+
+  @media @desktop {
+    margin: 2px 0 0 0;
+    padding: 27px 0 0 0;
   }
 }
