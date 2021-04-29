@@ -19,7 +19,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 110px;
   }
 }
@@ -56,11 +56,9 @@
 }
 
 .example-section__results-container {
-  @media (max-width: @only-mobile-width) {
-    margin: 25px 0 0 0;
-    display: flex;
-    flex-direction: column;
-  }
+  margin: 25px 0 0 0;
+  display: flex;
+  flex-direction: column;
 
   @media @tablet {
     margin-top: 54px;
@@ -117,7 +115,7 @@
   .font(24, 24);
   text-transform: uppercase;
 
-  @media @tablet{
+  @media @tablet {
     margin-top: 22px;
     .font(30, 37);
   }

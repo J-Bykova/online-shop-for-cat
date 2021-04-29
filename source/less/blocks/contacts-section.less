@@ -6,24 +6,17 @@
   display: flex;
   justify-content: space-between;
   background-color: @basic-white;
+  padding: 28px 19px 26px 19px;
 
-  @media (max-width: @only-mobile-width) {
-    padding: 28px 19px 26px 19px;
-
-    &--grey {
-      background-color: @background-light-grey;
-    }
+  &--grey {
+    background-color: @background-light-grey;
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 66px 72px 58px 72px;
-
-    &--grey {
-      background-color: @background-light-grey;
-    }
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 66px 89px 51px 76px;
     width: 570px;
     height: 201px;
@@ -40,18 +33,16 @@
   .oswaldFont();
   color: @dark-grey;
   text-transform: uppercase;
+  max-width: 140px;
+  .font(16, 18);
 
-  @media (max-width: @only-mobile-width) {
-    max-width: 140px;
-    .font(16, 18);
-  }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     max-width: 171px;
     .font(20, 21);
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     max-width: 163px;
   }
 }
@@ -60,18 +51,16 @@
   flex: 1;
   font-style: normal;
   color: @light-grey;
+  max-width: 140px;
+  .font(14; 20);
 
-  @media (max-width: @only-mobile-width) {
-    max-width: 140px;
-    .font(14; 20);
-  }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     max-width: 159px;
     .font(16; 20);
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     max-width: 155px;
   }
 }
@@ -80,12 +69,9 @@
   display: block;
   width: 100%;
   border: 0;
+  height: 362px;
 
-  @media (max-width: @only-mobile-width) {
-    height: 362px;
-  }
-
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     height: 400px;
   }
 }

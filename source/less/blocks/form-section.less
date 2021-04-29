@@ -7,18 +7,15 @@
   .oswaldFont();
   color: @basic-black;
   text-align: left;
+  padding: 0 20px;
+  .font(36, 36);
 
-  @media (max-width: @only-mobile-width) {
-    padding: 0 20px;
-    .font-size-height(36, 36);
-  }
-
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 0 30px;
-    .font-size-height(60, 60);
+    .font(60, 60);
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 0 100px;
   }
 }
@@ -28,18 +25,15 @@
   color: @basic-black;
   text-transform: uppercase;
   text-align: left;
+  padding: 0 20px;
+  .font(14, 18);
 
-  @media (max-width: @only-mobile-width) {
-    padding: 0 20px;
-    .font-size-height(14, 18);
-  }
-
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 0 30px;
-    .font-size-height(20, 30);
+    .font(20, 30);
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 0 100px;
   }
 }

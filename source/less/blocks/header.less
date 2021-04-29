@@ -152,6 +152,16 @@
   color: @basic-black;
   text-transform: uppercase;
 
+  &:hover {
+    @media @desktop {
+      opacity: 60%;
+    }
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
   &--current {
     @media @tablet {
       &::after {
@@ -230,14 +240,6 @@
     @media @tablet {
       border-bottom: none;
     }
-  }
-
-  &:hover {
-    opacity: 60%;
-  }
-
-  &:active {
-    opacity: 30%;
   }
 
   @media @tablet {
