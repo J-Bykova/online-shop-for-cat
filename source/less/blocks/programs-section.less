@@ -12,7 +12,6 @@
 
 .programs-section__program-list {
   .reset-list-styles();
-  display: block;
   position: relative;
 
   @media @desktop {
@@ -22,20 +21,21 @@
 }
 
 .programs-section__program {
-  padding: 30px 19px 22px 20px;
-  margin: 0;
   position: relative;
+  padding: 30px 19px 19px 20px;
   background-color: @background-light-grey;
 
   &:not(:first-of-type) {
     margin: 20px 0 0 0;
 
     @media @tablet {
-      margin: 33px 0 0 0;
+      margin: 30px 0 0 0;
+      padding-right: 315px;
     }
 
     @media @desktop {
       margin: 0 0 0 80px;
+      padding: 77px 0 59px 50px;
     }
   }
 
@@ -74,12 +74,12 @@
   }
 
   @media @tablet {
-    padding: 77px 276px 57px 52px;
+    padding: 77px 283px 57px 52px;
   }
 
   @media @desktop {
-    padding: 77px 52px 59px 52px;
     flex: 1;
+    padding: 77px 0 59px 50px;
   }
 }
 
@@ -91,72 +91,105 @@
   text-transform: uppercase;
 
   @media @tablet {
-    margin: 0 0 0 1px;
+    margin: 0;
     .font(36, 36);
   }
 
   @media @desktop {
-    margin: 0 0 0 162px;
+    margin: 0 0 0 164px;
   }
 }
 
 .programs-section__program-description {
   .font(14, 18);
   margin: 29px 0 0 0;
+  padding-bottom: 22px;
+  border-bottom: @border-content;
 
   @media @tablet {
     .font(16, 24);
     margin: 25px 0 0 0;
+    border-bottom: none;
   }
 
   @media @desktop {
-    margin: 72px 0 0 0;
+    margin: 74px 25px 0 1px;
   }
 }
 
 .programs-section__program-link {
   .font(16, 16);
   margin: 19px 0 0 -1px;
-  padding: 20px 0 0 0;
-  display: block;
+  padding-right: 50px;
+  display: inline-block;
   position: relative;
   font-family: @oswaldFont;
   color: @basic-black;
   text-transform: uppercase;
-  border-top: @border-content;
 
-  &::before {
-    top: 21px;
-    left: 102px;
+  @media @tablet {
+    .font(20, 30);
+    margin: 29px 0 0 0;
+    padding-right: 60px;
+  }
+
+  @media @desktop {
+    margin: 4px 0 0 2px;
+    padding-right: 70px;
+  }
+
+  //TODO полоска
+  &::after {
     content: "";
     display: block;
     position: absolute;
+    top: 7px;
+    right: 11px;
+    width: 22px;
+    height: 2px;
+    background: #000000;
+
+    @media @tablet {
+      top: 14px;
+    }
+
+    @media @desktop {
+      right: 21px;
+    }
+  }
+
+  //TODO стрелка
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 10px;
     width: 24px;
     height: 12px;
     background-image: url("../img/program-icons/icon-arrow.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: all 0.3s;
 
     @media @tablet {
-      top: 57px;
-      left: 133px;
-    }
-
-    @media @desktop {
-      top: 35px;
-      left: 133px;
+      top: 9px;
     }
   }
 
-  @media @tablet {
-    .font(20, 30);
-    margin: 51px 0 0 0;
-    padding: 48px 0 0 0;
-    border-top: none;
+  &:hover {
+    &::before {
+      @media @desktop {
+        right: 2px;
+      }
+    }
   }
 
-  @media @desktop {
-    margin: 2px 0 0 0;
-    padding: 27px 0 0 0;
+  &:active {
+    opacity: 30%;
+
+    &::before {
+      right: 2px;
+    }
   }
 }
