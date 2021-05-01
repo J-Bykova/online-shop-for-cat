@@ -54,6 +54,13 @@
   background-position: left center;
   background-repeat: no-repeat;
 
+  @media @tablet {
+    margin-top: 0;
+    background-position: left top;
+    min-height: 80px;
+    background-size: 80px 80px;
+  }
+
   &:first-of-type {
     margin-top: 0;
   }
@@ -74,74 +81,63 @@
     background-image: url("../img/howitworks/icon_alarm.svg");
   }
 
-  @media @tablet {
-    margin-top: 0;
-    background-position: left top;
-    min-height: 80px;
-    background-size: 80px 80px;
+  &::after {
+    .oswaldFont();
+    .font(280, 280);
+    color: @background-light-grey;
+    position: absolute;
+    top: -39px;
+    z-index: -1;
+  }
 
+  &--1 {
     &::after {
-      .oswaldFont();
-      .font(280, 280);
-      color: @background-light-grey;
-      position: absolute;
-      top: -39px;
-      z-index: -1;
-    }
-
-    &--1 {
-      &::after {
+      @media @tablet {
         content: "1";
+        right: 95px;
+      }
 
-        @media @tablet {
-          right: 95px;
-        }
-
-        @media @desktop {
-          right: 16px;
-        }
+      @media @desktop {
+        right: 16px;
       }
     }
+  }
 
-    &--2 {
-      &::after {
+  &--2 {
+    &::after {
+      @media @tablet {
         content: "2";
+        right: 79px;
+      }
 
-        @media @tablet {
-          right: 79px;
-        }
-
-        @media @desktop {
-          right: 1px;
-        }
+      @media @desktop {
+        right: 1px;
       }
     }
+  }
 
-    &--3 {
-      &::after {
+  &--3 {
+    &::after {
+      @media @tablet {
         content: "3";
+        right: 77px;
+      }
 
-        @media @tablet {
-          right: 77px;
-        }
-
-        @media @desktop {
-          right: -1px;
-        }
+      @media @desktop {
+        right: -1px;
       }
     }
+  }
 
-    &--4 {
-      &::after {
+  &--4 {
+    &::after {
+      @media @tablet {
         content: "4";
+        right: 76px;
+      }
 
-        @media @tablet {
-          right: 76px;
-        }
-
-        @media @desktop {
-          right: -3px;
-        }
+      @media @desktop {
+        right: -3px;
       }
     }
   }
