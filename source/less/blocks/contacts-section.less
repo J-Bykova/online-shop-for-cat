@@ -13,11 +13,11 @@
   }
 
   @media @tablet {
-    padding: 66px 72px 58px 72px;
+    padding: 63px 72px 58px 72px;
   }
 
   @media @desktop {
-    padding: 66px 89px 51px 76px;
+    padding: 75px 90px 51px 76px;
     width: 570px;
     height: 201px;
     position: absolute;
@@ -28,40 +28,58 @@
 }
 
 .contacts-section__title {
+  .oswaldFont();
+  .font(16, 18);
   flex: 1;
   margin: 0;
-  .oswaldFont();
   color: @dark-grey;
   text-transform: uppercase;
   max-width: 140px;
-  .font(16, 18);
-
+  display: flex;
+  flex-direction: column;
 
   @media @tablet {
-    max-width: 171px;
     .font(20, 21);
+    max-width: 171px;
   }
 
   @media @desktop {
-    max-width: 163px;
+    padding: 4px 0 0 0;
+    min-width: 163px;
+  }
+}
+
+.contacts-section__title > span:not(:first-of-type) {
+  margin-top: 6px;
+
+  @media @desktop {
+    margin-top: 5px;
   }
 }
 
 .contacts-section__address {
+  .font(14; 20);
   flex: 1;
   font-style: normal;
   color: @light-grey;
   max-width: 140px;
-  .font(14; 20);
-
 
   @media @tablet {
-    max-width: 159px;
     .font(16; 20);
+    max-width: 159px;
+    text-align: right;
   }
 
   @media @desktop {
     max-width: 155px;
+    text-align: left;
+  }
+}
+
+.contacts-section__address > span:not(:first-of-type) {
+  @media @tablet {
+    display: block;
+    margin-top: 18px;
   }
 }
 
