@@ -21,7 +21,8 @@
     }
 
     &:active {
-      //background-color: @button-background_green-hover;
+      background-color: @dark-green;
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -33,9 +34,9 @@
   &--after-before {
     .font(16, 20);
 
-
     @media @tablet {
       .font(20, 30);
+      border-bottom: 1px dotted #b2b2b2;
     }
   }
 }

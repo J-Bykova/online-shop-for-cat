@@ -20,18 +20,22 @@
     <a class="header__company-name-link">
       <img class="header__company-name" src="img/logos/text/cat-energy.svg" width="101" height="18" alt="Кэт энерджи">
     </a>
-    <button class="header__burger header__burger--closed-on-mobile button" type="button" aria-label="Close-open"></button>
+    <button class="header__burger header__burger--closed-on-mobile button" type="button"
+            aria-label="Close-open"></button>
   </div>
   <nav class="header__navigation header__navigation--closed-on-mobile">
     <ul class="header__navigation-menu">
       <li class="header__navigation-menu-item">
-        <a class="header__navigation-menu-link header__navigation-menu-link--desktop-light header__navigation-menu-link--current">Главная</a>
+        <a
+          class="header__navigation-menu-link header__navigation-menu-link--desktop-light header__navigation-menu-link--current">Главная</a>
       </li>
       <li class="header__navigation-menu-item">
-        <a class="header__navigation-menu-link header__navigation-menu-link--desktop-light" href="catalog.html">Каталог продукции</a>
+        <a class="header__navigation-menu-link header__navigation-menu-link--desktop-light" href="catalog.html">Каталог
+          продукции</a>
       </li>
       <li class="header__navigation-menu-item">
-        <a class="header__navigation-menu-link header__navigation-menu-link--desktop-light" href="form.html">Подбор программы</a>
+        <a class="header__navigation-menu-link header__navigation-menu-link--desktop-light" href="form.html">Подбор
+          программы</a>
       </li>
     </ul>
   </nav>
@@ -47,17 +51,17 @@
       <li class="programs-section__program programs-section__program--slim">
         <h3 class="programs-section__program-title">Похудение</h3>
         <p class="programs-section__program-description">
-          Ваш&nbsp;кот&nbsp;весит&nbsp;больше&nbsp;собаки&nbsp;и почти&nbsp;утратил способность
-          лазить по&nbsp;деревьям?&nbsp;Пора&nbsp;на&nbsp;диету! Cat Energy&nbsp;Slim&nbsp;поможет
-          вашему питомцу сбросить&nbsp;лишний&nbsp;вес.
+          Ваш кот весит больше собаки и почти утратил способность
+          лазить по деревьям? Пора на диету! Cat Energy Slim поможет
+          вашему питомцу сбросить лишний вес.
         </p>
         <a class="programs-section__program-link" href="catalog-slim.html" target="_blank">Каталог slim</a>
       </li>
       <li class="programs-section__program programs-section__program--pro ">
         <h3 class="programs-section__program-title">Набор массы</h3>
         <p class="programs-section__program-description">
-          Заработать&nbsp;авторитет&nbsp;среди дворовых&nbsp;котов и&nbsp;даже&nbsp;собак?
-          Серия&nbsp;Cat&nbsp;Energy&nbsp;Pro&nbsp;поможет вашему&nbsp;коту&nbsp;нарастить
+          Заработать авторитет среди дворовых котов и даже собак?
+          Серия Cat Energy Pro поможет вашему коту нарастить
           необходимые мышцы!
         </p>
         <a class="programs-section__program-link" href="catalog-pro.html" target="_blank">Каталог pro</a>
@@ -67,22 +71,22 @@
   <section class="howitworks-section">
     <h2 class="howitworks-section__title">Как это работает</h2>
     <ol class="howitworks-section__point-list">
-      <li class="howitworks-section__point howitworks-section__point--icon-leaf">
+      <li class="howitworks-section__point howitworks-section__point--1 howitworks-section__point--icon-leaf">
         <p class="howitworks-section__point-description">
           Функциональное питание содержит только полезные питательные вещества.
         </p>
       </li>
-      <li class="howitworks-section__point howitworks-section__point--icon-tub">
+      <li class="howitworks-section__point howitworks-section__point--2 howitworks-section__point--icon-tub">
         <p class="howitworks-section__point-description">
           Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
         </p>
       </li>
-      <li class="howitworks-section__point howitworks-section__point--icon-eat">
+      <li class="howitworks-section__point howitworks-section__point--3 howitworks-section__point--icon-eat">
         <p class="howitworks-section__point-description">
           Замените один-два приема обычной еды на наше функциональное питание.
         </p>
       </li>
-      <li class="howitworks-section__point howitworks-section__point--icon-alarm">
+      <li class="howitworks-section__point howitworks-section__point--4 howitworks-section__point--icon-alarm">
         <p class="howitworks-section__point-description">
           Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
         </p>
@@ -90,7 +94,7 @@
     </ol>
   </section>
   <section class="example-section">
-    <div class="example-section__content">
+    <div class="example-section__container">
       <div class="example-section__case">
         <h2 class="example-section__title">Живой пример</h2>
         <p class="example-section__description">
@@ -116,15 +120,15 @@
         </div>
       </div>
       <div class="example-section__demo">
-        <div class="example-section__before-container">
-          <img class="example-section__before-image" src="img/example-section/cat-fat.png" alt="fat cat">
-        </div>
-        <div class="example-section__after-container">
-          <!--              <img class="example-section__after-image" src="img/example-section/cat-skinny.png" alt="skinny cat">-->
-        </div>
+        <div class="example-section__image example-section__image--back"></div>
+        <div class="example-section__image example-section__image--front"></div>
         <div class="example-section__buttons">
           <button class="example-section__before-button button button--after-before" type="button">было</button>
-          <input class="example-section__slider" type="range" min="1" max="100" value="50">
+          <div class="example-section__slider">
+            <div class="example-section__slider-scale">
+              <div class="example-section__slider-bar"></div>
+            </div>
+          </div>
           <button class="example-section__after-button button button--after-before" type="button">стало</button>
         </div>
       </div>
@@ -132,13 +136,13 @@
   </section>
   <section class="contacts-section">
     <div class="contacts-section__container">
-      <h2 class="contacts-section__title page__section-header">
-        Приглашаем<br>
-        к сотрудничеству диллеров!
+      <h2 class="contacts-section__title">
+        <span>Приглашаем</span>
+        <span>к сотрудничеству дилеров!</span>
       </h2>
       <address class="contacts-section__address">
-        ул. Большая Конюшенная, д. 19/8<br>
-        Санкт-Петербург
+        <span>ул. Большая Конюшенная, д. 19/8</span>
+        <span>Санкт-Петербург</span>
       </address>
     </div>
     <div class="contacts-section__map">
@@ -154,17 +158,17 @@
   <div class="footer__body">
     <div class="footer__company-name">
       <a class="footer__company-name-link">
-        <img class="footer__company-name-image" src="img/logos/text/cat-energy.svg" alt="Кэт энерджи">
+        <img class="footer__company-name-image" width="128" height="24" src="img/logos/text/cat-energy.svg" alt="Кэт энерджи">
       </a>
     </div>
     <ul class="footer__social-networks">
-      <li class="footer__social-network">
+      <li class="footer__social-network footer__social-network--vk">
         <a class="footer__social-network-link" href="https://vk.com/htmlacademy" target="_blank"></a>
       </li>
-      <li class="footer__social-network">
+      <li class="footer__social-network footer__social-network--in">
         <a class="footer__social-network-link" href="https://www.instagram.com/htmlacademy" target="_blank"></a>
       </li>
-      <li class="footer__social-network">
+      <li class="footer__social-network footer__social-network--fb">
         <a class="footer__social-network-link" href="https://www.facebook.com/htmlacademy" target="_blank"></a>
       </li>
     </ul>
