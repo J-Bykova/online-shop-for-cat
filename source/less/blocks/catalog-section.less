@@ -1,7 +1,7 @@
 .catalog-section {
   padding-bottom: 35px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-bottom: 76px;
   }
 }
@@ -9,19 +9,19 @@
 .catalog-section__title {
   margin: 0;
   padding: 25px 20px;
-  .oswald-regular();
-  .font-size-height(36, 36);
+  .oswaldFont();
+  .font(36, 36);
   color: @basic-black;
   border-bottom: @border-catalog;
 
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 30px;
     border-bottom: none;
-    .font-size-height(60, 60);
+    .font(60, 60);
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 27px 110px 41px 110px;
   }
 }
@@ -32,7 +32,7 @@
   display: grid;
   grid-template-columns: 1fr;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 83px;
     padding: 0 30px;
     display: grid;
@@ -42,7 +42,7 @@
     justify-content: center;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 0 110px;
     grid-template-columns: repeat(4, 245px);
     grid-column-gap: 80px;
@@ -55,7 +55,7 @@
   padding: 20px;
   border-bottom: @border-catalog;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     border-bottom: none;
     max-width: 324px;
     height: 430px;
@@ -66,7 +66,7 @@
 }
 
 .catalog-section__product-card-body {
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     display: flex;
     flex-direction: column;
   }
@@ -85,7 +85,7 @@
 .catalog-section__product-card-text {
   flex: 1;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 34px;
   }
 }
@@ -97,20 +97,20 @@
 .catalog-section__product-name {
   margin: 0;
   width: 100px;
-  .oswald-regular();
-  .font-size-height(16, 20);
+  .oswaldFont();
+  .font(16, 20);
   color: @basic-grey;
   text-transform: uppercase;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 34px;
-    .font-size-height(20, 24);
+    .font(20, 24);
     width: 100%;
     text-align: center;
   }
 
-  @media (min-width: @desktop-width) {
-    .font-size-height(20, 21);
+  @media @desktop {
+    .font(20, 21);
   }
 }
 
@@ -118,7 +118,7 @@
   .reset-list-styles();
   margin: 12px 0 0 0;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 21px;
   }
 }
@@ -126,11 +126,11 @@
 .catalog-section__product-attribute {
   display: flex;
   justify-content: space-between;
-  .font-size-height(12, 16);
+  .font(12, 16);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 7px 0 9px 0;
-    .font-size-height(16, 16);
+    .font(16, 16);
   }
 }
 
@@ -138,14 +138,14 @@
   display: block;
   margin-top: 13px;
   padding: 10px 109px;
-  .font-size-height(16, 20);
+  .font(16, 20);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 33px;
     padding: 10px 93px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 10px 53px;
   }
 }
@@ -163,26 +163,26 @@
 
 .catalog-section__showmore-title {
   margin: 0;
-  .oswald-regular();
-  .font-size-height(16, 20);
+  .oswaldFont();
+  .font(16, 20);
   color: @dark-grey;
   text-transform: uppercase;
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 49px;
-    .font-size-height(20, 22);
+    .font(20, 22);
   }
 }
 
 .catalog-section__showmore-subtitle {
   margin: 8px 0 0 0;
-  .font-size-height(12, 16);
+  .font(12, 16);
   text-align: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 23px;
-    .font-size-height(16, 18);
+    .font(16, 18);
   }
 }
 
@@ -190,14 +190,14 @@
   display: block;
   margin-top: 21px;
   padding: 10px 94px;
-  .font-size-height(16, 20);
+  .font(16, 20);
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 87px;
     padding: 10px 53px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 10px 39px;
   }
 }
@@ -207,28 +207,28 @@
   padding: 0 20px;
   margin: 0;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 0 30px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 0 110px;
   }
 }
 
 .catalog-section__recommendations-title {
   margin: 25px 0 0 0;
-  .oswald-regular();
-  .font-size-height(24, 24);
+  .oswaldFont();
+  .font(24, 24);
   padding-bottom: 36px;
 
-  @media (min-width: @tablet-width) {
-    .font-size-height(36, 36);
+  @media @tablet {
+    .font(36, 36);
   }
 }
 
 .catalog-section__recommendations-container {
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     display: flex;
   }
 }
@@ -246,12 +246,12 @@
   border-top: @border-recommendations;
   border-bottom: @border-recommendations;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding: 27px 38px;
     border: @border-recommendations;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding: 14px 0;
     border-left: none;
     border-right: none;
@@ -262,11 +262,11 @@
 
 .catalog-section__related-product-name {
   margin-top: 13px;
-  .oswald-regular();
-  color: #222222;
+  .oswaldFont();
+  color: @basic-grey;
   text-transform: uppercase;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin: 0;
     text-align: right;
   }
@@ -278,7 +278,7 @@
   justify-content: space-between;
   color: @light-grey;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     width: 100%;
     max-width: 300px;
     margin-top: 0;
@@ -291,7 +291,7 @@
   margin-top: 15px;
   padding: 10px 109px;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin-top: 0;
     margin-left: 38px;
     text-align: right;
@@ -311,13 +311,13 @@
   justify-content: center;
   align-items: center;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     margin-top: 69px;
     display: flex;
     justify-content: space-around;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     margin: 0;
     margin-left: 80px;
     height: 289px;
@@ -332,12 +332,12 @@
 .catalog-section__special-title {
   margin: 0;
   color: @basic-white;
-  .font-size-height(16, 20);
+  .font(16, 20);
   font-weight: 400;
   text-align: center;
   width: 170px;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     text-align: left;
   }
 }

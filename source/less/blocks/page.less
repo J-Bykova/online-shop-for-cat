@@ -3,8 +3,9 @@
 }
 
 .page__body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  max-width: 1500px;
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -12,35 +13,20 @@
   font-style: normal;
   font-weight: 400;
   color: @light-grey;
-}
 
-@media (max-width: @mobile-width) {
-  .page__body {
-    max-width: 767px;
-  }
-}
-
-@media (min-width: @tablet-width) {
-  .page__body {
-    min-width: 768px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page__body {
-    min-width: 1440px;
-
-    &--desktop {
+  @media @desktop {
+    &--index-desktop {
       &::before {
         content: "";
         display: block;
         position: absolute;
         width: 50%;
+        max-width: 750px;
         height: 694px;
         top: 0;
-        right: 0;
+        left: 50%;
 
-        background-image: linear-gradient(@background-green, @background-green),
+        background-image: linear-gradient(@transparent-green, @transparent-green),
           url("../img/offer-section/index-background-desktop.png");
         background-position: right top;
         background-repeat: no-repeat;

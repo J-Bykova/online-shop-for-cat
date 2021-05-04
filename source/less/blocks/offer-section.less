@@ -1,140 +1,111 @@
 .offer-section {
+  padding: 27px 20px 22px 20px;
+  position: relative;
+
+  @media @tablet {
+    padding: 33px 117px 526px 117px;
+  }
+
+  @media @desktop {
+    padding: 55px 90px 200px 190px;
+  }
+
   &::before,
   &::after {
+    content: "";
+    display: block;
+    position: absolute;
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
   }
 
   &::before {
-    background-image: linear-gradient(@background-green, @background-green),
+    background-image: linear-gradient(@transparent-green, @transparent-green),
       url("../img/offer-section/cat-background.jpg");
+    width: 100%;
+    height: 302px;
+    top: 0;
+
+    @media @tablet {
+      display: none;
+    }
   }
 
   &::after {
     background-image: url("../img/offer-section/offer-can-mobile.png");
-  }
+    width: 280px;
+    height: 270px;
+    top: 167px;
 
-  @media (max-width: @mobile-width) {
-    padding: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: -1;
+    @media @tablet {
+      top: 235px;
+      left: 424px;
+      width: 629px;
+      height: 509px;
     }
 
-    &::before {
-      width: 100%;
-      height: 270px;
-      top: 0;
-    }
-
-    &::after {
-      width: 280px;
-      height: 270px;
-      top: 170px;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    padding: 20px 90px 221px;
-
-    &::before {
-      display: none;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 332px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: -1;
-      width: 280px;
-      height: 270px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 103px 90px 200px 111px;
-
-    &::after {
-      width: 280px;
-      height: 270px;
-      top: 350px;
-      left: 800px;
+    @media @desktop {
+      top: -34px;
+      left: 846px;
+      width: 552px;
+      height: 499px;
     }
   }
 }
 
 .offer-section__title {
+  .oswaldFont();
+  .font(36, 36);
+  color: @basic-white;
   margin: 0;
-  .oswald-regular();
+  text-align: center;
 
-  @media (max-width: @mobile-width) {
-    .font-size-height(36, 36);
-    color: @basic-white;
-    text-align: center;
-  }
-
-  @media (min-width: @tablet-width) {
-    margin-top: 30px;
-    .font-size-height(60, 60);
+  @media @tablet {
+    .font(60, 60);
     color: @basic-black;
     text-align: left;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: 0;
   }
 }
 
 .offer-section__subtitle {
-  margin: 0;
-  .oswald-regular();
+  .oswaldFont();
+  .font(14, 14);
+  color: @basic-white;
   text-transform: uppercase;
+  margin: 25px 0 0 0;
+  text-align: center;
 
-  @media (max-width: @mobile-width) {
-    margin-top: 25px;
-    .font-size-height(14, 14);
-    color: @basic-white;
-    text-align: center;
+  @media @tablet {
+    .font(20, 20);
+    color: @basic-black;
+    margin: 41px 0 0 1px;
+    text-align: left;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-top: 41px;
-    .font-size-height(20, 20);
-    color: @basic-black;
-    text-align: left;
+  @media @desktop {
+    margin: 40px 0 0 0;
   }
 }
 
 .offer-section__button {
+  .font(14, 18);
   display: block;
+  margin: 302px 0 0 0;
+  padding: 11px 44px 11px 44px;
 
-  @media (max-width: @mobile-width) {
-    margin-top: 300px;
-    padding: 7px 44px;
-    .font-size-height(14, 18);
+  @media @tablet {
+    .font(20, 20);
+    display: inline-block;
+    margin: 49px 0 0 -5px;
+    padding: 17px 26px 17px 26px;
   }
 
-  @media (min-width: @tablet-width) {
-    margin-top: 49px;
-    padding: 16px 0;
-    width: 244px;
-    .font-size-height(20, 20);
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 14px 26px;
+  @media @desktop {
+    margin: 52px 0 0 0;
+    padding: 17px 27px 17px 26px;
   }
 }

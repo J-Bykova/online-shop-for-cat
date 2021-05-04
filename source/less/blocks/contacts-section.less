@@ -6,25 +6,18 @@
   display: flex;
   justify-content: space-between;
   background-color: @basic-white;
+  padding: 28px 19px 26px 19px;
 
-  @media (max-width: @mobile-width) {
-    padding: 28px 19px 26px 19px;
-
-    &--grey {
-      background-color: @background-light-grey;
-    }
+  &--grey {
+    background-color: @background-light-grey;
   }
 
-  @media (min-width: @tablet-width) {
-    padding: 66px 72px 58px 72px;
-
-    &--grey {
-      background-color: @background-light-grey;
-    }
+  @media @tablet {
+    padding: 63px 72px 58px 72px;
   }
 
-  @media (min-width: @desktop-width) {
-    padding: 66px 89px 51px 76px;
+  @media @desktop {
+    padding: 75px 90px 51px 76px;
     width: 570px;
     height: 201px;
     position: absolute;
@@ -35,44 +28,58 @@
 }
 
 .contacts-section__title {
+  .oswaldFont();
+  .font(16, 18);
   flex: 1;
-  margin: 2px;
-  .oswald-regular();
+  margin: 0;
   color: @dark-grey;
   text-transform: uppercase;
+  max-width: 140px;
+  display: flex;
+  flex-direction: column;
 
-  @media (max-width: @mobile-width) {
-    max-width: 140px;
-    .font-size-height(16, 18);
-  }
-
-  @media (min-width: @tablet-width) {
+  @media @tablet {
+    .font(20, 21);
     max-width: 171px;
-    .font-size-height(20, 21);
   }
 
-  @media (min-width: @desktop-width) {
-    max-width: 163px;
+  @media @desktop {
+    padding: 4px 0 0 0;
+    min-width: 163px;
+  }
+}
+
+.contacts-section__title > span:not(:first-of-type) {
+  margin-top: 4px;
+
+  @media @desktop {
+    margin-top: 5px;
   }
 }
 
 .contacts-section__address {
+  .font(14; 20);
   flex: 1;
   font-style: normal;
   color: @light-grey;
+  max-width: 140px;
 
-  @media (max-width: @mobile-width) {
-    max-width: 140px;
-    .font-size-height(14; 20);
-  }
-
-  @media (min-width: @tablet-width) {
+  @media @tablet {
+    .font(16; 20);
     max-width: 159px;
-    .font-size-height(16; 20);
+    text-align: right;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     max-width: 155px;
+    text-align: left;
+  }
+}
+
+.contacts-section__address > span:not(:first-of-type) {
+  @media @tablet {
+    display: block;
+    margin-top: 18px;
   }
 }
 
@@ -80,12 +87,9 @@
   display: block;
   width: 100%;
   border: 0;
+  height: 362px;
 
-  @media (max-width: @mobile-width) {
-    height: 362px;
-  }
-
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     height: 400px;
   }
 }
