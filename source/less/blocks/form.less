@@ -1,8 +1,11 @@
+.form {
+  padding: 18px 0 0 0;
+}
+
 .form__section {
   margin: 0;
   padding: 0;
   border: 0;
-
   display: flex;
   flex-direction: column;
   border-top: 2px solid #68b738;
@@ -45,13 +48,13 @@
 
 .form__section-title {
   .oswaldFont();
-  color: @basic-black;
-  padding: 0 14px;
   .font(24; 26);
+  padding: 0;
+  color: @basic-black;
 
   @media @tablet {
-    padding: 0 30px;
     .font(36; 36);
+    padding: 0 30px;
   }
 
   @media @desktop {
@@ -62,7 +65,8 @@
 .form__field {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  justify-content: space-between;
+  margin-top: 13px;
 
   @media @tablet {
     margin-top: 20px;
@@ -74,7 +78,7 @@
 }
 
 .form__field-group {
-  padding: 20px;
+  padding: 20px 20px 23px 20px;
   display: flex;
   flex-direction: column;
   border-bottom: @border-content;
@@ -90,9 +94,9 @@
 
 .form__field-label {
   .oswaldFont();
+  .font(16, 18);
   text-transform: uppercase;
   white-space: nowrap;
-  .font(16, 18);
 
   @media @tablet {
     .font(20, 30);
@@ -100,14 +104,29 @@
 }
 
 .form__field-input {
-  padding: 13px 0 13px 15px;
-  margin-left: 8px;
-  width: 100%;
-  outline: none;
-  border: @border-content;
   .oswaldFont();
-  text-transform: uppercase;
   .font(16, 18);
+  outline: none;
+  width: 100%;
+  padding: 13px 0 13px 15px;
+  margin-left: 16px;
+  border: @border-content;
+  text-transform: uppercase;
+
+  &:hover {
+    @media @desktop {
+      border: 1px solid rgba(68, 68, 68, 1);
+    }
+  }
+
+  &:focus {
+    border: 2px solid rgba(68, 68, 68, 1);
+  }
+
+  //TODO нужно переделать,это не работает так как надо
+  &:required:valid {
+    border: 2px solid rgba(255, 130, 130, 1);
+  }
 
   @media @tablet {
     .font(20, 30);
@@ -115,7 +134,7 @@
 }
 
 .form__radiobutton {
-  margin-top: 13px;
+  margin-top: 23px;
 }
 
 .form__radiobutton:first-of-type {
@@ -125,7 +144,7 @@
 .form__radiobutton-group {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 28px 20px 22px 20px;
   border-bottom: @border-content;
 
   @media @tablet {
@@ -139,11 +158,11 @@
 }
 
 .form__radiobutton-label {
-  margin-left: 13px;
   .oswaldFont();
-  color: @basic-grey;
-  text-transform: uppercase;
   .font(16, 18);
+  margin-left: 20px;
+  text-transform: uppercase;
+  color: @basic-grey;
 
   @media @tablet {
     .font(20, 30);
@@ -156,11 +175,11 @@
 }
 
 .form__checkbox-label {
-  margin-left: 16px;
   .oswaldFont();
-  color: @basic-black;
-  text-transform: uppercase;
   .font(16, 18);
+  margin-left: 16px;
+  text-transform: uppercase;
+  color: @basic-black;
 
   @media @tablet {
     .font(20, 30);
@@ -168,14 +187,14 @@
 }
 
 .form__textarea {
+  .oswaldFont();
+  .font(16, 18);
+  display: block;
+  width: 100%;
   padding: 10px;
   margin-top: 20px;
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  .oswaldFont();
+  //box-sizing: border-box; //TODO ?????
   text-transform: uppercase;
-  .font(16, 18);
   height: 150px;
 
   @media @tablet {
@@ -193,12 +212,12 @@
 }
 
 .form__submit-button {
-  padding: 7px 44px;
   .font(16, 18);
+  padding: 7px 44px;
 
   @media @tablet {
-    padding: 13px 45px;
     .font(20, 30);
+    padding: 13px 45px;
   }
 
   @media @desktop {
@@ -208,13 +227,13 @@
 
 .form__footnote {
   .font(14, 16);
-  text-align: center;
   margin-top: 21px;
   padding-bottom: 20px;
+  text-align: center;
 
   @media @tablet {
-    margin-left: 70px;
     .font(16, 16);
+    margin-left: 70px;
   }
 
   @media @desktop {
