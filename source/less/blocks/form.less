@@ -309,7 +309,7 @@
 .form__radiobutton-container {
   display: flex;
   flex-direction: column;
-  max-width: 233px;
+
 
   @media @tablet {
     padding: 29px 20px 30px 20px;
@@ -319,6 +319,7 @@
 
 .form__radiobutton {
   margin-top: 23px;
+  cursor: pointer;
 }
 
 .form__radiobutton:first-of-type {
@@ -335,7 +336,7 @@
     left: 0;
     width: 30px;
     height: 30px;
-    border-radius: 15px;
+    border-radius: 50%;
     border: 1px solid #cdcdcd;
 
     @media @tablet {
@@ -343,10 +344,11 @@
       left: 7px;
       width: 38px;
       height: 37px;
-      border-radius: 22px;
     }
   }
+}
 
+.form__radiobutton-input:checked + .form__radiobutton-box {
   &::after {
     position: absolute;
     content: "";
@@ -354,7 +356,7 @@
     left: 8px;
     width: 14px;
     height: 14px;
-    border-radius: 7px;
+    border-radius: 50%;
     background: @basic-green;
 
     @media @tablet {
@@ -362,20 +364,21 @@
       left: 18px;
       width: 17px;
       height: 17px;
-      border-radius: 10px;
     }
   }
 }
 
 .form__radiobutton-input {
+  position: absolute;
   margin: 0;
-  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .form__radiobutton-label {
   .oswaldFont();
   .font(16, 18);
-  margin-left: 28px;
+  padding-left: 46px;
   text-transform: uppercase;
   color: @basic-grey;
 
