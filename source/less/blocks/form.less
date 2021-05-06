@@ -109,7 +109,7 @@
   }
 }
 
-// TODO Заголовки для  разделов формы
+//Заголовки для  разделов формы
 .form__section-title {
   .oswaldFont();
   .font(24; 26);
@@ -171,7 +171,7 @@
 }
 
 
-//TODO поля формы
+//поля формы
 .form__field-group {
   padding: 21px 20px 23px 20px;
   display: flex;
@@ -291,7 +291,7 @@
 }
 
 
-//TODO radiobutton
+//radiobutton
 .form__radiobutton-group {
   padding: 28px 20px 22px 20px;
   border-bottom: @border-content;
@@ -337,7 +337,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid #cdcdcd;
+    border: @border-radio;
 
     @media @tablet {
       top: -13px;
@@ -368,6 +368,23 @@
   }
 }
 
+.form__radiobutton-input:hover + .form__radiobutton-box {
+  &::before {
+    border: @border-radio-hover;
+  }
+}
+
+//TODO не работает для label
+.form__radiobutton-input:disabled + .form__radiobutton-box,
+.form__radiobutton-input:disabled + .form__radiobutton-label {
+  color: rgba(34, 34, 34, 0.3);
+
+  &::before,
+  &::after {
+    opacity: 30%;
+  }
+}
+
 .form__radiobutton-input {
   position: absolute;
   margin: 0;
@@ -388,8 +405,7 @@
   }
 }
 
-
-//TODO checkbox
+//checkbox
 .form__checkbox {
   display: flex;
 
@@ -454,8 +470,7 @@
   }
 }
 
-
-//TODO textarea
+//textarea
 .form__textarea {
   .oswaldFont();
   .font(16, 18);
@@ -487,8 +502,7 @@
   }
 }
 
-
-//TODO submit
+//submit
 .form__submit-button {
   .font(16, 18);
   padding: 11px 44px;
