@@ -1,39 +1,54 @@
 .form-section {
-  padding: 0;
   margin: 0;
+  padding: 27px 0 0 0;
+
+  @media @tablet {
+    padding: 34px 0 0 0;
+  }
+
+  @media @desktop {
+    padding: 19px 0 0 0;
+  }
 }
 
 .form-section__title {
   .oswaldFont();
-  color: @basic-black;
-  text-align: left;
-  padding: 0 20px;
   .font(36, 36);
+  margin: 0;
+  padding: 0 20px;
+  text-align: left;
+  color: @basic-black;
 
   @media @tablet {
-    padding: 0 30px;
     .font(60, 60);
+    padding: 0 69px;
   }
 
   @media @desktop {
-    padding: 0 100px;
+    padding: 0 110px;
   }
 }
 
 .form-section__subtitle {
   .oswaldFont();
+  .font(14, 18);
+  max-width: 314px;
+  margin: 37px 0 0 0;
+  padding: 0 20px;
+  text-align: left;
   color: @basic-black;
   text-transform: uppercase;
-  text-align: left;
-  padding: 0 20px;
-  .font(14, 18);
 
   @media @tablet {
-    padding: 0 30px;
     .font(20, 30);
+    margin: 54px 0 0 0;
+    padding: 0 69px 0 69px;
+    max-width: 461px;
   }
 
   @media @desktop {
-    padding: 0 100px;
+    max-width: 543px;
+    padding: 0 110px;
+    margin: 56px 0 0 0;
   }
 }

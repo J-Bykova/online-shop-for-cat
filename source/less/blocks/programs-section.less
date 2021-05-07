@@ -40,19 +40,22 @@
   }
 
   &::before {
-    top: 21px;
-    left: 13px;
-    width: 67px;
-    height: 53px;
-    content: "";
     display: block;
     position: absolute;
+    content: "";
     background-repeat: no-repeat;
     background-size: contain;
 
+    @media @only-mobile {
+      top: 21px;
+      left: 13px;
+      width: 67px;
+      height: 53px;
+    }
+
     @media @tablet {
       top: 80px;
-      left: 410px;
+      right: -29px;
       width: 328px;
       height: 212px;
     }
