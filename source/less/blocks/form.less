@@ -408,6 +408,7 @@
 //checkbox
 .form__checkbox {
   display: flex;
+  cursor: pointer;
 
   &:not(:first-of-type) {
     margin-top: 24px;
@@ -420,28 +421,18 @@
 
 .form__checkbox-input {
   margin: 0;
-  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.form__checkbox-box {
-  position: relative;
-
+.form__checkbox-input:hover + .form__checkbox-box {
   &::before {
-    position: absolute;
-    content: "";
-    top: -5px;
-    left: -2px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #cdcdcd;
-
-    @media @tablet {
-      left: -14px;
-      width: 40px;
-      height: 40px;
-    }
+    border: @border-checkbox-hover;
   }
+}
 
+.form__checkbox-input:checked + .form__checkbox-box {
   &::after {
     position: absolute;
     content: "";
@@ -458,10 +449,38 @@
   }
 }
 
+.form__checkbox-input:disabled + .form__checkbox-box,
+.form__checkbox-input:disabled + .form__checkbox-label {
+  &::before,
+  &::after {
+    opacity: 30%;
+  }
+}
+
+.form__checkbox-box {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: -2px;
+    width: 30px;
+    height: 30px;
+    border: @border-checkbox;
+
+    @media @tablet {
+      left: -14px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
 .form__checkbox-label {
   .oswaldFont();
   .font(16, 18);
-  margin-left: 33px;
+  padding-left: 46px;
   text-transform: uppercase;
   color: @basic-black;
 
