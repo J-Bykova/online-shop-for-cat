@@ -37,7 +37,6 @@
   }
 }
 
-//TODO описание кейса
 .example-section__case {
   padding: 0 20px;
 
@@ -109,7 +108,7 @@
   display: flex;
   justify-content: center;
   width: 124px;
-  border: 1px solid #cdcdcd;
+  border: @border-example;
   border-radius: 3px;
 
   &:not(:first-of-type) {
@@ -145,7 +144,6 @@
   left: calc(50% - 44px);
   bottom: -16px;
   padding: 0 4px 0 2px;
-
   text-align: center;
   text-transform: lowercase;
   background-color: @background-dark-grey;
@@ -191,7 +189,6 @@
   }
 }
 
-//TODO пример кейса
 .example-section__demo {
   position: relative;
   margin-top: 41px;
@@ -252,7 +249,6 @@
   }
 }
 
-//TODO переключатель
 .example-section__buttons {
   display: flex;
   justify-content: space-between;
@@ -277,7 +273,7 @@
   display: block;
   width: 84px;
   height: 14px;
-  border: 1px solid #cdcdcd;
+  border: @border-slider;
   border-radius: 6px;
   background-color: @basic-white;
 
@@ -285,7 +281,7 @@
     width: 425px;
     height: 6px;
     border: none;
-    background-color: #dcdcdc;
+    background-color: @middle-grey;
   }
 }
 
@@ -304,7 +300,7 @@
     top: -13px;
     left: 196px;
     border-radius: 20px;
-    border: 1px solid #cdcdcd;
+    border: @border-slider;
     background-color: @basic-white;
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
 
