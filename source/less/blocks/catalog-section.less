@@ -7,18 +7,17 @@
 }
 
 .catalog-section__title {
-  margin: 0;
-  padding: 25px 20px;
   .oswaldFont();
   .font(36, 36);
+  margin: 0;
+  padding: 25px 20px;
   color: @basic-black;
   border-bottom: @border-catalog;
 
-
   @media @tablet {
+    .font(60, 60);
     padding: 30px;
     border-bottom: none;
-    .font(60, 60);
   }
 
   @media @desktop {
@@ -26,7 +25,6 @@
   }
 }
 
-// TODO catalog
 .catalog-section__catalog {
   .reset-list-styles();
   display: grid;
@@ -95,16 +93,16 @@
 }
 
 .catalog-section__product-name {
-  margin: 0;
-  width: 100px;
   .oswaldFont();
   .font(16, 20);
+  margin: 0;
+  width: 100px;
   color: @basic-grey;
   text-transform: uppercase;
 
   @media @tablet {
-    margin-top: 34px;
     .font(20, 24);
+    margin-top: 34px;
     width: 100%;
     text-align: center;
   }
@@ -124,21 +122,21 @@
 }
 
 .catalog-section__product-attribute {
+  .font(12, 16);
   display: flex;
   justify-content: space-between;
-  .font(12, 16);
 
   @media @tablet {
-    padding: 7px 0 9px 0;
     .font(16, 16);
+    padding: 7px 0 9px 0;
   }
 }
 
 .catalog-section__product-button {
+  .font(16, 20);
   display: block;
   margin-top: 13px;
   padding: 10px 109px;
-  .font(16, 20);
 
   @media @tablet {
     margin-top: 33px;
@@ -150,7 +148,6 @@
   }
 }
 
-// TODO showmore
 .catalog-section__catalog-card--showmore {
   background-color: @basic-white;
   border: @border-catalog-card;
@@ -162,35 +159,35 @@
 }
 
 .catalog-section__showmore-title {
-  margin: 0;
   .oswaldFont();
   .font(16, 20);
-  color: @dark-grey;
+  margin: 0;
   text-transform: uppercase;
   text-align: center;
+  color: @dark-grey;
 
   @media @tablet {
-    margin-top: 49px;
     .font(20, 22);
+    margin-top: 49px;
   }
 }
 
 .catalog-section__showmore-subtitle {
-  margin: 8px 0 0 0;
   .font(12, 16);
+  margin: 8px 0 0 0;
   text-align: center;
 
   @media @tablet {
-    margin-top: 23px;
     .font(16, 18);
+    margin-top: 23px;
   }
 }
 
 .catalog-section__showmore-button {
+  .font(16, 20);
   display: block;
   margin-top: 21px;
   padding: 10px 94px;
-  .font(16, 20);
 
   @media @tablet {
     margin-top: 87px;
@@ -202,7 +199,6 @@
   }
 }
 
-// TODO recommendations
 .catalog-section__recommendations {
   padding: 0 20px;
   margin: 0;
@@ -217,9 +213,9 @@
 }
 
 .catalog-section__recommendations-title {
-  margin: 25px 0 0 0;
   .oswaldFont();
   .font(24, 24);
+  margin: 25px 0 0 0;
   padding-bottom: 36px;
 
   @media @tablet {
@@ -233,7 +229,6 @@
   }
 }
 
-// TODO related
 .catalog-section__related-product-list {
   .reset-list-styles();
   flex: 1;
@@ -261,8 +256,8 @@
 }
 
 .catalog-section__related-product-name {
-  margin-top: 13px;
   .oswaldFont();
+  margin-top: 13px;
   color: @basic-grey;
   text-transform: uppercase;
 
@@ -298,7 +293,6 @@
   }
 }
 
-// TODO special
 .catalog-section__special {
   margin-top: 39px;
   background-image: url("../img/catalog-section/gift-photo.png");
@@ -330,12 +324,12 @@
 }
 
 .catalog-section__special-title {
-  margin: 0;
-  color: @basic-white;
   .font(16, 20);
+  margin: 0;
   font-weight: 400;
   text-align: center;
   width: 170px;
+  color: @basic-white;
 
   @media @tablet {
     text-align: left;
