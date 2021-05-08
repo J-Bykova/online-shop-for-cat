@@ -4,13 +4,13 @@
   align-items: stretch;
 
   @media @tablet {
-    padding: 0 30px 0 30px;
+    padding: 0 30px;
     display: flex;
     justify-content: space-between;
   }
 
   @media @desktop {
-    padding: 54px 109px 54px 109px;
+    padding: 54px 109px;
   }
 }
 
@@ -19,9 +19,11 @@
   justify-content: space-between;
   align-items: stretch;
   height: 65px;
+  border-bottom: @border-mobile-menu;
 
   @media @tablet {
     height: 107px;
+    border: none;
   }
 
   @media @desktop {
@@ -135,10 +137,13 @@
   border-top: @border-mobile-menu;
   border-bottom: @border-mobile-menu;
 
+  &:first-of-type {
+    border-top: none;
+  }
+
   @media @tablet {
     display: flex;
-    border-top: none;
-    border-bottom: none;
+    border: none;
   }
 }
 
