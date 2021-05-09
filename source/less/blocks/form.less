@@ -45,6 +45,7 @@
       .form__field {
         margin: 0;
       }
+
       //TODO что это за form__field тоже не понятно
       .form__field:not(:first-of-type) {
         margin: 0;
@@ -362,11 +363,13 @@
 
 .form__radiobutton-input:hover + .form__radiobutton-box {
   &::before {
-    border: @border-radio-hover;
+    @media @desktop {
+      border: @border-radio-hover;
+    }
   }
 }
 
-//TODO не работает для label
+//TODO disabled не работает для label
 .form__radiobutton-input:disabled + .form__radiobutton-box,
 .form__radiobutton-input:disabled + .form__radiobutton-label {
   color: rgba(34, 34, 34, 0.3);
@@ -419,7 +422,9 @@
 
 .form__checkbox-input:hover + .form__checkbox-box {
   &::before {
-    border: @border-checkbox-hover;
+    @media @desktop {
+      border: @border-checkbox-hover;
+    }
   }
 }
 
@@ -440,7 +445,7 @@
   }
 }
 
-//TODO не работает для label
+//TODO disabled не работает для label
 .form__checkbox-input:disabled + .form__checkbox-box,
 .form__checkbox-input:disabled + .form__checkbox-label {
   &::before,
