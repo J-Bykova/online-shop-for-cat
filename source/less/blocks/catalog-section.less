@@ -167,6 +167,11 @@
   }
 }
 
+.catalog-section__product-attribute-name,
+.catalog-section__product-attribute-value {
+  .font(12, 16);
+}
+
 .catalog-section__product-button-body {
   padding: 0 20px 24px 20px;
 
@@ -248,8 +253,7 @@
 }
 
 .catalog-section__recommendations {
-  padding: 0 20px;
-  margin: 0;
+  //padding: 25px 20px 0 20px;
 
   @media @tablet {
     padding: 0 30px;
@@ -263,8 +267,8 @@
 .catalog-section__recommendations-title {
   .oswaldFont();
   .font(24, 24);
-  margin: 25px 0 0 0;
-  padding-bottom: 36px;
+  margin: 0;
+  padding: 25px 20px 35px 20px;
 
   @media @tablet {
     .font(36, 36);
@@ -272,6 +276,8 @@
 }
 
 .catalog-section__recommendations-container {
+  padding: 0 20px 0 20px;
+
   @media @desktop {
     display: flex;
   }
@@ -283,11 +289,17 @@
 }
 
 .catalog-section__related-product {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 19px;
+  display: block;
+  padding: 13px 0 17px 0;
   border-top: @border-recommendations;
-  border-bottom: @border-recommendations;
+
+  &:last-of-type {
+    border-bottom: @border-recommendations;
+
+    @media @tablet {
+      border: none;
+    }
+  }
 
   @media @tablet {
     padding: 27px 38px;
@@ -305,12 +317,12 @@
 
 .catalog-section__related-product-name {
   .oswaldFont();
-  margin-top: 13px;
+  .font(16, 16);
+  margin: 0;
   color: @basic-grey;
   text-transform: uppercase;
 
   @media @desktop {
-    margin: 0;
     text-align: right;
   }
 }
@@ -330,9 +342,15 @@
   }
 }
 
+.catalog-section__related-product-amount,
+.catalog-section__related-product-price {
+  .font(14, 14);
+}
+
 .catalog-section__related-product-button {
+  display: block;
   margin-top: 15px;
-  padding: 10px 109px;
+  padding: 8px 109px;
 
   @media @desktop {
     margin-top: 0;
@@ -367,19 +385,20 @@
   }
 }
 
-.catalog-section__special-icon {
-  padding: 0;
-}
-
 .catalog-section__special-title {
   .font(16, 20);
+  display: block;
   margin: 0;
+  padding: 145px 0 0 0;
   font-weight: 400;
   text-align: center;
-  width: 170px;
   color: @basic-white;
 
   @media @tablet {
     text-align: left;
   }
+}
+
+.catalog-section__special-title > span {
+  display: block;
 }
