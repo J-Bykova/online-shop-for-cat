@@ -190,18 +190,18 @@
 }
 
 .catalog-section__catalog-card--showmore {
-  background-color: @basic-white;
-  border: @border-catalog-card;
-
   @media @tablet {
     position: relative;
-    border: none;
   }
 }
 
 .catalog-section__showmore {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  padding: 78px 20px 24px 21px;
+
+  @media @tablet {
+    padding: 168px 20px 23px 20px;
+  }
 }
 
 .catalog-section__showmore-title {
@@ -214,18 +214,20 @@
 
   @media @tablet {
     .font(20, 22);
-    margin-top: 49px;
+    margin: 49px auto 0 auto;
+    max-width: 160px;
   }
 }
 
 .catalog-section__showmore-subtitle {
   .font(12, 16);
-  margin: 8px 0 0 0;
+  margin: 8px 1px 0 0;
   text-align: center;
 
   @media @tablet {
     .font(16, 18);
-    margin-top: 23px;
+    margin: 23px auto 0 auto;
+    max-width: 228px;
   }
 }
 
