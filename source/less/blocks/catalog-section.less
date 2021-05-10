@@ -31,12 +31,12 @@
   grid-template-columns: 1fr;
 
   @media @tablet {
-    margin-top: 83px;
-    padding: 0 30px;
+    margin-top: 134px;
+    padding: 0 30px 70px 30px;
     display: grid;
     grid-template-columns: repeat(2, 324px);
     grid-column-gap: 60px;
-    row-gap: 103px;
+    row-gap: 140px;
     justify-content: center;
   }
 
@@ -52,54 +52,38 @@
 .catalog-section__catalog-card {
   display: block;
   border-bottom: @border-catalog;
+  padding: 20px 20px 24px 20px;
 
   @media @tablet {
     position: relative;
     border-bottom: none;
-  }
-
-  &::after {
-    @media @tablet {
-      content: "";
-      position: absolute;
-      bottom: -14px;
-      left: 0;
-      height: 430px;
-      width: 100%;
-      background-color: @background-light-grey;
-      z-index: -1;
-    }
-
-    @media @desktop {
-      height: 432px;
-    }
+    background-color: @background-light-grey;
   }
 }
 
 .catalog-section__product-card-body {
   display: flex;
-  padding: 20px 20px 10px 20px;
+  position: relative;
 
   @media @tablet {
     display: block;
-    padding: 20px 20px 32px 20px;
   }
 }
 
 .catalog-section__product-image-link {
   display: block;
-  height: 114px;
   flex: 1;
-
-  @media @tablet {
-    min-height: 200px;
-  }
 }
 
 .catalog-section__product-image {
   display: block;
-  text-align: center;
-  padding: 12px;
+  position: absolute;
+  top: 14px;
+  left: 37px;
+
+  @media @tablet {
+    left: 124px;
+  }
 }
 
 .catalog-section__product-card-text {
@@ -170,14 +154,14 @@
 .catalog-section__product-attribute-name,
 .catalog-section__product-attribute-value {
   .font(12, 16);
+
+  @media @tablet {
+    .font(16, 16);
+  }
 }
 
 .catalog-section__product-button-body {
-  padding: 0 20px 24px 20px;
-
-  @media @tablet {
-    padding: 0 37px 24px 38px;
-  }
+  margin-top: 22px;
 }
 
 .catalog-section__product-button {
@@ -195,17 +179,32 @@
 }
 
 .catalog-section__catalog-card--showmore {
+  position: relative;
+//TODO плюсик уплывает в лево если экран становиться шире
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 145px;
+    background-image: url("../img/catalog-section/plus.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+  }
+
   @media @tablet {
     position: relative;
+    background-color: @basic-white;
+    border: @border-catalog-card;
   }
 }
 
 .catalog-section__showmore {
   display: block;
-  padding: 78px 20px 24px 21px;
+  padding: 58px 0 0 0;
 
   @media @tablet {
-    padding: 168px 20px 23px 20px;
+    padding: 162px 0 0 0;
   }
 }
 
@@ -219,7 +218,7 @@
 
   @media @tablet {
     .font(20, 22);
-    margin: 49px auto 0 auto;
+    margin: 0 auto;
     max-width: 160px;
   }
 }
@@ -252,18 +251,6 @@
   }
 }
 
-.catalog-section__recommendations {
-  //padding: 25px 20px 0 20px;
-
-  @media @tablet {
-    padding: 0 30px;
-  }
-
-  @media @desktop {
-    padding: 0 110px;
-  }
-}
-
 .catalog-section__recommendations-title {
   .oswaldFont();
   .font(24, 24);
@@ -272,11 +259,16 @@
 
   @media @tablet {
     .font(36, 36);
+    padding: 0 30px 80px 66px;
   }
 }
 
 .catalog-section__recommendations-container {
   padding: 0 20px 0 20px;
+
+  @media @tablet {
+    padding: 0 30px 0 30px;
+  }
 
   @media @desktop {
     display: flex;
@@ -286,6 +278,10 @@
 .catalog-section__related-product-list {
   .reset-list-styles();
   flex: 1;
+
+  @media @tablet {
+    border: @border-recommendations;
+  }
 }
 
 .catalog-section__related-product {
@@ -293,17 +289,22 @@
   padding: 13px 0 17px 0;
   border-top: @border-recommendations;
 
+  &:first-of-type {
+    @media @tablet {
+      border-top: none;
+    }
+  }
+
   &:last-of-type {
     border-bottom: @border-recommendations;
 
     @media @tablet {
-      border: none;
+      border-bottom: none;
     }
   }
 
   @media @tablet {
-    padding: 27px 38px;
-    border: @border-recommendations;
+    padding: 27px 38px 28px 38px;
   }
 
   @media @desktop {
@@ -315,12 +316,23 @@
   }
 }
 
+.catalog-section__related-product-container {
+  @media @tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .catalog-section__related-product-name {
   .oswaldFont();
   .font(16, 16);
   margin: 0;
   color: @basic-grey;
   text-transform: uppercase;
+
+  @media @tablet {
+    .font(20, 20);
+  }
 
   @media @desktop {
     text-align: right;
@@ -332,6 +344,10 @@
   display: flex;
   justify-content: space-between;
   color: @light-grey;
+
+  @media @tablet {
+    margin: 0;
+  }
 
   @media @desktop {
     width: 100%;
@@ -345,12 +361,27 @@
 .catalog-section__related-product-amount,
 .catalog-section__related-product-price {
   .font(14, 14);
+
+  @media @tablet {
+    .font(16, 20);
+  }
+}
+
+.catalog-section__related-product-price {
+  @media @tablet {
+    margin-left: 49px;
+  }
 }
 
 .catalog-section__related-product-button {
   display: block;
   margin-top: 15px;
   padding: 8px 109px;
+
+  @media @tablet {
+    margin: 24px 0 0 0;
+    padding: 7px 109px;
+  }
 
   @media @desktop {
     margin-top: 0;
@@ -360,21 +391,31 @@
 }
 
 .catalog-section__special {
+  position: relative;
   margin-top: 39px;
+  padding: 188px 0 0 0;
   background-image: url("../img/catalog-section/gift-photo.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 289px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  //TODO подарок уплывает в лево если экран становиться шире
+  &::after {
+    content: "";
+    position: absolute;
+    top: 57px;
+    left: 101px;
+    background-image: url("../img/catalog-section/gift.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 78px;
+    height: 80px;
+  }
 
   @media @tablet {
-    margin-top: 69px;
-    display: flex;
-    justify-content: space-around;
+    margin-top: 72px;
+    max-height: 200px;
   }
 
   @media @desktop {
@@ -389,7 +430,6 @@
   .font(16, 20);
   display: block;
   margin: 0;
-  padding: 145px 0 0 0;
   font-weight: 400;
   text-align: center;
   color: @basic-white;
