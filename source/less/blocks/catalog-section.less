@@ -55,6 +55,7 @@
   padding: 20px 20px 24px 20px;
 
   @media @tablet {
+    padding-top: 169px;
     position: relative;
     border-bottom: none;
     background-color: @background-light-grey;
@@ -82,7 +83,8 @@
   left: 37px;
 
   @media @tablet {
-    left: 124px;
+    top: -127px;
+    left: 110px;
   }
 }
 
@@ -162,6 +164,11 @@
 
 .catalog-section__product-button-body {
   margin-top: 22px;
+
+  @media @tablet {
+    margin-top: 31px;
+    padding: 0 17px 16px 18px;
+  }
 }
 
 .catalog-section__product-button {
@@ -180,20 +187,30 @@
 
 .catalog-section__catalog-card--showmore {
   position: relative;
-//TODO плюсик уплывает в лево если экран становиться шире
-  &::after {
+  padding: 78px 20px 24px 20px;
+  border-bottom: @border-catalog-card;
+
+  //TODO плюсик уплывает в лево если экран становиться шире
+  &::after,
+  &::before {
     content: "";
     position: absolute;
-    top: 25px;
+    top: 39px;
     left: 145px;
-    background-image: url("../img/catalog-section/plus.svg");
-    background-repeat: no-repeat;
     width: 30px;
-    height: 30px;
+    border: @border-catalog-plus;
+  }
+
+  &::after {
+    transform: rotate(-180deg);
+  }
+
+  &::before {
+    transform: rotate(-90deg);
   }
 
   @media @tablet {
-    position: relative;
+    padding: 162px 33px 24px 34px;
     background-color: @basic-white;
     border: @border-catalog-card;
   }
@@ -201,11 +218,6 @@
 
 .catalog-section__showmore {
   display: block;
-  padding: 58px 0 0 0;
-
-  @media @tablet {
-    padding: 162px 0 0 0;
-  }
 }
 
 .catalog-section__showmore-title {
@@ -400,6 +412,7 @@
   background-size: cover;
   height: 289px;
   width: 100%;
+
   //TODO подарок уплывает в лево если экран становиться шире
   &::after {
     content: "";
