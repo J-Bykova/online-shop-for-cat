@@ -29,6 +29,17 @@
   &--grey {
     background-color: @background-light-grey;
     color: @dark-grey;
+
+    &:hover {
+      @media @desktop {
+        background-color: @background-middle-grey;
+      }
+    }
+
+    &:active {
+      background-color: @background-middle-grey;
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--after-before {
