@@ -41,10 +41,11 @@
   }
 
   @media @desktop {
+    margin-top: 124px;
     padding: 0 110px;
     grid-template-columns: repeat(4, 245px);
     grid-column-gap: 80px;
-    row-gap: 117px;
+    row-gap: 145px;
     justify-content: start;
   }
 }
@@ -59,6 +60,10 @@
     position: relative;
     border-bottom: none;
     background-color: @background-light-grey;
+  }
+
+  @media @desktop {
+    padding-top: 180px;
   }
 }
 
@@ -211,6 +216,11 @@
       left: 131px;
       width: 60px;
     }
+
+    @media @desktop {
+      top: 79px;
+      left: 91px;
+    }
   }
 
   &::after {
@@ -225,6 +235,10 @@
     padding: 162px 33px 24px 34px;
     background-color: @basic-white;
     border: @border-catalog-card;
+  }
+
+  @media @desktop {
+    padding-top: 159px;
   }
 }
 
