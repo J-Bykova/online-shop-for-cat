@@ -214,11 +214,13 @@
     background-position: left;
 
     @media @tablet {
-      width: 677px;
+      width: 338px;
       height: 520px;
-      top: 16px;
+      top: 15px;
       left: calc(50% - 338px);
-      background-color: transparent;
+
+      //TODO этот фон перекрывает толстого кота!
+      background: linear-gradient(to top, @background-dark-grey 67%, @basic-white 50%);
     }
 
     @media @desktop {
@@ -237,7 +239,7 @@
     left: -1px;
 
     @media @tablet {
-      top: 10px;
+      top: 12px;
       left: 19px;
       width: 545px;
       height: 520px;
@@ -295,17 +297,18 @@
   background-color: @basic-green;
   border-radius: 6px;
 
-  @media @tablet {
-    width: 34px;
-    height: 34px;
-    top: -13px;
-    left: 196px;
-    border-radius: 20px;
-    border: @border-slider;
-    background-color: @basic-white;
-    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  &:hover {
+    @media @desktop {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+    }
+  }
 
-    &::after {
+  &:active {
+    border: 1px solid #68b738;
+  }
+
+  &::after {
+    @media @tablet {
       content: "";
       position: absolute;
       top: calc(50% - 4px);
@@ -315,5 +318,16 @@
       border-radius: 4px;
       background-color: @basic-green;
     }
+  }
+
+  @media @tablet {
+    width: 34px;
+    height: 34px;
+    top: -13px;
+    left: 196px;
+    border-radius: 20px;
+    border: @border-slider;
+    background-color: @basic-white;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
   }
 }
