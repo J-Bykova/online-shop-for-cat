@@ -6,14 +6,14 @@
   }
 
   @media @desktop {
-    margin: 26px 0 0 0;//TODO повторяются  0 0 0
+    margin-top: 26px;
   }
 }
 
 .form__section {
   position: relative;
-  display: flex; //TODO заменить на block
-  flex-direction: column; //TODO удалить?
+  display: flex;
+  flex-direction: column;
   border: none;
 
   &--personal {
@@ -38,18 +38,10 @@
 
   &--contacts-desktop {
     @media @desktop {
+      margin: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 75px;
-      //TODO что это за form__field в &--contacts-desktop???
-      .form__field {
-        margin: 0;
-      }
-
-      //TODO что это за form__field тоже не понятно
-      .form__field:not(:first-of-type) {
-        margin: 0;
-      }
     }
   }
 
@@ -99,7 +91,7 @@
 
     @media @tablet {
       padding: 20px 20px 73px 70px;
-      flex-direction: row;//TODO заменить на fleks?
+      flex-direction: row;
     }
 
     @media @desktop {
@@ -111,7 +103,7 @@
 .form__section-title {
   .oswaldFont();
   .font(24; 26);
-  padding: 0;//TODO???
+  padding: 0;
   color: @basic-black;
   position: relative;
 
@@ -170,8 +162,8 @@
 
 .form__field-group {
   padding: 21px 20px 23px 20px;
-  display: flex; //TODO посеять на block
-  flex-direction: column;//TODO удалить
+  display: flex;
+  flex-direction: column;
   border-bottom: @border-form-group;
 
   @media @tablet {
@@ -188,14 +180,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &:not(:first-of-type) {
+    margin-top: 13px;
+
+    @media @tablet {
+      margin-top: 20px;
+    }
+  }
 }
 
-.form__field:not(:first-of-type) {
-  //TODO перенести в .form__field
-  margin-top: 13px;
-
-  @media @tablet {
-    margin-top: 20px;
+.form__section--contacts-desktop > .form__field {
+  @media @desktop {
+    margin-top: 0;
   }
 }
 
@@ -211,7 +208,6 @@
 }
 
 .form__field-input {
-  //TODO  добавить cursor: pointer;???
   .oswaldFont();
   .font(16, 18);
   outline: none;
@@ -224,7 +220,7 @@
     padding: 13px 14px;
 
     @media @tablet {
-      margin: 0 0 0 17px;//TODO повторяешь 000
+      margin-left: 17px;
       padding: 10px 17px;
     }
   }
@@ -234,7 +230,7 @@
     padding: 13px 15px;
 
     @media @tablet {
-      margin: 0 0 0 21px;//TODO повторяешь 000
+      margin-left: 21px;
       padding: 10px 17px;
     }
   }
@@ -244,7 +240,7 @@
     padding: 13px 15px;
 
     @media @tablet {
-      margin: 0 0 0 18px;//TODO повторяешь 000
+      margin-left: 18px;
       padding: 10px 18px;
     }
   }
@@ -254,7 +250,7 @@
     padding: 13px 14px;
 
     @media @tablet {
-      margin: 0 0 0 20px;//TODO повторяешь 000
+      margin-left: 20px;
       padding: 10px 20px;
     }
   }
@@ -264,7 +260,7 @@
     padding: 13px 16px;
 
     @media @tablet {
-      margin: 0 0 0 13px;//TODO повторяешь 000
+      margin-left: 13px;
       padding: 10px 20px;
     }
   }
@@ -303,8 +299,8 @@
 }
 
 .form__radiobutton-container {
-  display: flex;//TODO поменять на block
-  flex-direction: column;//TODO удалить
+  display: flex;
+  flex-direction: column;
 
   @media @tablet {
     padding: 29px 20px 30px 20px;
@@ -314,12 +310,11 @@
 
 .form__radiobutton {
   margin-top: 23px;
-  cursor: pointer;//TODO нужно???
-}
+  cursor: pointer;
 
-.form__radiobutton:first-of-type {
-  //TODO перенести в тег
-  margin-top: 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .form__radiobutton-box {
@@ -387,7 +382,6 @@
   position: absolute;
   margin: 0;
   opacity: 0;
-  cursor: pointer;//TODO нужно???
 }
 
 .form__radiobutton-label {
@@ -399,13 +393,13 @@
 
   @media @tablet {
     .font(20, 30);
-    margin-left: 49px;//TODO может увеличить padding-left?
+    padding-left: 66px;
   }
 }
 
 .form__checkbox {
   display: flex;
-  cursor: pointer;//TODO нужно???
+  cursor: pointer;
 
   &:not(:first-of-type) {
     margin-top: 24px;
@@ -420,7 +414,6 @@
   margin: 0;
   position: absolute;
   opacity: 0;
-  cursor: pointer;//TODO нужно???
 }
 
 .form__checkbox-input:hover + .form__checkbox-box {
@@ -496,7 +489,7 @@
   width: 100%;
   padding: 7px 10px 10px 12px;
   text-transform: uppercase;
-  height: 150px;//TODO ???
+  height: 150px;
   outline: @border-input;
 
   &:hover {
@@ -526,11 +519,11 @@
 
   @media @tablet {
     .font(20, 30);
-    padding: 11px 64px;//TODO повторяешь 11
+    padding: 11px 64px;
   }
 
   @media @desktop {
-    padding: 11px 206px;//TODO повторяешь 11
+    padding: 11px 206px;
   }
 }
 
