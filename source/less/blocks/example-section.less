@@ -1,6 +1,6 @@
 .example-section {
   background-color: @background-dark-grey;
-
+  //TODO перенести before из медио запросов
   @media @tablet {
     position: relative;
     background-color: @basic-white;
@@ -27,7 +27,7 @@
   padding: 27px 0 36px 0;
 
   @media @tablet {
-    position: relative;
+    position: relative;//TODO зачем это нужно?
     padding: 43px 30px 70px 30px;
   }
 
@@ -63,31 +63,31 @@
   @media @tablet {
     .font(16, 24);
     margin: 64px 30px 0 0;
-    //width: 432px; //TODO вместо margin сделай width
+    //width: 432px; //TODO вместо левого margin сделай width
   }
 
   @media @desktop {
     margin: 146px 0 0 0;
-    padding: 0;
+    padding: 0;//TODO зачем тут padding???
     width: 432px;
   }
 }
 
 .example-section__results-container {
   margin: 25px 0 0 0;
-  display: flex;
-  flex-direction: column;
+  display: flex;//TODO поменять на block и
+  flex-direction: column; //TODO  удалить column
 
   @media @tablet {
     margin: 54px 0 0 0;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: row; //TODO поменять на display flex
     align-items: center;
   }
 
   @media @desktop {
     margin: 69px 0 0 0;
-    flex-direction: column;
+    flex-direction: column; //TODO поменять на block
     align-items: flex-start;
   }
 }
@@ -171,15 +171,15 @@
   @media @tablet {
     .font(20, 29);
     margin: -2px 1px 0 0;
-    display: flex;
-    flex-direction: column;
+    display: flex; //TODO помеянть на block и
+    flex-direction: column;//TODO удалить
     text-align: right;
   }
 
   @media @desktop {
     margin-top: 55px;
     text-align: left;
-    flex-direction: row;
+    flex-direction: row;//TODO???
   }
 }
 
@@ -210,6 +210,7 @@
     top: -5px;
     left: calc(50% - 158px);
     background-color: @background-dark-grey;
+    //TODO Графика должна быть подготовлена как минимум для двух вариантов экранов
     background-image: url("../img/example-section/cat-fat.png");
     background-position: left;
 
@@ -229,6 +230,7 @@
 
   &--back {
     margin: 0 auto;
+    //TODO Графика должна быть подготовлена как минимум для двух вариантов экранов
     background-image: url("../img/example-section/cat-skinny.png");
     background-position: center;
     position: relative;

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html class="page" lang="ru" xmlns="http://www.w3.org/1999/html">
+<html class="page" lang="ru" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Подбор программы</title>
 </head>
-<body class="page__body">
+<body class="page-body">
 <header class="header">
   <div class="header__body">
     <a class="header__logo-link" href="index.html">
@@ -41,7 +40,7 @@
     </ul>
   </nav>
 </header>
-<main class="page__main">
+<main>
   <section class="form-section">
     <h1 class="form-section__title">Подбор программы</h1>
     <p class="form-section__subtitle">
@@ -105,27 +104,27 @@
         <div class="form__section--related-tablet-desktop">
           <label class="form__checkbox">
             <input class="form__checkbox-input" type="checkbox" checked>
-            <div class="form__checkbox-box">
+            <span class="form__checkbox-box">
               <span class="form__checkbox-label">Сахарозаменитель</span>
-            </div>
+            </span>
           </label>
           <label class="form__checkbox">
             <input class="form__checkbox-input" type="checkbox" disabled>
-            <div class="form__checkbox-box">
+            <span class="form__checkbox-box">
               <span class="form__checkbox-label">Питьевая вода</span>
-            </div>
+            </span>
           </label>
           <label class="form__checkbox">
             <input class="form__checkbox-input" type="checkbox">
-            <div class="form__checkbox-box">
+            <span class="form__checkbox-box">
               <span class="form__checkbox-label">Молоко</span>
-            </div>
+            </span>
           </label>
           <label class="form__checkbox">
             <input class="form__checkbox-input" type="checkbox">
-            <div class="form__checkbox-box">
+            <span class="form__checkbox-box">
               <span class="form__checkbox-label">Витамины</span>
-            </div>
+            </span>
           </label>
         </div>
       </fieldset>
@@ -158,7 +157,7 @@
 <footer class="footer">
   <div class="footer__body">
     <div class="footer__company-name">
-      <a class="footer__company-name-link" href="index.html" target="_blank">
+      <a class="footer__company-name-link" href="index.html">
         <img class="footer__company-name-image" width="128" height="24" src="img/logos/text/cat-energy.svg" alt="Кэт энерджи">
       </a>
     </div>

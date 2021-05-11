@@ -4,13 +4,13 @@
 
 .footer__body {
   padding: 39px 20px 22px 20px;
-  display: flex;
-  flex-direction: column;
+  display: flex;//TODO поменять на block
+  flex-direction: column; //TODO удалить???
   align-items: stretch;
 
   @media @tablet {
     padding: 55px 30px 61px 30px;
-    flex-direction: row;
+    flex-direction: row;//TODO поменять на flex
     justify-content: space-between;
     align-items: center;
   }
@@ -63,6 +63,8 @@
   .reset-list-styles();
   background-repeat: no-repeat;
   background-size: cover;
+
+  //TODO вставить иконки инлайново
 
   &--vk {
     background-image: url("../img/social-icons/vkontakte.svg");
