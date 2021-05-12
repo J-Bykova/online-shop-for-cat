@@ -18,16 +18,16 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  height: 65px;//TODO ???
+  height: 65px;
   border-bottom: @border-mobile-menu;
 
   @media @tablet {
-    height: 107px;//TODO ???
+    height: 107px;
     border: none;
   }
 
   @media @desktop {
-    height: 60px;//TODO ???
+    height: 60px;
   }
 }
 
@@ -54,19 +54,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 74px;//TODO ???
+  width: 74px;
 
   @media @tablet {
-    width: 174px;//TODO ???
+    width: 174px;
   }
 
   @media @tablet {
-    width: 201px;//TODO ???
+    width: 201px;
   }
 }
 
 .header__company-name {
-  //TODO сделать только для мобилки
   display: block;
   transform: translateX(-1px);
 
@@ -76,7 +75,6 @@
 }
 
 .header__company-name-link {
-  //TODO сделать только для мобилки
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,11 +87,6 @@
 
 .header__logo-link,
 .header__company-name-link {
-  //TODO hover тут не нужен???
-  &:hover {
-    opacity: 80%;
-  }
-
   &:active {
     opacity: 60%;
   }
@@ -101,7 +94,6 @@
 
 .header__burger {
   //TODO нужен ли hover and active для burger???
-  //TODO сделать только для мобилки???
   display: block;
   width: 74px;
   background-image: url("../img/cross-button.svg");
@@ -221,7 +213,7 @@
   text-align: center;
 
   &:first-of-type {
-    margin: 0; //TODO перенести для всех
+    margin: 0;
 
     @media @tablet {
       margin: 0 -3px 0 0;
@@ -233,7 +225,7 @@
   }
 
   &:not(:first-of-type) {
-    margin: 0;//TODO перенести для всех
+    margin: 0;
 
     @media @tablet {
       margin: 0 0 0 37px;
