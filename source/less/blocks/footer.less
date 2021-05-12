@@ -43,10 +43,20 @@
   @media @tablet {
     margin: 0;
   }
+
+  &:hover {
+    @media @desktop {
+      opacity: 80%;
+    }
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 }
 
 .footer__social-networks {
-  padding: 20px 4px 20px 0;
+  padding: 20px 4px 16px 0;
   margin: 0 auto;
   width: 136px;
   display: flex;
@@ -114,7 +124,7 @@
 }
 
 .footer__copyright-logo {
-  //margin: 0;
+  margin: 0;
 
   &:hover {
     @media @desktop {
