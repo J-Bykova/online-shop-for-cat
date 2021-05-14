@@ -69,7 +69,7 @@
 
 .catalog-section__product-card-body {
   display: flex;
-  position: relative;//TODO для кого?
+  position: relative; //TODO для кого?
 
   @media @tablet {
     display: block;
@@ -315,6 +315,7 @@
 
   @media @desktop {
     display: flex;
+    padding: 0 110px 0 110px;
   }
 }
 
@@ -324,6 +325,11 @@
 
   @media @tablet {
     border: @border-recommendations;
+  }
+
+  @media @desktop {
+    border-left: none;
+    border-right: none;
   }
 }
 
@@ -351,11 +357,10 @@
   }
 
   @media @desktop {
-    padding: 14px 0;
-    border-left: none;
-    border-right: none;
+    padding: 17px 0 16px 0;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
   }
 }
 
@@ -379,6 +384,7 @@
 
   @media @desktop {
     text-align: right;
+    white-space: nowrap;
   }
 }
 
@@ -390,14 +396,6 @@
 
   @media @tablet {
     margin: 0;
-  }
-
-  @media @desktop {
-    width: 100%;
-    max-width: 300px;
-    margin-top: 0;
-    margin-left: auto;
-    text-align: center;
   }
 }
 
@@ -428,7 +426,7 @@
 
   @media @desktop {
     margin-top: 0;
-    margin-left: 38px;
+    padding: 7px 91px;
     text-align: right;
   }
 }
@@ -444,6 +442,19 @@
   background-size: cover;
   height: 289px;
   width: 100%;
+
+  @media @tablet {
+    padding: 72px 0 0 423px;
+    margin-top: 72px;
+    max-height: 200px;
+  }
+
+  @media @desktop {
+    margin: 0 0 0 80px;
+    padding: 187px 0 0 0;
+    max-height: 289px;
+    max-width: 245px;
+  }
 
   //TODO подарок уплывает в лево если экран становиться шире
   &::after {
@@ -461,18 +472,10 @@
       top: 58px;
       left: 79px;
     }
-  }
 
-  @media @tablet {
-    padding: 72px 0 0 423px;
-    margin-top: 72px;
-    max-height: 200px;
-  }
-
-  @media @desktop {
-    margin: 0 0 0 80px;
-    height: 289px;
-    width: 245px;
+    @media @desktop {
+      left: 85px;
+    }
   }
 }
 
@@ -486,6 +489,10 @@
 
   @media @tablet {
     text-align: left;
+  }
+
+  @media @desktop {
+    text-align: center;
   }
 }
 
