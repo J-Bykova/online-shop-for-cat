@@ -109,17 +109,17 @@
   border: @border-example;
   border-radius: 3px;
 
+  @media @tablet {
+    width: 163px;
+    height: 72px;
+  }
+
   &:not(:first-of-type) {
     margin-left: 32px;
 
     @media @tablet {
       margin-left: 42px;
     }
-  }
-
-  @media @tablet {
-    width: 163px;
-    height: 72px;
   }
 }
 
@@ -150,7 +150,7 @@
     .font(14, 14);
     background-color: @basic-white;
     white-space: nowrap;
-    left: 29px;
+    left: 29px;//TODO напиши тут  calk
     bottom: -5px;
   }
 
@@ -163,22 +163,30 @@
   .oswaldFont();
   .font(14, 20);
   margin: 34px 0 0 0;
+  text-align: center;
   color: @basic-black;
   text-transform: uppercase;
-  text-align: center;
 
   @media @tablet {
     .font(20, 29);
     margin: -2px 1px 0 0;
-    display: flex; //TODO помеянть на block и
-    flex-direction: column;//TODO удалить
     text-align: right;
   }
 
   @media @desktop {
     margin-top: 55px;
     text-align: left;
-    flex-direction: row;//TODO???
+    display: flex;
+  }
+}
+
+.example-section__expenses > span {
+  @media @tablet {
+    display: block;
+  }
+
+  @media @desktop {
+    display: flex;
   }
 }
 
@@ -199,60 +207,42 @@
 
 .example-section__image {
   display: block;
-  width: 311px;
-  height: 232px;
-  background-repeat: no-repeat;
-  background-size: cover;
+  max-width: 320px;
+  top: -7px;
+  left: calc(50% - 160px);
 
   &--front {
     position: absolute;
-    top: -5px;
-    left: calc(50% - 158px);
     background-color: @background-dark-grey;
-    //TODO Графика должна быть подготовлена как минимум для двух вариантов экранов
-    background-image: url("../img/example-section/cat-fat.png");
-    background-position: left;
 
     @media @tablet {
-      width: 338px;
-      height: 520px;
-      top: 15px;
-      left: calc(50% - 338px);
-
+      top: 0;
+      left: 0;
       //TODO этот фон перекрывает толстого кота!
-      background: linear-gradient(to top, @background-dark-grey 67%, @basic-white 50%);
+      //background: linear-gradient(to top, @background-dark-grey 67%, @basic-white 50%);
     }
 
     @media @desktop {
-      height: 530px;
-      top: -122px;
-      left: calc(50% - 135px);
+      top: 0;
+      left: 0;
       //TODO этот фон перекрывает толстого кота!
       background: linear-gradient(to top, @background-dark-grey 64%, @basic-white 50%);
     }
   }
 
   &--back {
-    margin: 0 auto;
-    //TODO Графика должна быть подготовлена как минимум для двух вариантов экранов
-    background-image: url("../img/example-section/cat-skinny.png");
-    background-position: center;
     position: relative;
-    top: -5px;
-    left: -1px;
 
     @media @tablet {
-      top: 12px;
-      left: 19px;
-      width: 545px;
-      height: 520px;
+      top: 0;
+      left: 0;
       //TODO этот фон перекрывает тонкого кота!
-      background: linear-gradient(to top, #eaeaea 67%, @basic-white 50%);
+      //background: linear-gradient(to top, #eaeaea 67%, @basic-white 50%);
     }
 
     @media @desktop {
-      top: -127px;
-      left: 209px;
+      top: 0;
+      left: 0;
     }
   }
 }
@@ -261,7 +251,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 33px auto 0 auto;
+  margin: 8px auto 0 auto;
   width: 196px;
 
   @media @tablet {

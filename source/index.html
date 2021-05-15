@@ -125,13 +125,21 @@
         </div>
       </div>
       <div class="example-section__demo">
-        <div class="example-section__image-container example-section__image-container--back">
-          <img class="example-section__image  example-section__image--back" src="img/example-section/cat-skinny.png"
-               alt="">
+        <div class="example-section__image-container">
+          <picture class="example-section__image example-section__image--back">
+            <source media="(min-width: 768px)" srcset="#">
+            <img src="img/example-section/back-cat-mobile@1x.png"
+                 srcset="img/example-section/back-cat-mobile@2x.png 2x"
+                 alt="">
+          </picture>
         </div>
-        <div class="example-section__image-container example-section__image-container--front">
-          <img class="example-section__image  example-section__image--front" src="img/example-section/cat-fat.png"
-               alt="">
+        <div class="example-section__image-container">
+          <picture class="example-section__image example-section__image--front">
+            <source media="(min-width: 768px)" srcset="#">
+            <img src="img/example-section/front-cat-mobile@1x.png"
+                 srcset="img/example-section/front-cat-mobile@2x.png 2x"
+                 alt="">
+          </picture>
         </div>
         <div class="example-section__buttons">
           <button class="example-section__before-button button button--after-before" type="button">было</button>
