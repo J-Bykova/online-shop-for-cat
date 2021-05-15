@@ -7,6 +7,8 @@
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin>
+  <link rel="icon" href="./img/favicons/favicon-16.svg" sizes="16x16" type="image/png">
+  <link rel="icon" href="./img/favicons/favicon-32.svg" sizes="32x32" type="image/png">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
@@ -123,8 +125,14 @@
         </div>
       </div>
       <div class="example-section__demo">
-        <div class="example-section__image example-section__image--back"></div>
-        <div class="example-section__image example-section__image--front"></div>
+        <div class="example-section__image-container example-section__image-container--back">
+          <img class="example-section__image  example-section__image--back" src="img/example-section/cat-skinny.png"
+               alt="">
+        </div>
+        <div class="example-section__image-container example-section__image-container--front">
+          <img class="example-section__image  example-section__image--front" src="img/example-section/cat-fat.png"
+               alt="">
+        </div>
         <div class="example-section__buttons">
           <button class="example-section__before-button button button--after-before" type="button">было</button>
           <div class="example-section__slider">
@@ -161,7 +169,8 @@
   <div class="footer__body">
     <div class="footer__company-name">
       <a class="footer__company-name-link">
-        <svg class="footer__company-name-image"  width="101" height="18" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="footer__company-name-image" width="101" height="18" viewBox="0 0 101 18" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
             <path d="M1.26449 16.5385C0.36955 15.2762 -0.0747041 13.7627 1.02073e-05 12.2308V5.84615C-0.108365
             4.29774 0.308071 2.75746 1.18546 1.46154C2.05478 0.461538 3.39829 0 5.37403 0C7.34978 0 8.61425
@@ -175,13 +184,20 @@
             <path d="M15.2527 0.23077H19.7574L23.0767 17.7692H19.4413L18.8091 14.0769H16.2011L15.5689
             17.7692H11.8545L15.2527 0.23077ZM18.493 11.7692L17.5446 4.92308L16.5963 11.7692H18.493Z" fill="#111111"/>
             <path d="M25.8427 3.15385H23.1557V0.23077H32.5602V3.07692H29.8732V17.7692H25.8427V3.15385Z" fill="#111111"/>
-            <path d="M39.752 0.23077H46.7066V2.07692H42.2019V7.84615H45.8372V9.61539H42.2019V16.0769H46.7066V17.8462H39.6729V0.23077H39.752Z" fill="#111111"/>
-            <path d="M48.7613 0.23077H50.5L55.6369 11.8462V0.23077H57.6917V17.7692H56.1111L50.8951 5.76923V17.7692H48.7613V0.23077Z" fill="#111111"/>
-            <path d="M60.0626 0.23077H67.0172V2.07692H62.5125V7.84615H66.1479V9.61539H62.5125V16.0769H67.0172V17.8462H60.0626V0.23077Z" fill="#111111"/>
+            <path
+              d="M39.752 0.23077H46.7066V2.07692H42.2019V7.84615H45.8372V9.61539H42.2019V16.0769H46.7066V17.8462H39.6729V0.23077H39.752Z"
+              fill="#111111"/>
+            <path
+              d="M48.7613 0.23077H50.5L55.6369 11.8462V0.23077H57.6917V17.7692H56.1111L50.8951 5.76923V17.7692H48.7613V0.23077Z"
+              fill="#111111"/>
+            <path
+              d="M60.0626 0.23077H67.0172V2.07692H62.5125V7.84615H66.1479V9.61539H62.5125V16.0769H67.0172V17.8462H60.0626V0.23077Z"
+              fill="#111111"/>
             <path d="M69.072 0.230769H72.7074C74.1375 0.134616 75.5587 0.514352 76.7379 1.30769C77.6072 2 78.0024 3.23077 78.0024 4.84615C78.0024 7.07692
             77.2911 8.46154 75.7895 8.92308L78.3185 17.6923H75.8686L73.4977 9.46154H71.5219V17.6923H68.993V0.230769H69.072ZM72.5493 7.76923C73.364
             7.83458 74.1761 7.61652 74.8412 7.15384C75.3154 6.76923 75.5524 6 75.5524 4.84615C75.5743 4.27296 75.4941 3.7004 75.3154 3.15385C75.1375
-            2.76165 74.832 2.4373 74.446 2.23077C73.9017 1.98934 73.3042 1.8836 72.7074 1.92308H71.601V7.69231H72.5493V7.76923Z" fill="#111111"/>
+            2.76165 74.832 2.4373 74.446 2.23077C73.9017 1.98934 73.3042 1.8836 72.7074 1.92308H71.601V7.69231H72.5493V7.76923Z"
+                  fill="#111111"/>
             <path d="M81.1635 16.4615C80.342 15.1166 79.9564 13.5617 80.0571 12V6.15384C80.0376 5.03911 80.1705 3.9268 80.4522 2.84615C80.7167 2.03863 81.2437
             1.33668 81.9538 0.846152C82.8362 0.337748 83.8542 0.0967294 84.8779 0.153844C86.5375 0.153844 87.723 0.53846 88.4343 1.38461C89.2524 2.50191
             89.6438 3.86237 89.5407 5.23077V5.84615H87.1698V5.30769C87.1734 4.66346 87.1205 4.0201 87.0117 3.38461C86.9451 2.98303 86.7178 2.62348 86.3795
@@ -191,7 +207,9 @@
             15.1538C87.1922 14.1811 87.3812 13.1299 87.3278 12.0769V10.8462H85.036V9.07692H89.6197V17.7692H88.0391L87.802 15.7692C87.5948 16.4395 87.1634
             17.0231 86.5763 17.4273C85.9892 17.8315 85.2801 18.0331 84.5618 18C83.9088 18.0374 83.2565 17.9164 82.6633 17.6479C82.0702 17.3794 81.5549
             16.9717 81.1635 16.4615Z" fill="#111111"/>
-            <path d="M94.6776 11.6154L90.8052 0.30769H93.1761L95.9421 8.76923L98.6291 0.30769H101L97.1275 11.6154V17.7692H94.7566V11.6154H94.6776Z" fill="#111111"/>
+            <path
+              d="M94.6776 11.6154L90.8052 0.30769H93.1761L95.9421 8.76923L98.6291 0.30769H101L97.1275 11.6154V17.7692H94.7566V11.6154H94.6776Z"
+              fill="#111111"/>
           </g>
           <defs>
             <clipPath id="clip0">
@@ -204,7 +222,8 @@
     <ul class="footer__social-networks">
       <li class="footer__social-network">
         <a class="footer__social-network-link" href="https://vk.com/htmlacademy">
-          <svg class="footer__social-network-logo" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="footer__social-network-logo" width="23" height="16" viewBox="0 0 23 16" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
             <path d="M0.0700912 3.99266C0.0700912 3.37082 0.493211 3.03552 1.33945 2.98675L4.60039 3.00503C4.81925 3.00503 4.96515 3.09648
             5.03811 3.27938C5.37368 4.19385 5.74938 4.98334 6.16521 5.64785C6.58103 6.31237 7.12453 7.07748 7.79568 7.94317C7.85404 8.05291
             7.94888 8.10778 8.08019 8.10778C8.18233 8.10778 8.26257 8.0651 8.32093 7.97975L8.38659 7.77857L8.40848 4.6145C8.40848 4.39503
@@ -237,13 +256,15 @@
             17.6515 8.70523 17.8849 8.43699C18.0746 8.19313 18.443 7.78771 18.9901 7.22074C19.5373 6.65377 20.0151 6.12338 20.4236
             5.62956C20.8322 5.13575 21.1021 4.68766 21.2334 4.28529L21.299 4.04753C21.2845 4.02314 21.2772 3.98352 21.2772
             3.92865C21.2772 3.87378 21.2699 3.82806 21.2553 3.79148H17.8193C17.6004 3.86464 17.4253 3.97437 17.294 4.12069L17.1627
-            4.46819C16.7979 5.3095 15.8423 6.60805 14.2957 8.36383C13.9893 8.60769 13.6318 8.72962 13.2233 8.72962Z" fill="#666666"/>
+            4.46819C16.7979 5.3095 15.8423 6.60805 14.2957 8.36383C13.9893 8.60769 13.6318 8.72962 13.2233 8.72962Z"
+                  fill="#666666"/>
           </svg>
         </a>
       </li>
       <li class="footer__social-network">
         <a class="footer__social-network-link" href="https://www.instagram.com/htmlacademy">
-          <svg class="footer__social-network-logo" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="footer__social-network-logo" width="16" height="16" viewBox="0 0 16 16" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
             <path d="M7.98438 0.0625C9.31771 0.0625 10.4062 0.078125 11.25 0.109375C11.9688 0.140625 12.6094 0.265625 13.1719 0.484375C13.7135
             0.692708 14.1823 0.994792 14.5781 1.39062C14.974 1.78646 15.276 2.25521 15.4844 2.79687C15.7031 3.35937 15.8281 4 15.8594 4.71875C15.8906
             5.5625 15.9062 6.65104 15.9062 7.98437C15.9062 9.31771 15.8906 10.4062 15.8594 11.25C15.8281 11.9687 15.7031 12.6094 15.4844 13.1719C15.276
@@ -271,7 +292,8 @@
       </li>
       <li class="footer__social-network">
         <a class="footer__social-network-link" href="https://www.facebook.com/htmlacademy">
-          <svg class="footer__social-network-logo" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="footer__social-network-logo" width="22" height="22" viewBox="0 0 22 22" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
             <path d="M16.5 1.83325H13.75C12.5344 1.83325 11.3686 2.30674 10.5091 3.14957C9.64956 3.99239
             9.16667 5.1355 9.16667 6.32743V9.02394H6.41667V12.6193H9.16667V19.81H12.8333V12.6193H15.5833L16.5
             9.02394H12.8333V6.32743C12.8333 6.08905 12.9299 5.86042 13.1018 5.69186C13.2737 5.52329 13.5069
@@ -285,7 +307,8 @@
         <p class="footer__copyright-name">HTML Academy</p>
       </a>
       <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="footer__copyright-logo" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="footer__copyright-logo" width="27" height="34" viewBox="0 0 27 34" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
           <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5
           31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088
           25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344
