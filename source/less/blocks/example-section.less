@@ -27,7 +27,7 @@
   padding: 27px 0 36px 0;
 
   @media @tablet {
-    padding: 43px 30px 70px 30px;
+    padding: 43px 0 70px 0;
   }
 
   @media @desktop {
@@ -41,7 +41,7 @@
   padding: 0 20px;
 
   @media @tablet {
-    padding: 0;
+    padding: 0 30px;
   }
 }
 
@@ -198,52 +198,64 @@
 
 .example-section__demo {
   position: relative;
-  margin-top: 41px;
+  margin-top: 34px;
+  padding-top: 272px;
 
   @media @tablet {
-    margin-top: 67px;
+    margin-top: 80px;
+    padding-top: 507px;
+  }
+}
+
+.example-section__image-container {
+  position: absolute;
+  height: 257px;
+  top: 0;
+  overflow: hidden;
+
+  &--front {
+    width: 50%;
+    left: calc(50% - 160px);
+    right: auto;
+
+    @media @tablet {
+      left: calc(50% - 384px);
+    }
+
+    .example-section__image {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  &--back {
+    width: 50%;
+    left: auto;
+    right: calc(50% - 160px);
+
+    @media @tablet {
+      right: calc(50% - 384px);
+    }
+
+    .example-section__image {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  @media @tablet {
+    height: 522px;
   }
 }
 
 .example-section__image {
   display: block;
-  max-width: 320px;
-  top: -7px;
+  position: absolute;
+  width: 320px;
   left: calc(50% - 160px);
 
-  &--front {
-    position: absolute;
-    background-color: @background-dark-grey;
-
-    @media @tablet {
-      top: 0;
-      left: 0;
-      //TODO этот фон перекрывает толстого кота!
-      //background: linear-gradient(to top, @background-dark-grey 67%, @basic-white 50%);
-    }
-
-    @media @desktop {
-      top: 0;
-      left: 0;
-      //TODO этот фон перекрывает толстого кота!
-      background: linear-gradient(to top, @background-dark-grey 64%, @basic-white 50%);
-    }
-  }
-
-  &--back {
-    position: relative;
-
-    @media @tablet {
-      top: 0;
-      left: 0;
-      //TODO этот фон перекрывает тонкого кота!
-      //background: linear-gradient(to top, #eaeaea 67%, @basic-white 50%);
-    }
-
-    @media @desktop {
-      top: 0;
-      left: 0;
-    }
+  @media @tablet {
+    width: 768px;
   }
 }
 
@@ -251,8 +263,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 8px auto 0 auto;
-  width: 196px;
+  position: relative;
+  left: 2px;
+  margin: 0 auto;
+  width: 197px;
 
   @media @tablet {
     width: 572px;
@@ -266,7 +280,7 @@
   }
 }
 
-.example-section__slider-scale {
+.example-section__slider-bar {
   position: relative;
   display: block;
   width: 84px;
@@ -283,12 +297,12 @@
   }
 }
 
-.example-section__slider-bar {
+.example-section__slider-handle {
   position: absolute;
   width: 35px;
   height: 6px;
   top: 3px;
-  left: 3px;
+  margin: 0 6px;
   background-color: @basic-green;
   border-radius: 6px;
 

@@ -208,19 +208,19 @@
     content: "";
     position: absolute;
     top: 39px;
-    left: 145px;
+    left: calc(50% - 15px);
     width: 30px;
-    border: @border-catalog-plus;
+    height: 2px;
+    background-color: #d3d3d3;
 
     @media @tablet {
       top: 83px;
-      left: 131px;
+      left: calc(50% - 30px);
       width: 60px;
     }
 
     @media @desktop {
       top: 79px;
-      left: 91px;
     }
   }
 
@@ -461,7 +461,7 @@
     content: "";
     position: absolute;
     top: 57px;
-    left: 101px;
+    left: calc(50% - 39px);
     background-image: url("../img/catalog-section/gift.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -470,11 +470,11 @@
 
     @media @tablet {
       top: 58px;
-      left: 79px;
+      left: calc(17% - 39px);
     }
 
     @media @desktop {
-      left: 85px;
+      left: calc(50% - 39px);
     }
   }
 }

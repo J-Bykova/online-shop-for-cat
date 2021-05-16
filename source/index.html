@@ -125,27 +125,29 @@
         </div>
       </div>
       <div class="example-section__demo">
-        <div class="example-section__image-container">
-          <picture class="example-section__image example-section__image--back">
-            <source media="(min-width: 768px)" srcset="#">
+        <div class="example-section__image-container example-section__image-container--back">
+          <picture class="example-section__image">
+            <source media="(min-width: 768px)"
+                    srcset="img/example-section/back-cat-tablet@1x.png 1x, img/example-section/back-cat-tablet@2x.png 2x">
             <img src="img/example-section/back-cat-mobile@1x.png"
-                 srcset="img/example-section/back-cat-mobile@2x.png 2x"
+                 srcset="img/example-section/back-cat-mobile@1x.png 1x, img/example-section/back-cat-mobile@2x.png 2x"
                  alt="">
           </picture>
         </div>
-        <div class="example-section__image-container">
-          <picture class="example-section__image example-section__image--front">
-            <source media="(min-width: 768px)" srcset="#">
+        <div class="example-section__image-container example-section__image-container--front">
+          <picture class="example-section__image">
+            <source media="(min-width: 768px)"
+                    srcset="img/example-section/front-cat-tablet@1x.png 1x, img/example-section/front-cat-tablet@2x.png 2x">
             <img src="img/example-section/front-cat-mobile@1x.png"
-                 srcset="img/example-section/front-cat-mobile@2x.png 2x"
+                 srcset="img/example-section/front-cat-mobile@1x.png 1x, img/example-section/front-cat-mobile@2x.png 2x"
                  alt="">
           </picture>
         </div>
         <div class="example-section__buttons">
           <button class="example-section__before-button button button--after-before" type="button">было</button>
           <div class="example-section__slider">
-            <div class="example-section__slider-scale">
-              <div class="example-section__slider-bar"></div>
+            <div class="example-section__slider-bar">
+              <div class="example-section__slider-handle"></div>
             </div>
           </div>
           <button class="example-section__after-button button button--after-before" type="button">стало</button>
@@ -330,5 +332,6 @@
   </div>
 </footer>
 <script src="js/menu.js"></script>
+<script src="js/slider.js"></script>
 </body>
 </html>
