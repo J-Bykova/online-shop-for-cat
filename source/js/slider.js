@@ -23,7 +23,7 @@ function showBefore() {
   sliderHandle.style.left = "0%";
   sliderHandle.style.right = "auto";
 }
-showBefore();
+// showBefore();
 
 
 sliderHandle.addEventListener("mousedown", onSideBarCatch);
