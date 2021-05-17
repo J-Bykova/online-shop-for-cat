@@ -29,14 +29,52 @@
   &--grey {
     background-color: @background-light-grey;
     color: @dark-grey;
+
+    &:hover {
+      @media @desktop {
+        background-color: @background-middle-grey;
+      }
+    }
+
+    &:active {
+      background-color: @background-middle-grey;
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 
   &--after-before {
     .font(16, 20);
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+    }
+
+    &:hover {
+      &::after {
+        @media @desktop {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+
+    &:active {
+      &::after {
+        border: none;
+      }
+    }
 
     @media @tablet {
       .font(20, 30);
-      border-bottom: 1px dotted #b2b2b2;
+
+      &::after {
+        border-bottom: 1px dotted #b2b2b2;
+      }
     }
   }
 }

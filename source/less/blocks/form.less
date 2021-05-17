@@ -6,7 +6,7 @@
   }
 
   @media @desktop {
-    margin: 26px 0 0 0;
+    margin-top: 26px;
   }
 }
 
@@ -15,11 +15,9 @@
   display: flex;
   flex-direction: column;
   border: none;
-  margin: 0;
 
   &--personal {
     @media @desktop {
-      padding: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 77px;
@@ -40,17 +38,10 @@
 
   &--contacts-desktop {
     @media @desktop {
+      margin: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 75px;
-
-      .form__field {
-        margin: 0;
-      }
-
-      .form__field:not(:first-of-type) {
-        margin: 0;
-      }
     }
   }
 
@@ -109,7 +100,6 @@
   }
 }
 
-//Заголовки для  разделов формы
 .form__section-title {
   .oswaldFont();
   .font(24; 26);
@@ -170,13 +160,11 @@
   }
 }
 
-
-//поля формы
 .form__field-group {
   padding: 21px 20px 23px 20px;
   display: flex;
   flex-direction: column;
-  border-bottom: @border-content;
+  border-bottom: @border-form-group;
 
   @media @tablet {
     border-bottom: none;
@@ -192,13 +180,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &:not(:first-of-type) {
+    margin-top: 13px;
+
+    @media @tablet {
+      margin-top: 20px;
+    }
+  }
 }
 
-.form__field:not(:first-of-type) {
-  margin-top: 13px;
-
-  @media @tablet {
-    margin-top: 20px;
+.form__section--contacts-desktop > .form__field {
+  @media @desktop {
+    margin-top: 0;
   }
 }
 
@@ -226,7 +220,7 @@
     padding: 13px 14px;
 
     @media @tablet {
-      margin: 0 0 0 17px;
+      margin-left: 17px;
       padding: 10px 17px;
     }
   }
@@ -236,7 +230,7 @@
     padding: 13px 15px;
 
     @media @tablet {
-      margin: 0 0 0 21px;
+      margin-left: 21px;
       padding: 10px 17px;
     }
   }
@@ -246,7 +240,7 @@
     padding: 13px 15px;
 
     @media @tablet {
-      margin: 0 0 0 18px;
+      margin-left: 18px;
       padding: 10px 18px;
     }
   }
@@ -256,7 +250,7 @@
     padding: 13px 14px;
 
     @media @tablet {
-      margin: 0 0 0 20px;
+      margin-left: 20px;
       padding: 10px 20px;
     }
   }
@@ -266,7 +260,7 @@
     padding: 13px 16px;
 
     @media @tablet {
-      margin: 0 0 0 13px;
+      margin-left: 13px;
       padding: 10px 20px;
     }
   }
@@ -290,11 +284,9 @@
   }
 }
 
-
-//radiobutton
 .form__radiobutton-group {
   padding: 28px 20px 22px 20px;
-  border-bottom: @border-content;
+  border-bottom: @border-form-group;
 
   @media @tablet {
     padding: 42px 70px 48px 71px;
@@ -310,20 +302,19 @@
   display: flex;
   flex-direction: column;
 
-
   @media @tablet {
     padding: 29px 20px 30px 20px;
-    border: 1px solid #e7e7e7;
+    border: @border-radio-container;
   }
 }
 
 .form__radiobutton {
   margin-top: 23px;
   cursor: pointer;
-}
 
-.form__radiobutton:first-of-type {
-  margin-top: 0;
+  &:first-of-type {
+    margin-top: 0;
+  }
 }
 
 .form__radiobutton-box {
@@ -370,11 +361,13 @@
 
 .form__radiobutton-input:hover + .form__radiobutton-box {
   &::before {
-    border: @border-radio-hover;
+    @media @desktop {
+      border: @border-radio-hover;
+    }
   }
 }
 
-//TODO не работает для label
+//TODO disabled не работает для label
 .form__radiobutton-input:disabled + .form__radiobutton-box,
 .form__radiobutton-input:disabled + .form__radiobutton-label {
   color: rgba(34, 34, 34, 0.3);
@@ -389,7 +382,6 @@
   position: absolute;
   margin: 0;
   opacity: 0;
-  cursor: pointer;
 }
 
 .form__radiobutton-label {
@@ -401,11 +393,10 @@
 
   @media @tablet {
     .font(20, 30);
-    margin-left: 49px;
+    padding-left: 66px;
   }
 }
 
-//checkbox
 .form__checkbox {
   display: flex;
   cursor: pointer;
@@ -423,12 +414,13 @@
   margin: 0;
   position: absolute;
   opacity: 0;
-  cursor: pointer;
 }
 
 .form__checkbox-input:hover + .form__checkbox-box {
   &::before {
-    border: @border-checkbox-hover;
+    @media @desktop {
+      border: @border-checkbox-hover;
+    }
   }
 }
 
@@ -449,7 +441,7 @@
   }
 }
 
-//TODO не работает для label
+//TODO disabled не работает для label
 .form__checkbox-input:disabled + .form__checkbox-box,
 .form__checkbox-input:disabled + .form__checkbox-label {
   &::before,
@@ -490,7 +482,6 @@
   }
 }
 
-//textarea
 .form__textarea {
   .oswaldFont();
   .font(16, 18);
@@ -522,7 +513,6 @@
   }
 }
 
-//submit
 .form__submit-button {
   .font(16, 18);
   padding: 11px 44px;

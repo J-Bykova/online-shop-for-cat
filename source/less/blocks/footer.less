@@ -4,13 +4,13 @@
 
 .footer__body {
   padding: 39px 20px 22px 20px;
-  display: flex;
-  flex-direction: column;
+  display: flex; //TODO поменять на block
+  flex-direction: column; //TODO удалить???
   align-items: stretch;
 
   @media @tablet {
     padding: 55px 30px 61px 30px;
-    flex-direction: row;
+    flex-direction: row;//TODO поменять на flex
     justify-content: space-between;
     align-items: center;
   }
@@ -43,10 +43,20 @@
   @media @tablet {
     margin: 0;
   }
+
+  &:hover {
+    @media @desktop {
+      opacity: 80%;
+    }
+  }
+
+  &:active {
+    opacity: 60%;
+  }
 }
 
 .footer__social-networks {
-  padding: 20px 4px 20px 0;
+  padding: 20px 4px 16px 0;
   margin: 0 auto;
   width: 136px;
   display: flex;
@@ -61,40 +71,18 @@
 
 .footer__social-network {
   .reset-list-styles();
-  background-repeat: no-repeat;
-  background-size: cover;
+}
 
-  &--vk {
-    background-image: url("../img/social-icons/vkontakte.svg");
-    width: 23px;
-    height: 16px;
-
-    @media @tablet {
-      width: 30px;
-      height: 22px;
+.footer__social-network-logo {
+  &:hover {
+    @media @desktop {
+      stroke: #68b738;
     }
   }
 
-  &--in {
-    background-image: url("../img/social-icons/instagram.svg");
-    width: 16px;
-    height: 16px;
-
-    @media @tablet {
-      width: 23px;
-      height: 23px;
-    }
-  }
-
-  &--fb {
-    background-image: url("../img/social-icons/facebook.svg");
-    width: 22px;
-    height: 22px;
-
-    @media @tablet {
-      width: 28px;
-      height: 33px;
-    }
+  &:active {
+    stroke: #68b738;
+    opacity: 30%;
   }
 }
 
@@ -121,6 +109,10 @@
   margin: 0;
   color: @light-grey;
 
+  &:active {
+    opacity: 30%;
+  }
+
   @media @tablet {
     margin-right: 23px;
   }
@@ -133,4 +125,15 @@
 
 .footer__copyright-logo {
   margin: 0;
+
+  &:hover {
+    @media @desktop {
+      stroke: #68b738;
+    }
+  }
+
+  &:active {
+    stroke: #68b738;
+    opacity: 30%;
+  }
 }

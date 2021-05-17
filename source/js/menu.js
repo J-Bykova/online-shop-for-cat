@@ -7,3 +7,5 @@ function onBurgerClick(e) {
   burger.classList.toggle("header__burger--closed-on-mobile");
   navigation.classList.toggle("header__navigation--closed-on-mobile");
 }
+
+onBurgerClick()

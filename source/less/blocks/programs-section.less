@@ -39,6 +39,15 @@
     }
   }
 
+  @media @tablet {
+    padding: 77px 283px 57px 52px;
+  }
+
+  @media @desktop {
+    flex: 1;
+    padding: 77px 0 59px 50px;
+  }
+
   &::before {
     display: block;
     position: absolute;
@@ -75,27 +84,18 @@
   &--pro::before {
     background-image: url("../img/program-icons/cat-pro.svg");
   }
-
-  @media @tablet {
-    padding: 77px 283px 57px 52px;
-  }
-
-  @media @desktop {
-    flex: 1;
-    padding: 77px 0 59px 50px;
-  }
 }
 
 .programs-section__program-title {
-  margin: 0 0 0 71px;
   .oswaldFont();
   .font(24, 37);
+  margin: 0 0 0 71px;
   color: @basic-black;
   text-transform: uppercase;
 
   @media @tablet {
-    margin: 0;
     .font(36, 36);
+    margin: 0;
   }
 
   @media @desktop {
@@ -107,7 +107,7 @@
   .font(14, 18);
   margin: 29px 0 0 0;
   padding-bottom: 22px;
-  border-bottom: @border-content;
+  border-bottom: @border-program;
 
   @media @tablet {
     .font(16, 24);
@@ -121,12 +121,12 @@
 }
 
 .programs-section__program-link {
+  .oswaldFont();
   .font(16, 16);
   margin: 19px 0 0 -1px;
   padding-right: 50px;
   display: inline-block;
   position: relative;
-  font-family: @oswaldFont;
   color: @basic-black;
   text-transform: uppercase;
 
@@ -141,16 +141,19 @@
     padding-right: 70px;
   }
 
-  //TODO полоска
-  &::after {
+  &::after,
+  &::before {
     content: "";
     display: block;
     position: absolute;
+  }
+
+  &::after {
     top: 7px;
     right: 11px;
     width: 22px;
     height: 2px;
-    background: #000000;
+    background: @basic-black;
 
     @media @tablet {
       top: 14px;
@@ -161,11 +164,7 @@
     }
   }
 
-  //TODO стрелка
   &::before {
-    content: "";
-    display: block;
-    position: absolute;
     top: 2px;
     right: 10px;
     width: 24px;

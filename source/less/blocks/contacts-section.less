@@ -5,8 +5,8 @@
 .contacts-section__container {
   display: flex;
   justify-content: space-between;
-  background-color: @basic-white;
   padding: 28px 19px 26px 19px;
+  background-color: @basic-white;
 
   &--grey {
     background-color: @background-light-grey;
@@ -30,13 +30,11 @@
 .contacts-section__title {
   .oswaldFont();
   .font(16, 18);
-  flex: 1;
-  margin: 0;
-  color: @dark-grey;
-  text-transform: uppercase;
   max-width: 140px;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  flex: 1;
+  text-transform: uppercase;
+  color: @dark-grey;
 
   @media @tablet {
     .font(20, 21);
@@ -50,6 +48,7 @@
 }
 
 .contacts-section__title > span:not(:first-of-type) {
+  display: block;
   margin-top: 4px;
 
   @media @desktop {
