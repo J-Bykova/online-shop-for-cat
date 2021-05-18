@@ -37,8 +37,9 @@
   color: @dark-grey;
 
   @media @tablet {
-    .font(20, 21);
+    .font(20, 22);
     max-width: 171px;
+    padding: 4px 0 0 0;
   }
 
   @media @desktop {
@@ -51,8 +52,12 @@
   display: block;
   margin-top: 4px;
 
+  @media @tablet {
+    margin-top: 8px;
+  }
+
   @media @desktop {
-    margin-top: 5px;
+    margin-top: 3px;
   }
 }
 
