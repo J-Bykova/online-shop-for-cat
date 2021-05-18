@@ -82,15 +82,19 @@
 }
 
 .catalog-section__product-image {
-  //TODO Графика должна быть подготовлена как минимум для двух вариантов экранов(контентные)
   display: block;
   position: absolute;
-  top: 14px;
-  left: 37px;
+  top: 0;
+  left: 0;
 
   @media @tablet {
-    top: -127px;
-    left: 110px;
+    top: -233px;
+    left: 58px;
+  }
+
+  @media @desktop {
+    top: -244px;
+    left: 20px;
   }
 }
 

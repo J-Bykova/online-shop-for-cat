@@ -24,12 +24,16 @@
   }
 
   &::before {
-    //TODO Графика должна быть подготовлена как минимум для двух вариантов экранов
     background-image: linear-gradient(@transparent-green, @transparent-green),
-      url("../img/offer-section/cat-background.jpg");
+      url("../../img/offer-section/background-mobile1x.png");
     top: 1px;
     width: 100%;
     height: 302px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(@transparent-green, @transparent-green),
+        url("../../img/offer-section/background-mobile2x.png");
+    }
 
     @media @tablet {
       display: none;
@@ -37,24 +41,40 @@
   }
 
   &::after {
-    //TODO Графика должна быть подготовлена как минимум для двух вариантов экранов
-    background-image: url("../img/offer-section/offer-can-mobile.png");
+    background-image: url("../../img/offer-section/index-can-mobile1x.png");
     top: 167px;
     width: 280px;
     height: 270px;
+    background-size: 280px 270px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/offer-section/index-can-mobile2x.png");
+    }
 
     @media @tablet {
+      background-image: url("../../img/offer-section/index-can-tablet1x.png");
       top: 235px;
-      left: 424px;
-      width: 629px;
-      height: 600px;
+      width: 709px;
+      height: 609px;
+      background-size: 709px 609px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/offer-section/index-can-tablet2x.png");
+      }
     }
 
     @media @desktop {
-      top: -34px;
-      left: 846px;
+      background-image: url("../../img/offer-section/index-can-desktop1x.png");
+      transition: none;
+      top: -26px;
+      left: 836px;
       width: 552px;
-      height: 524px;
+      height: 499px;
+      background-size: 552px 499px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../../img/offer-section/index-can-desktop2x.png");
+      }
     }
   }
 }
