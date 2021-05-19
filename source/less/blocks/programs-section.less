@@ -78,11 +78,21 @@
   }
 
   &--slim::before {
-    background-image: url("../../img/program-section/cat-slim.svg");
+    background-image: url("../img/program-section/cat-slim.svg");
   }
 
   &--pro::before {
-    background-image: url("../../img/program-section/cat-pro.svg");
+    background-image: url("../img/program-section/cat-pro.svg");
+    top: 22px;
+
+    @media @tablet {
+      top: 83px;
+      right: -31px;
+    }
+
+    @media @desktop {
+      top: 42px;
+    }
   }
 }
 
@@ -150,7 +160,7 @@
 
   &::after {
     top: 7px;
-    right: 11px;
+    right: 12px;
     width: 22px;
     height: 2px;
     background: @basic-black;
@@ -169,7 +179,7 @@
     right: 10px;
     width: 24px;
     height: 12px;
-    background-image: url("../../img/program-section/icon-arrow.svg");
+    background-image: url("../img/program-section/icon-arrow.svg");
     background-repeat: no-repeat;
     background-size: cover;
     transition: all 0.3s;
