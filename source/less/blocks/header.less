@@ -37,42 +37,13 @@
   width: 34px;
   height: 34px;
 
-  &--mobile {
-    display: block;
-
-    @media @tablet {
-      display: none;
-    }
-  }
-
-  &--tablet {
-    display: none;
-
-    @media @tablet {
-      display: block;
-    }
-
-    @media @desktop {
-      display: none;
-    }
-  }
-
-  &--desktop {
-    display: none;
-
-    @media @desktop {
-      display: block;
-    }
-  }
-
-  //TODO ты уверенна что тебе это надо?
   @media @tablet {
     margin: -7px 0 0 0;
     width: 174px;
     height: 52px;
   }
-  //TODO ты уверенна что тебе и это тоже надо?
-  @media @tablet {
+
+  @media @desktop {
     margin: -3px 0 0 1px;
     width: 201px;
     height: 59px;
@@ -89,7 +60,7 @@
     width: 174px;
   }
 
-  @media @tablet {
+  @media @desktop {
     width: 201px;
   }
 }
@@ -124,13 +95,13 @@
 .header__burger {
   display: block;
   width: 74px;
-  background-image: url("../img/menu-buttons-on-mobile/cross-button.svg");
+  background-image: url("../img/header-section/cross-button.svg");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: 32px calc(50% - 2px);
 
   &--closed-on-mobile {
-    background-image: url("../img/menu-buttons-on-mobile/burger-button.svg");
+    background-image: url("../img/header-section/burger-button.svg");
   }
 
   @media @tablet {
