@@ -173,6 +173,7 @@
 }
 
 .form__field {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -277,6 +278,23 @@
 
   @media @tablet {
     .font(20, 30);
+  }
+}
+
+.form__field-input-icon {
+  &--email,
+  &--tel {
+    position: absolute;
+  }
+
+  &--email {
+    top: calc(50% - 7px);
+    right: 15px;
+  }
+
+  &--tel {
+    top: 15px;
+    right: 13px;
   }
 }
 
@@ -484,7 +502,7 @@
   padding: 7px 10px 10px 12px;
   text-transform: uppercase;
   height: 150px;
-  outline: @border-input;//TODO поменяй на border
+  outline: @border-input; //TODO поменяй на border
 
   &:hover {
     @media @desktop {

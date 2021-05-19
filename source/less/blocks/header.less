@@ -37,12 +37,41 @@
   width: 34px;
   height: 34px;
 
+  &--mobile {
+    display: block;
+
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @media @tablet {
+      display: block;
+    }
+
+    @media @desktop {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media @desktop {
+      display: block;
+    }
+  }
+
+  //TODO ты уверенна что тебе это надо?
   @media @tablet {
     margin: -7px 0 0 0;
     width: 174px;
     height: 52px;
   }
-
+  //TODO ты уверенна что тебе и это тоже надо?
   @media @tablet {
     margin: -3px 0 0 1px;
     width: 201px;
