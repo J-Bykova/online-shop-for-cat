@@ -90,15 +90,28 @@
       height: 33px;
     }
   }
-
-  &:hover {
+  //TODO не пойму почему не работают hover and active для иконок
+  &--vk,
+  &--in:hover {
     @media @desktop {
-      stroke: #68b738;
+      fill: @basic-green;
     }
   }
 
-  &:active {
-    stroke: #68b738;
+  &--fb:hover {
+    @media @desktop {
+      stroke: @basic-green;
+    }
+  }
+
+  &--vk,
+  &--in:active {
+    fill: @basic-green;
+    opacity: 30%;
+  }
+
+  &--fb:active {
+    stroke: @basic-green;
     opacity: 30%;
   }
 }
@@ -126,10 +139,6 @@
   margin: 0;
   color: @light-grey;
 
-  &:active {
-    opacity: 30%;
-  }
-
   @media @tablet {
     margin-right: 23px;
   }
@@ -143,14 +152,19 @@
 .footer__copyright-logo {
   margin: 0;
 
-  &:hover {
-    @media @desktop {
-      stroke: #68b738;
-    }
-  }
-
   &:active {
     stroke: #68b738;
     opacity: 30%;
   }
+}
+
+//TODO не работает ни hover ни active
+.footer__copyright:hover + svg {
+  @media @desktop {
+    fill: @basic-green;
+  }
+}
+
+.footer__copyright:active + svg .footer__copyright-name {
+  opacity: 30%;
 }
