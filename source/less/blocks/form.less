@@ -281,7 +281,15 @@
   }
 }
 
-.form__field-input-icon {
+.form__field-input:focus ~ svg path {
+  fill: red;
+}
+
+.form__field-input:focus ~ svg line {
+  fill: yellow;
+}
+
+.form__field-icon {
   &--email,
   &--tel {
     position: absolute;
