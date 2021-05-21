@@ -9,7 +9,7 @@
   align-items: stretch;
 
   @media @tablet {
-    padding: 55px 30px 61px 30px;
+    padding: 53px 30px 61px 30px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -73,35 +73,22 @@
   .reset-list-styles();
 }
 
+.footer__social-network,
+.footer__social-network-link {
+  @media @tablet {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .footer__social-network-logo {
-  //TODO состояния иконкок нужно сделать для ссылки
   & use {
     fill: #666666;
-
-    &:hover {
-      fill: @basic-green;
-    }
-
-    &:active {
-      fill: @basic-green;
-      opacity: 30%;
-    }
   }
 
   &--fb use {
     fill: none;
     stroke: #666666;
-
-    &:hover {
-      fill: none;
-      stroke: @basic-green;
-    }
-
-    &:active {
-      fill: none;
-      stroke: @basic-green;
-      opacity: 30%;
-    }
   }
 
   @media @tablet {
@@ -125,6 +112,36 @@
 .footer__social-network-link {
   display: block;
   height: 100%;
+}
+
+.footer__social-network-link:hover {
+  .footer__social-network-logo {
+    @media @desktop {
+      & use {
+        fill: @basic-green;
+      }
+
+      &--fb use {
+        fill: none;
+        stroke: @basic-green;
+      }
+    }
+  }
+}
+
+.footer__social-network-link:active {
+  .footer__social-network-logo {
+    & use {
+      fill: @basic-green;
+      opacity: 30%;
+    }
+
+    &--fb use {
+      fill: none;
+      stroke: @basic-green;
+      opacity: 30%;
+    }
+  }
 }
 
 .footer__copyright {
@@ -155,6 +172,10 @@
   display: block;
 }
 
+.footer__copyright-link:active {
+  opacity: 30%;
+}
+
 .footer__copyright-logo {
   margin: 0;
 
@@ -163,7 +184,9 @@
   }
 
   &:hover use {
-    fill: @basic-green;
+    @media @desktop {
+      fill: @basic-green;
+    }
   }
 
   &:active use {
