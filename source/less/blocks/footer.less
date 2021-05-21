@@ -4,13 +4,13 @@
 
 .footer__body {
   padding: 39px 20px 22px 20px;
-  display: flex; //TODO поменять на block
-  flex-direction: column; //TODO удалить???
+  display: flex;
+  flex-direction: column;
   align-items: stretch;
 
   @media @tablet {
     padding: 55px 30px 61px 30px;
-    flex-direction: row;//TODO поменять на flex
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -74,6 +74,36 @@
 }
 
 .footer__social-network-logo {
+  //TODO состояния иконкок нужно сделать для ссылки
+  & use {
+    fill: #666666;
+
+    &:hover {
+      fill: @basic-green;
+    }
+
+    &:active {
+      fill: @basic-green;
+      opacity: 30%;
+    }
+  }
+
+  &--fb use {
+    fill: none;
+    stroke: #666666;
+
+    &:hover {
+      fill: none;
+      stroke: @basic-green;
+    }
+
+    &:active {
+      fill: none;
+      stroke: @basic-green;
+      opacity: 30%;
+    }
+  }
+
   @media @tablet {
     &--vk {
       width: 30px;
@@ -89,30 +119,6 @@
       width: 28px;
       height: 33px;
     }
-  }
-  //TODO не пойму почему не работают hover and active для иконок
-  &--vk:hover,
-  &--in:hover {
-    @media @desktop {
-      fill: @basic-green;
-    }
-  }
-
-  &--fb:hover {
-    @media @desktop {
-      stroke: @basic-green;
-    }
-  }
-
-  &--vk:active,
-  &--in:active {
-    fill: @basic-green;
-    opacity: 30%;
-  }
-
-  &--fb:active {
-    stroke: @basic-green;
-    opacity: 30%;
   }
 }
 
@@ -152,19 +158,16 @@
 .footer__copyright-logo {
   margin: 0;
 
-  &:active {
-    stroke: #68b738;
-    opacity: 30%;
+  & use {
+    fill: #666666;
   }
-}
 
-//TODO не работает ни hover ни active
-.footer__copyright:hover + svg {
-  @media @desktop {
+  &:hover use {
     fill: @basic-green;
   }
-}
 
-.footer__copyright:active + svg .footer__copyright-name {
-  opacity: 30%;
+  &:active use {
+    fill: @basic-green;
+    opacity: 30%;
+  }
 }
