@@ -281,15 +281,8 @@
   }
 }
 
-.form__field-input:focus ~ svg path {
-  fill: red;
-}
-
-.form__field-input:focus ~ svg line {
-  fill: yellow;
-}
-
 .form__field-icon {
+  //TODO у иконок полей должен быть focus and error
   &--email,
   &--tel {
     position: absolute;
@@ -361,8 +354,8 @@
     @media @tablet {
       top: -13px;
       left: 7px;
-      width: 40px;//TODO поменяла размеры на побольше
-      height: 40px;//TODO поменяла размеры на побольше
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -395,9 +388,8 @@
   }
 }
 
-//TODO disabled не работает для label
 .form__radiobutton-input:disabled + .form__radiobutton-box,
-.form__radiobutton-input:disabled + .form__radiobutton-label {
+.form__radiobutton-input:disabled ~ .form__radiobutton-label {
   color: rgba(34, 34, 34, 0.3);
 
   &::before,
@@ -456,7 +448,7 @@
   &::after {
     position: absolute;
     content: "";
-    background-image: url("../img/tick.svg");
+    background-image: url("../img/tick.svg"); //TODO поменяй на спрайт
     top: 3px;
     left: 4px;
     width: 18px;
@@ -469,9 +461,10 @@
   }
 }
 
-//TODO disabled не работает для label
 .form__checkbox-input:disabled + .form__checkbox-box,
-.form__checkbox-input:disabled + .form__checkbox-label {
+.form__checkbox-input:disabled ~ .form__checkbox-label {
+  opacity: 30%;
+
   &::before,
   &::after {
     opacity: 30%;
@@ -518,7 +511,7 @@
   padding: 7px 10px 10px 12px;
   text-transform: uppercase;
   height: 150px;
-  outline: @border-input; //TODO поменяй на border
+  outline: @border-input;
 
   &:hover {
     @media @desktop {
