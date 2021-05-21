@@ -18,7 +18,7 @@
     }
 
     @media @desktop {
-      height: 451px;
+      height: 462px;
     }
   }
 }
@@ -81,7 +81,7 @@
   display: block;
 
   @media @tablet {
-    margin-top: 54px;
+    margin-top: 53px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,7 +118,7 @@
   border-radius: 3px;
 
   @media @tablet {
-    width: 163px;
+    width: 162px;
     height: 72px;
   }
 
@@ -156,10 +156,12 @@
 
   @media @tablet {
     .font(14, 14);
+    width: auto;
+    left: auto;
+    padding: 0 9px 0 8px;
+    bottom: -6px;
     background-color: @basic-white;
     white-space: nowrap;
-    left: 29px;//TODO напиши тут  calk
-    bottom: -5px;
   }
 
   @media @desktop {
@@ -177,7 +179,7 @@
 
   @media @tablet {
     .font(20, 29);
-    margin: -2px 1px 0 0;
+    margin: 0;
     text-align: right;
   }
 
@@ -215,8 +217,9 @@
   }
 
   @media @desktop {
-    margin-top: 68px;
-    padding-top: 519px;
+    flex: 1;
+    margin: 0;
+    padding: 499px 0 69px 0;
   }
 }
 
@@ -227,7 +230,7 @@
   overflow: hidden;
 
   &--front {
-    width: 100%;
+    width: 320px;
     left: calc(50% - 160px);
     right: auto;
 
@@ -261,6 +264,10 @@
   @media @tablet {
     height: 522px;
   }
+
+  @media @desktop {
+    width: 384px;
+  }
 }
 
 .example-section__image {
@@ -289,9 +296,7 @@
   }
 
   @media @desktop {
-    position: absolute;
-    top: 402px;
-    left: 218px;
+    margin: 0 auto;
   }
 }
 
