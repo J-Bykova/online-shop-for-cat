@@ -46,7 +46,7 @@
 
   @media @desktop {
     margin-top: 124px;
-    padding: 0 110px;
+    padding: 0 110px 76px 110px;
     grid-template-columns: repeat(4, 245px);
     grid-column-gap: 80px;
     row-gap: 145px;
@@ -297,7 +297,7 @@
   }
 }
 
-.catalog-section__recommendations {
+.catalog-section__recommendations-title-container {
   position: relative;
   //TODO это полоска перекрывает текст
   &::before {
@@ -314,6 +314,18 @@
     @media @desktop {
       top: 98px;
     }
+
+    @media @desktop {
+      top: 22px;
+    }
+  }
+
+  @media @tablet {
+    padding: 0 0 0 31px;
+  }
+
+  @media @desktop {
+    padding: 0 0 0 70px;
   }
 }
 
@@ -325,12 +337,14 @@
 
   @media @tablet {
     .font(36, 36);
-    padding: 0 96px 80px 66px;
+    position: relative;
+    width: 409px;
+    padding: 0 0 0 36px;
     background-color: @basic-white;
   }
 
   @media @desktop {
-    padding: 75px 110px 79px 110px;
+    padding: 0 0 0 41px;
   }
 }
 
@@ -339,6 +353,7 @@
 
   @media @tablet {
     padding: 0 30px 0 30px;
+    margin-top: 80px;
   }
 
   @media @desktop {
