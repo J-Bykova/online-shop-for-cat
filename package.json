@@ -1,18 +1,36 @@
 {
-  "name": "cat-energy-22",
-  "private": true,
+  "name": "cat-energy",
   "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "author": {
+    "name": "Евгения Быкова",
+    "url": "(https://up.htmlacademy.ru/adaptive/22/user/206693)"
+  },
+  "contributors": [
+    {
+      "name": "Анастасия Ничипорчук",
+      "url": "(https://htmlacademy.ru/profile/id612797)"
+    }
+  ],
+  "version": "0.0.1",
+  "private": true,
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.2.5",
     "browser-sync": "2.26.14",
-    "gulp": "^4.0.2",
-    "gulp-htmlmin": "^5.0.1",
+    "del": "6.0.0",
+    "gulp": "4.0.2",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "7.1.0",
     "gulp-less": "4.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
+    "gulp-rename": "2.0.0",
     "gulp-sourcemaps": "3.0.0",
-    "postcss": "8.2.8",
+    "gulp-svgstore": "7.0.1",
+    "gulp-terser": "2.0.1",
+    "gulp-webp": "4.0.1",
+    "postcss": "8.2.10",
+    "postcss-csso": "5.0.1",
     "stylelint": "13.12.0",
     "stylelint-config-htmlacademy": "0.1.4"
   },
@@ -20,7 +38,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "build": "gulp build",
     "start": "gulp"
   },
   "browserslist": [
@@ -38,8 +56,5 @@
   ],
   "engines": {
     "node": "14.15.0"
-  },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
   }
 }
