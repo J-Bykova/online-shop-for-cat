@@ -100,12 +100,38 @@
   }
 }
 
+.form__section--contacts,
+.form__section--comment,
+.form__section--related {
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: @basic-green;
+  }
+}
+
+.form__section--contacts::before {
+  top: 43px;
+}
+
+.form__section--comment::before {
+  top: 15px;
+}
+
+.form__section--related::before {
+  top: 13px;
+}
+
 .form__section-title {
   .oswaldFont();
   .font(24; 26);
   position: absolute;
   padding: 0;
   color: @basic-black;
+  background-color: @basic-white;
 
   @media @tablet {
     .font(36; 36);
@@ -114,9 +140,10 @@
 }
 
 .form__section--contacts > .form__section-title {
-  max-width: 181px;
+  max-width: 221px;
   top: 26px;
-  left: 20px;
+  left: 0;
+  padding-left: 20px;
 
   @media @tablet {
     max-width: 100%;
@@ -131,7 +158,9 @@
 
 .form__section--comment > .form__section-title {
   top: -1px;
-  left: 20px;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 23px;
 
   @media @tablet {
     left: 37px;
@@ -145,7 +174,9 @@
 
 .form__section--related > .form__section-title {
   top: -3px;
-  left: 20px;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 23px;
 
   @media @tablet {
     left: 37px;
