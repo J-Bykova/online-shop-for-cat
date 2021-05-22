@@ -107,36 +107,43 @@
 }
 
 .header__burger {
-  display: block;
-  width: 74px;
-  background-image: url("../img/header-section/cross-button.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: 32px calc(50% - 2px);
+  display: none;
 
-  &--closed-on-mobile {
-    background-image: url("../img/header-section/burger-button.svg");
+  @media @only-mobile {
+    display: block;
+    width: 74px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 32px calc(50% - 2px);
   }
 
-  @media @tablet {
-    display: none;
+  &--open-on-mobile {
+    @media @only-mobile {
+      background-image: url("../img/header-section/cross-button.svg");
+    }
+  }
+
+  &--closed-on-mobile {
+    @media @only-mobile {
+      background-image: url("../img/header-section/burger-button.svg");
+    }
   }
 }
 
 .header__navigation {
-  display: block;
+  display: flex;
   align-items: stretch;
 
-  &--closed-on-mobile {
-    display: none;
-
-    @media @tablet {
-      display: flex;
+  &--open-on-mobile {
+    @media @only-mobile {
+      display: block;
     }
   }
 
-  @media @tablet {
-    display: flex;
+  &--closed-on-mobile {
+    @media @only-mobile {
+      display: none;
+    }
   }
 }
 
