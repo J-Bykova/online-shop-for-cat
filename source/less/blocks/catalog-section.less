@@ -57,7 +57,7 @@
 
   @media @tablet {
     padding-top: 169px;
-    position: relative; //TODO для кого?
+    position: relative;
     border-bottom: none;
     background-color: @background-light-grey;
   }
@@ -69,7 +69,7 @@
 
 .catalog-section__product-card-body {
   display: flex;
-  position: relative; //TODO для кого?
+  position: relative;
 
   @media @tablet {
     display: block;
@@ -293,6 +293,22 @@
   }
 }
 
+.catalog-section__recommendations {
+  position: relative;
+//TODO это полоска перекрывает текст
+  &::before {
+    @media @tablet {
+      position: absolute;
+      content: "";
+      top: 22px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: @basic-green;
+    }
+  }
+}
+
 .catalog-section__recommendations-title {
   .oswaldFont();
   .font(24, 24);
@@ -301,7 +317,8 @@
 
   @media @tablet {
     .font(36, 36);
-    padding: 0 30px 80px 66px;
+    padding: 0 96px 80px 66px;
+    background-color: @basic-white;
   }
 
   @media @desktop {
