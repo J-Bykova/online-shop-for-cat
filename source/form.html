@@ -47,103 +47,105 @@
 </header>
 <main>
   <section class="form-section">
-    <h1 class="form-section__title">Подбор программы</h1>
-    <p class="form-section__subtitle">
-      Заполните анкету, и мы подберем программу питания для вашего кота
-    </p>
-    <form class="form" action='https://echo.htmlacademy.ru' method='POST'>
-      <div class="form__section form__section--personal">
-        <div class="form__field-group">
-          <label class="form__field">
-            <span class="form__field-label">Имя:*</span>
-            <input class="form__field-input form__field-input--name" type="text" placeholder="Барсик" required>
-          </label>
-          <label class="form__field">
-            <span class="form__field-label">Вес (кг):*</span>
-            <input class="form__field-input form__field-input--weight" type="text" placeholder="7" required>
-          </label>
-          <label class="form__field">
-            <span class="form__field-label">Возраст (лет):</span>
-            <input class="form__field-input form__field-input--age" type="text" placeholder="7">
-          </label>
-        </div>
-        <div class="form__radiobutton-group">
-          <div class="form__radiobutton-container">
-            <label class="form__radiobutton">
-              <input class="form__radiobutton-input" name="program" type="radio" checked>
-              <span class="form__radiobutton-box form__radiobutton-box--marked"></span>
-              <span class="form__radiobutton-label">Похудение</span>
+      <h1 class="form-section__title">Подбор программы</h1>
+      <p class="form-section__subtitle">
+        Заполните анкету, и мы подберем программу питания для вашего кота
+      </p>
+      <form class="form" action='https://echo.htmlacademy.ru' method='POST'>
+        <div class="form__section form__section--personal">
+          <div class="form__field-group">
+            <label class="form__field">
+              <span class="form__field-label">Имя:*</span>
+              <input class="form__field-input form__field-input--name" type="text" placeholder="Барсик" required>
             </label>
-            <label class="form__radiobutton">
-              <input class="form__radiobutton-input" name="program" type="radio">
-              <span class="form__radiobutton-box"></span>
-              <span class="form__radiobutton-label">Набор массы</span>
+            <label class="form__field">
+              <span class="form__field-label">Вес (кг):*</span>
+              <input class="form__field-input form__field-input--weight" type="text" placeholder="7" required>
             </label>
-            <label class="form__radiobutton">
-              <input class="form__radiobutton-input" name="program" type="radio">
-              <span class="form__radiobutton-box"></span>
-              <span class="form__radiobutton-label">Не знаю (нужен ваш совет)</span>
+            <label class="form__field">
+              <span class="form__field-label">Возраст (лет):</span>
+              <input class="form__field-input form__field-input--age" type="text" placeholder="7">
             </label>
           </div>
+          <div class="form__radiobutton-group">
+            <div class="form__radiobutton-container">
+              <label class="form__radiobutton">
+                <input class="form__radiobutton-input" name="program" type="radio" checked>
+                <span class="form__radiobutton-box form__radiobutton-box--marked"></span>
+                <span class="form__radiobutton-label">Похудение</span>
+              </label>
+              <label class="form__radiobutton">
+                <input class="form__radiobutton-input" name="program" type="radio">
+                <span class="form__radiobutton-box"></span>
+                <span class="form__radiobutton-label">Набор массы</span>
+              </label>
+              <label class="form__radiobutton">
+                <input class="form__radiobutton-input" name="program" type="radio">
+                <span class="form__radiobutton-box"></span>
+                <span class="form__radiobutton-label">Не знаю (нужен ваш совет)</span>
+              </label>
+            </div>
+          </div>
         </div>
-      </div>
-      <fieldset class="form__section form__section--contacts">
-        <legend class="form__section-title">Контактные данные (владельца кота)</legend>
-        <div class="form__section--contacts-desktop">
-          <label class="form__field">
-            <span class="form__field-label">e-mail:*</span>
-            <input class="form__field-input form__field-input--email" type="email" placeholder="kuklachev@gmail.com" required>
-            <svg class="form__field-icon form__field-icon--email" width="19" height="14">
-              <use xlink:href="img/sprite.svg#email"></use>
-            </svg>
-          </label>
-          <label class="form__field">
-            <span class="form__field-label">Телефон:*</span>
-            <input class="form__field-input form__field-input--tel" type="tel" placeholder="8 (960) 900-60-90" required>
-            <svg class="form__field-icon form__field-icon--tel" width="20" height="20">
-              <use xlink:href="img/sprite.svg#phone"></use>
-            </svg>
-          </label>
-        </div>
-      </fieldset>
-      <fieldset class="form__section form__section--comment">
-        <legend class="form__section-title">Комментарий</legend>
-        <textarea class="form__textarea" placeholder="Расскажите обо всех повАдках кота"></textarea>
-      </fieldset>
-      <fieldset class="form__section form__section--related">
-        <legend class="form__section-title">Дополнительно</legend>
-        <div class="form__section--related-tablet-desktop">
-          <label class="form__checkbox">
-            <input class="form__checkbox-input" type="checkbox" checked>
-            <span class="form__checkbox-box">
+        <fieldset class="form__section form__section--contacts">
+          <legend class="form__section-title">Контактные данные (владельца кота)</legend>
+          <div class="form__section--contacts-desktop">
+            <label class="form__field">
+              <span class="form__field-label">e-mail:*</span>
+              <input class="form__field-input form__field-input--email" type="email" placeholder="kuklachev@gmail.com"
+                     required>
+              <svg class="form__field-icon form__field-icon--email" width="19" height="14">
+                <use xlink:href="img/sprite.svg#email"></use>
+              </svg>
+            </label>
+            <label class="form__field">
+              <span class="form__field-label">Телефон:*</span>
+              <input class="form__field-input form__field-input--tel" type="tel" placeholder="8 (960) 900-60-90"
+                     required>
+              <svg class="form__field-icon form__field-icon--tel" width="20" height="20">
+                <use xlink:href="img/sprite.svg#phone"></use>
+              </svg>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form__section form__section--comment">
+          <legend class="form__section-title">Комментарий</legend>
+          <textarea class="form__textarea" placeholder="Расскажите обо всех повАдках кота"></textarea>
+        </fieldset>
+        <fieldset class="form__section form__section--related">
+          <legend class="form__section-title">Дополнительно</legend>
+          <div class="form__section--related-tablet-desktop">
+            <label class="form__checkbox">
+              <input class="form__checkbox-input" type="checkbox" checked>
+              <span class="form__checkbox-box">
               <span class="form__checkbox-label">Сахарозаменитель</span>
             </span>
-          </label>
-          <label class="form__checkbox">
-            <input class="form__checkbox-input" type="checkbox">
-            <span class="form__checkbox-box">
+            </label>
+            <label class="form__checkbox">
+              <input class="form__checkbox-input" type="checkbox">
+              <span class="form__checkbox-box">
               <span class="form__checkbox-label">Питьевая вода</span>
             </span>
-          </label>
-          <label class="form__checkbox">
-            <input class="form__checkbox-input" type="checkbox">
-            <span class="form__checkbox-box">
+            </label>
+            <label class="form__checkbox">
+              <input class="form__checkbox-input" type="checkbox">
+              <span class="form__checkbox-box">
               <span class="form__checkbox-label">Молоко</span>
             </span>
-          </label>
-          <label class="form__checkbox">
-            <input class="form__checkbox-input" type="checkbox">
-            <span class="form__checkbox-box">
+            </label>
+            <label class="form__checkbox">
+              <input class="form__checkbox-input" type="checkbox">
+              <span class="form__checkbox-box">
               <span class="form__checkbox-label">Витамины</span>
             </span>
-          </label>
+            </label>
+          </div>
+        </fieldset>
+        <div class="form__section form__section--submit">
+          <button class="form__submit-button button button--green" type="submit">Отправить заявку</button>
+          <span class="form__footnote">* — Обязательные поля</span>
         </div>
-      </fieldset>
-      <div class="form__section form__section--submit">
-        <button class="form__submit-button button button--green" type="submit">Отправить заявку</button>
-        <span class="form__footnote">* — Обязательные поля</span>
-      </div>
-    </form>
+      </form>
   </section>
   <section class="contacts-section">
     <div class="contacts-section__container contacts-section__container--grey">
@@ -166,7 +168,7 @@
   </section>
 </main>
 <footer class="footer">
-  <div class="footer__body">
+  <div class="footer__body page-container">
     <div class="footer__company-name">
       <a class="footer__company-name-link" href="index.html">
         <svg class="footer__company-name-image" width="128" height="24">
@@ -183,7 +185,8 @@
         </a>
       </li>
       <li class="footer__social-network">
-        <a class="footer__social-network-link footer__social-network-link--in" href="https://www.instagram.com/htmlacademy">
+        <a class="footer__social-network-link footer__social-network-link--in"
+           href="https://www.instagram.com/htmlacademy">
           <svg class="footer__social-network-logo footer__social-network-logo--in" width="16" height="16">
             <use xlink:href="img/sprite.svg#social-in"></use>
           </svg>

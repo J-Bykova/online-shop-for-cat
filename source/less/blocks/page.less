@@ -5,7 +5,6 @@
 .page-body {
   margin: 0 auto;
   padding: 0;
-  max-width: 1500px;
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -26,7 +25,7 @@
         top: 0;
         left: 50%;
         background-image: linear-gradient(@transparent-green, @transparent-green),
-          url("../img/offer-section/background-desktop1x.png");
+        url("../img/offer-section/background-desktop1x.png");
         background-position: left top;
         background-repeat: no-repeat;
         background-size: cover;
@@ -34,9 +33,14 @@
 
         @media (min-resolution: 2dppx) {
           background-image: linear-gradient(@transparent-green, @transparent-green),
-            url("../img/offer-section/background-desktop2x.png");
+          url("../img/offer-section/background-desktop2x.png");
         }
       }
     }
   }
+}
+
+.page-container {
+  margin: 0 auto;
+  max-width: 1440px;
 }
