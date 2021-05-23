@@ -13,7 +13,6 @@
 .form__section {
   position: relative;
   display: block;
-  margin: 0;
   border: none;
 
   &--personal {
@@ -38,7 +37,6 @@
 
   &--contacts-desktop {
     @media @desktop {
-      margin: 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       column-gap: 75px;
@@ -352,6 +350,8 @@
   &--email {
     top: calc(50% - 7px);
     right: 15px;
+    fill: none;
+    stroke: #222222;
 
     @media @tablet {
       right: 18px;
@@ -361,6 +361,7 @@
   &--tel {
     top: 15px;
     right: 13px;
+    fill: @basic-black;
 
     @media @tablet {
       right: 18px;
