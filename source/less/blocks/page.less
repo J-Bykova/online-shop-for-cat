@@ -5,7 +5,6 @@
 .page-body {
   margin: 0 auto;
   padding: 0;
-  max-width: 1500px;
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -38,5 +37,17 @@
         }
       }
     }
+  }
+}
+
+.page-container {
+  margin: 0 auto;
+
+  @media @tablet {
+    max-width: 768px;
+  }
+
+  @media @desktop {
+    max-width: 1440px;
   }
 }
