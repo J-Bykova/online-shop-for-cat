@@ -38,6 +38,19 @@
     padding: 0;
     z-index: 1;
   }
+
+  &::after {
+    @media @desktop {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 10px;
+      left: 72.5%;
+      width: 100vw;
+      height: 100%;
+      background: linear-gradient(#ffffff 194px, #eaeaea 194px);
+    }
+  }
 }
 
 .example-section__case {
@@ -222,8 +235,8 @@
 
   @media @desktop {
     flex: 1;
-    margin: 0;
-    padding: 566px 0 69px 102px;
+    margin: 11px 0 0 64px;
+    padding: 553px 0 69px 102px;
   }
 }
 

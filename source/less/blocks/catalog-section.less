@@ -32,13 +32,12 @@
 }
 
 .catalog-section__catalog {
-  list-style-type: none;
-  padding: 0;
+  @reset-list-styles;
   display: grid;
   grid-template-columns: 1fr;
 
   @media @tablet {
-    margin-top: 134px;
+    margin: 134px 0 0 0;
     padding: 0 30px 70px 30px;
     grid-template-columns: repeat(2, 324px);
     grid-column-gap: 60px;
