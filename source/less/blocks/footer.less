@@ -2,28 +2,33 @@
   background-color: @background-light-grey;
 }
 
+.footer__content-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .footer__body {
   padding: 39px 20px 22px 20px;
-  display: flex; //TODO поменять на block
-  flex-direction: column; //TODO удалить???
+  display: flex;
+  flex-direction: column;
   align-items: stretch;
 
   @media @tablet {
-    padding: 55px 30px 61px 30px;
-    flex-direction: row;//TODO поменять на flex
+    padding: 53px 30px 61px 30px;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
   @media @desktop {
-    padding: 69px 110px 58px 110px;
+    padding: 57px 110px 58px 110px;
   }
 }
 
 .footer__company-name {
   padding: 0 0 32px 0;
   text-align: center;
-  border-bottom: @border-content;
+  border-bottom: @border-footer;
 
   @media @tablet {
     width: 164px;
@@ -73,7 +78,24 @@
   .reset-list-styles();
 }
 
+.footer__social-network,
+.footer__social-network-link {
+  @media @tablet {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .footer__social-network-logo {
+  & use {
+    fill: #666666;
+  }
+
+  &--fb use {
+    fill: none;
+    stroke: #666666;
+  }
+
   @media @tablet {
     &--vk {
       width: 30px;
@@ -90,17 +112,6 @@
       height: 33px;
     }
   }
-
-  &:hover {
-    @media @desktop {
-      stroke: #68b738;
-    }
-  }
-
-  &:active {
-    stroke: #68b738;
-    opacity: 30%;
-  }
 }
 
 .footer__social-network-link {
@@ -108,12 +119,46 @@
   height: 100%;
 }
 
+.footer__social-network-link--in {
+  padding: 5px 0 0 4px;
+}
+
+.footer__social-network-link:hover {
+  .footer__social-network-logo {
+    @media @desktop {
+      & use {
+        fill: @basic-green;
+      }
+
+      &--fb use {
+        fill: none;
+        stroke: @basic-green;
+      }
+    }
+  }
+}
+
+.footer__social-network-link:active {
+  .footer__social-network-logo {
+    & use {
+      fill: @basic-green;
+      opacity: 30%;
+    }
+
+    &--fb use {
+      fill: none;
+      stroke: @basic-green;
+      opacity: 30%;
+    }
+  }
+}
+
 .footer__copyright {
   padding: 21px 0 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: @border-content;
+  border-top: @border-footer;
 
   @media @tablet {
     width: 164px;
@@ -126,10 +171,6 @@
   margin: 0;
   color: @light-grey;
 
-  &:active {
-    opacity: 30%;
-  }
-
   @media @tablet {
     margin-right: 23px;
   }
@@ -140,17 +181,25 @@
   display: block;
 }
 
+.footer__copyright-link:active {
+  opacity: 30%;
+}
+
 .footer__copyright-logo {
   margin: 0;
 
-  &:hover {
+  & use {
+    fill: #666666;
+  }
+
+  &:hover use {
     @media @desktop {
-      stroke: #68b738;
+      fill: @basic-green;
     }
   }
 
-  &:active {
-    stroke: #68b738;
+  &:active use {
+    fill: @basic-green;
     opacity: 30%;
   }
 }

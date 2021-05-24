@@ -1,11 +1,13 @@
-.header {
-  padding: 0;
+.header__content-container {
   display: block;
-  align-items: stretch;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
 
   @media @tablet {
     padding: 0 30px;
     display: flex;
+    align-items: stretch;
     justify-content: space-between;
   }
 
@@ -65,6 +67,20 @@
   }
 }
 
+.header__logo-link:hover {
+  .header__logo {
+    @media @desktop {
+      opacity: 80%;
+    }
+  }
+}
+
+.header__logo-link:active {
+  .header__logo {
+    opacity: 60%;
+  }
+}
+
 .header__company-name {
   display: block;
   transform: translateX(-1px);
@@ -93,36 +109,43 @@
 }
 
 .header__burger {
-  display: block;
-  width: 74px;
-  background-image: url("../img/header-section/cross-button.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: 32px calc(50% - 2px);
+  display: none;
 
-  &--closed-on-mobile {
-    background-image: url("../img/header-section/burger-button.svg");
+  @media @only-mobile {
+    display: block;
+    width: 74px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 32px calc(50% - 2px);
   }
 
-  @media @tablet {
-    display: none;
+  &--open-on-mobile {
+    @media @only-mobile {
+      background-image: url("../img/header-section/cross-button.svg");
+    }
+  }
+
+  &--closed-on-mobile {
+    @media @only-mobile {
+      background-image: url("../img/header-section/burger-button.svg");
+    }
   }
 }
 
 .header__navigation {
-  display: block;
+  display: flex;
   align-items: stretch;
 
-  &--closed-on-mobile {
-    display: none;
-
-    @media @tablet {
-      display: flex;
+  &--open-on-mobile {
+    @media @only-mobile {
+      display: block;
     }
   }
 
-  @media @tablet {
-    display: flex;
+  &--closed-on-mobile {
+    @media @only-mobile {
+      display: none;
+    }
   }
 }
 

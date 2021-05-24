@@ -15,10 +15,12 @@
       width: 100%;
       height: 462px;
       background-color: @background-dark-grey;
+      z-index: 0;
     }
 
     @media @desktop {
-      height: 451px;
+      height: 462px;
+      background-color: @background-light-grey;
     }
   }
 }
@@ -27,13 +29,27 @@
   padding: 27px 0 36px 0;
 
   @media @tablet {
-    padding: 43px 0 70px 0;
+    padding: 44px 0 70px 0;
   }
 
   @media @desktop {
     position: relative;
     display: flex;
-    padding: 67px 110px 0 110px;
+    padding: 0;
+    z-index: 1;
+  }
+
+  &::after {
+    @media @desktop {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 10px;
+      left: 72.5%;
+      width: 100vw;
+      height: 100%;
+      background: linear-gradient(#ffffff 194px, #eaeaea 194px);
+    }
   }
 }
 
@@ -45,7 +61,7 @@
   }
 
   @media @desktop {
-    padding: 0;
+    padding: 68px 0 70px 110px;
   }
 }
 
@@ -81,7 +97,7 @@
   display: block;
 
   @media @tablet {
-    margin-top: 54px;
+    margin-top: 53px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,7 +134,7 @@
   border-radius: 3px;
 
   @media @tablet {
-    width: 163px;
+    width: 162px;
     height: 72px;
   }
 
@@ -156,14 +172,16 @@
 
   @media @tablet {
     .font(14, 14);
+    width: auto;
+    left: auto;
+    padding: 0 9px 0 8px;
+    bottom: -6px;
     background-color: @basic-white;
     white-space: nowrap;
-    left: 29px;//TODO напиши тут  calk
-    bottom: -5px;
   }
 
   @media @desktop {
-    background-color: @background-dark-grey;
+    background-color: @background-light-grey;
   }
 }
 
@@ -177,7 +195,7 @@
 
   @media @tablet {
     .font(20, 29);
-    margin: -2px 1px 0 0;
+    margin: 0;
     text-align: right;
   }
 
@@ -210,13 +228,15 @@
   padding-top: 272px;
 
   @media @tablet {
-    margin-top: 80px;
+    margin: 80px 0 auto;
+    max-width: 768px;
     padding-top: 507px;
   }
 
   @media @desktop {
-    margin-top: 68px;
-    padding-top: 519px;
+    flex: 1;
+    margin: 11px 0 0 64px;
+    padding: 553px 0 69px 102px;
   }
 }
 
@@ -227,7 +247,7 @@
   overflow: hidden;
 
   &--front {
-    width: 100%;
+    width: 320px;
     left: calc(50% - 160px);
     right: auto;
 
@@ -239,6 +259,10 @@
     .example-section__image {
       left: 0;
       right: auto;
+    }
+
+    @media @desktop {
+      left: calc(50% - 356px);
     }
   }
 
@@ -256,10 +280,18 @@
       left: auto;
       right: 0;
     }
+
+    @media @desktop {
+      right: calc(50% - 412px);
+    }
   }
 
   @media @tablet {
     height: 522px;
+  }
+
+  @media @desktop {
+    width: 410px;
   }
 }
 
@@ -289,9 +321,7 @@
   }
 
   @media @desktop {
-    position: absolute;
-    top: 402px;
-    left: 218px;
+    margin: 0 auto;
   }
 }
 
