@@ -42,5 +42,12 @@
 
 .page-container {
   margin: 0 auto;
-  max-width: 1440px;
+
+  @media @tablet {
+    max-width: 768px;
+  }
+
+  @media @desktop {
+    max-width: 1440px;
+  }
 }

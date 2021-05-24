@@ -2,15 +2,22 @@
   position: relative;
 }
 
-.contacts-section__container {
-  display: flex;
-  justify-content: space-between;
-  padding: 28px 19px 26px 19px;
+.contacts-section__color {
   background-color: @basic-white;
 
   &--grey {
     background-color: @background-light-grey;
   }
+
+  @media @desktop {
+    background-color: @basic-white;
+  }
+}
+
+.contacts-section__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 19px 26px 19px;
 
   @media @tablet {
     padding: 63px 72px 58px 72px;
