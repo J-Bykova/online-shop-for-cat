@@ -15,35 +15,37 @@
 </head>
 <body class="page-body">
 <header class="header">
-  <div class="header__body">
-    <a class="header__logo-link" href="index.html">
-      <picture class="header__logo">
-        <source media="(min-width: 1440px)" srcset="img/header-section/logo-desktop.svg">
-        <source media="(min-width: 768px)" srcset="img/header-section/logo-tablet.svg">
-        <img src="img/header-section/logo-mobile.svg" alt="Кэт энерджи">
-      </picture>
-    </a>
-    <a class="header__company-name-link" href="index.html">
-      <svg class="header__company-name" width="101" height="18">
-        <use xlink:href="img/sprite.svg#logo-name-mobile"></use>
-      </svg>
-    </a>
-    <button class="header__burger header__burger--closed-on-mobile button" type="button"
-            aria-label="Close-open"></button>
+  <div class="header__content-container">
+    <div class="header__body">
+      <a class="header__logo-link" href="index.html">
+        <picture class="header__logo">
+          <source media="(min-width: 1440px)" srcset="img/header-section/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/header-section/logo-tablet.svg">
+          <img src="img/header-section/logo-mobile.svg" alt="Кэт энерджи">
+        </picture>
+      </a>
+      <a class="header__company-name-link" href="index.html">
+        <svg class="header__company-name" width="101" height="18">
+          <use xlink:href="img/sprite.svg#logo-name-mobile"></use>
+        </svg>
+      </a>
+      <button class="header__burger header__burger--closed-on-mobile button" type="button"
+              aria-label="Close-open"></button>
+    </div>
+    <nav class="header__navigation header__navigation--closed-on-mobile">
+      <ul class="header__navigation-menu">
+        <li class="header__navigation-menu-item">
+          <a class="header__navigation-menu-link" href="index.html">Главная</a>
+        </li>
+        <li class="header__navigation-menu-item">
+          <a class="header__navigation-menu-link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="header__navigation-menu-item">
+          <a class="header__navigation-menu-link header__navigation-menu-link--current">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </div>
-  <nav class="header__navigation header__navigation--closed-on-mobile">
-    <ul class="header__navigation-menu">
-      <li class="header__navigation-menu-item">
-        <a class="header__navigation-menu-link" href="index.html">Главная</a>
-      </li>
-      <li class="header__navigation-menu-item">
-        <a class="header__navigation-menu-link" href="catalog.html">Каталог продукции</a>
-      </li>
-      <li class="header__navigation-menu-item">
-        <a class="header__navigation-menu-link header__navigation-menu-link--current">Подбор программы</a>
-      </li>
-    </ul>
-  </nav>
 </header>
 <main>
   <section class="form-section">
@@ -146,16 +148,18 @@
     </form>
   </section>
   <section class="contacts-section">
-    <div class="contacts-section__color contacts-section__color--grey">
-      <div class="page-container contacts-section__container">
-        <h2 class="contacts-section__title">
-          <span>Приглашаем</span>
-          <span>к сотрудничеству дилеров!</span>
-        </h2>
-        <address class="contacts-section__address">
-          <span>ул. Большая Конюшенная, д. 19/8</span>
-          <span>Санкт-Петербург</span>
-        </address>
+    <div class="contacts-section__content-container">
+      <div class="contacts-section__color contacts-section__color--grey">
+        <div class="contacts-section__container">
+          <h2 class="contacts-section__title">
+            <span>Приглашаем</span>
+            <span>к сотрудничеству дилеров!</span>
+          </h2>
+          <address class="contacts-section__address">
+            <span>ул. Большая Конюшенная, д. 19/8</span>
+            <span>Санкт-Петербург</span>
+          </address>
+        </div>
       </div>
     </div>
     <div class="contacts-section__map">
@@ -168,46 +172,48 @@
   </section>
 </main>
 <footer class="footer">
-  <div class="footer__body page-container">
-    <div class="footer__company-name">
-      <a class="footer__company-name-link" href="index.html">
-        <svg class="footer__company-name-image" width="128" height="24">
-          <use xlink:href="img/sprite.svg#logo-name-mobile"></use>
-        </svg>
-      </a>
-    </div>
-    <ul class="footer__social-networks">
-      <li class="footer__social-network">
-        <a class="footer__social-network-link" href="https://vk.com/htmlacademy">
-          <svg class="footer__social-network-logo footer__social-network-logo--vk" width="23" height="16">
-            <use xlink:href="img/sprite.svg#social-vk"></use>
+  <div class="footer__content-container">
+    <div class="footer__body">
+      <div class="footer__company-name">
+        <a class="footer__company-name-link" href="index.html">
+          <svg class="footer__company-name-image" width="128" height="24">
+            <use xlink:href="img/sprite.svg#logo-name-mobile"></use>
           </svg>
         </a>
-      </li>
-      <li class="footer__social-network">
-        <a class="footer__social-network-link footer__social-network-link--in" href="https://www.instagram.com/htmlacademy">
-          <svg class="footer__social-network-logo footer__social-network-logo--in" width="16" height="16">
-            <use xlink:href="img/sprite.svg#social-in"></use>
+      </div>
+      <ul class="footer__social-networks">
+        <li class="footer__social-network">
+          <a class="footer__social-network-link" href="https://vk.com/htmlacademy">
+            <svg class="footer__social-network-logo footer__social-network-logo--vk" width="23" height="16">
+              <use xlink:href="img/sprite.svg#social-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-network">
+          <a class="footer__social-network-link footer__social-network-link--in" href="https://www.instagram.com/htmlacademy">
+            <svg class="footer__social-network-logo footer__social-network-logo--in" width="16" height="16">
+              <use xlink:href="img/sprite.svg#social-in"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__social-network">
+          <a class="footer__social-network-link" href="https://www.facebook.com/htmlacademy">
+            <svg class="footer__social-network-logo footer__social-network-logo--fb" width="22" height="22">
+              <use xlink:href="img/sprite.svg#social-fb"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <div class="footer__copyright">
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <p class="footer__copyright-name">HTML Academy</p>
+        </a>
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <svg class="footer__copyright-logo" width="27" height="34">
+            <use xlink:href="img/sprite.svg#copyright"></use>
           </svg>
         </a>
-      </li>
-      <li class="footer__social-network">
-        <a class="footer__social-network-link" href="https://www.facebook.com/htmlacademy">
-          <svg class="footer__social-network-logo footer__social-network-logo--fb" width="22" height="22">
-            <use xlink:href="img/sprite.svg#social-fb"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-    <div class="footer__copyright">
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <p class="footer__copyright-name">HTML Academy</p>
-      </a>
-      <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="footer__copyright-logo" width="27" height="34">
-          <use xlink:href="img/sprite.svg#copyright"></use>
-        </svg>
-      </a>
+      </div>
     </div>
   </div>
 </footer>

@@ -26,6 +26,8 @@
 
   @media @desktop {
     padding: 20px 110px 41px 110px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -45,8 +47,9 @@
   }
 
   @media @desktop {
-    margin-top: 124px;
+    max-width: 1440px;
     padding: 0 110px 76px 110px;
+    margin: 124px auto 0 auto;
     grid-template-columns: repeat(4, 245px);
     grid-column-gap: 80px;
     row-gap: 145px;
@@ -298,34 +301,14 @@
 }
 
 .catalog-section__recommendations-title-container {
-  position: relative;
-
-  &::before {
-    @media @tablet {
-      position: absolute;
-      content: "";
-      top: 22px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: @basic-green;
-    }
-
-    @media @desktop {
-      top: 98px;
-    }
-
-    @media @desktop {
-      top: 22px;
-    }
-  }
-
   @media @tablet {
     padding: 0 0 0 31px;
   }
 
   @media @desktop {
     padding: 0 0 0 70px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -348,6 +331,29 @@
   }
 }
 
+.catalog-section__recommendations {
+  position: relative;
+
+  &::before {
+    @media @tablet {
+      position: absolute;
+      content: "";
+      top: 22px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: @basic-green;
+    }
+
+    @media @desktop {
+      top: 98px;
+    }
+
+    @media @desktop {
+      top: 22px;
+    }
+  }
+}
 .catalog-section__recommendations-container {
   padding: 0 20px 0 20px;
 
@@ -359,6 +365,8 @@
   @media @desktop {
     display: flex;
     padding: 0 110px 0 110px;
+    max-width: 1440px;
+    margin: 80px auto 0 auto;
   }
 }
 
